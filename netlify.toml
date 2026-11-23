@@ -1,0 +1,21 @@
+# Alles Baby – Netlify-Konfiguration
+# Kein Build-Schritt: Die App liegt fertig im Ordner public/.
+[build]
+  publish = "public"
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Der Service Worker muss bei jedem Start frisch geprüft werden, sonst kommen Updates verspätet an.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
