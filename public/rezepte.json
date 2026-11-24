@@ -4115,7 +4115,8 @@
     "tips": [
       "Avocado liefert ungesättigte Fettsäuren, das Ei hochwertiges Eiweiß, eine sättigende Kombination für kleine Esser.",
       "Für jüngere Babys glatt zerdrücken und vom Löffel füttern; ältere Babys mögen die Creme auf weichen Brotfingern oder gedämpften Gemüsesticks.",
-      "Die Creme verfärbt sich schnell. Bereite sie frisch zu oder bedecke sie direkt mit Frischhaltefolie."
+      "Die Creme verfärbt sich schnell. Bereite sie frisch zu oder bedecke sie direkt mit Frischhaltefolie.",
+      "Als warmes Abendbrot: Weiches Brot in Stücke schneiden, kurz in der Pfanne ohne Fett anrösten, mit Frischkäse oder der Avocadocreme bestreichen und mit fein zerdrücktem, hart gekochtem Ei belegen. Ein weich gekochtes Ei ist für Babys nicht geeignet."
     ],
     "categories": [
       "gemuese"
@@ -6572,15 +6573,11 @@
       {
         "name": "junger Gouda, gerieben",
         "amount": "40 g"
-      },
-      {
-        "name": "Kochschinken, sehr fein gewürfelt (optional)",
-        "amount": "40 g"
       }
     ],
-    "instructions": "1. Nimm den Blätterteig etwa 10 Minuten vor dem Verarbeiten aus dem Kühlschrank und roll ihn samt Backpapier aus. 2. Streich den Frischkäse dünn darauf und lass an einer Längsseite einen Rand von 2 cm frei. 3. Verteil Karotte oder Spinat, Gouda und nach Wunsch den Schinken gleichmäßig auf der Fläche. 4. Roll den Teig von der belegten Längsseite her straff auf und leg die Rolle 15 Minuten ins Gefrierfach (oder 30 Minuten in den Kühlschrank). 5. Heiz den Ofen auf 190 °C Ober-/Unterhitze vor. Schneid die feste Rolle in 1,5 bis 2 cm breite Scheiben und setz sie mit etwas Abstand auf ein Blech mit Backpapier. 6. Back die Röllchen 15 bis 18 Minuten goldbraun und lass sie gut abkühlen, bevor dein Kind zugreift, die Füllung bleibt lange heiß.",
+    "instructions": "1. Nimm den Blätterteig etwa 10 Minuten vor dem Verarbeiten aus dem Kühlschrank und roll ihn samt Backpapier aus. 2. Streich den Frischkäse dünn darauf und lass an einer Längsseite einen Rand von 2 cm frei. 3. Verteil Karotte oder Spinat und den Gouda gleichmäßig auf der Fläche. 4. Roll den Teig von der belegten Längsseite her straff auf und leg die Rolle 15 Minuten ins Gefrierfach (oder 30 Minuten in den Kühlschrank). 5. Heiz den Ofen auf 190 °C Ober-/Unterhitze vor. Schneid die feste Rolle in 1,5 bis 2 cm breite Scheiben und setz sie mit etwas Abstand auf ein Blech mit Backpapier. 6. Back die Röllchen 15 bis 18 Minuten goldbraun und lass sie gut abkühlen, bevor dein Kind zugreift, die Füllung bleibt lange heiß.",
     "tips": [
-      "Blätterteig, Käse und Schinken bringen schon einiges an Salz und Fett mit, die Röllchen sind deshalb eher etwas für Feste als für jeden Tag. Ohne Schinken wird die Salzmenge deutlich geringer.",
+      "Blätterteig und Käse bringen schon einiges an Salz und Fett mit. Die Röllchen sind deshalb eher etwas für Feste als für jeden Tag. Für Erwachsene und ältere Kinder kann ein Teil der Rolle zusätzlich mit sehr fein gewürfeltem Kochschinken belegt werden.",
       "Pizza-Variante: Statt Frischkäse passierte Tomaten ohne Salzzusatz mit etwas Oregano aufstreichen, Mozzarella und fein gewürfelte Zucchini darauf verteilen.",
       "Süßkartoffel-Variante: Gegarte Süßkartoffel mit einem Löffel Frischkäse und fein gehackten milden Kräutern zu Püree zerdrücken und als Füllung verwenden.",
       "Das kurze Kühlen ist der Trick für saubere Schnitte: Der Teig wird fest und die Füllung quillt nicht heraus."
@@ -8389,7 +8386,7 @@
       },
       {
         "name": "Wasser oder Gemüsebrühe ohne Salz",
-        "amount": "850 ml–1 l"
+        "amount": "850 ml bis 1 l"
       },
       {
         "name": "Frischkäse natur",
@@ -8471,6 +8468,818 @@
       "ohne-nuesse",
       "einfrierbar",
       "ofen"
+    ]
+  },
+  {
+    "id": "obstglaeschen-muffins",
+    "title": "Fruchtmus-Muffins aus dem Obstgläschen",
+    "ageRecommendation": 8,
+    "prepTime": "10 Minuten + 20 Minuten Backen",
+    "categories": [
+      "obst",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Obstgläschen ohne Zuckerzusatz (zum Beispiel Apfel-Birne oder Apfel-Banane)",
+        "amount": "1 Glas (190 g)"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "45 ml"
+      },
+      {
+        "name": "Naturjoghurt, 3,5 % Fett (optional)",
+        "amount": "2 EL"
+      },
+      {
+        "name": "Milch (unter 1 Jahr: Säuglingsmilch oder Wasser)",
+        "amount": "30 bis 50 ml"
+      },
+      {
+        "name": "Dinkelmehl Type 630",
+        "amount": "170 g"
+      },
+      {
+        "name": "Weinsteinbackpulver",
+        "amount": "1,5 TL"
+      },
+      {
+        "name": "Kokosraspel (optional)",
+        "amount": "2 EL"
+      },
+      {
+        "name": "Ceylon-Zimt (optional)",
+        "amount": "1 Prise"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 170 °C Umluft vor und stell 8 bis 10 Muffinförmchen bereit. 2. Verrühr den Inhalt des Gläschens mit Ei, Öl und nach Wunsch Joghurt. 3. Misch Mehl, Backpulver und die optionalen Kokosraspel und den Zimt und heb alles kurz unter. 4. Gib so viel Milch dazu, dass ein schwerer, aber gut rührbarer Teig entsteht. 5. Füll die Förmchen zu drei Vierteln und back die Muffins 18 bis 22 Minuten. Mach die Stäbchenprobe und lass sie auf einem Gitter abkühlen.",
+    "tips": [
+      "Das feine Fruchtpüree macht die Muffins innen weich, sodass sie kaum krümeln. Das ist praktisch für kleine Hände und für unterwegs.",
+      "Ein guter Weg, angebrochene Gläschen zu verwerten. Selbst gekochtes Obstmus funktioniert genauso.",
+      "Wer mag, ersetzt die Hälfte des Mehls durch fein gemahlene Haferflocken.",
+      "Einzeln eingefroren halten die Muffins etwa 3 Monate."
+    ],
+    "tags": [
+      "snack",
+      "fingerfood",
+      "muffins",
+      "vegetarisch",
+      "ohne-nuesse",
+      "einfrierbar",
+      "unterwegs",
+      "reste-verwertung",
+      "ofen"
+    ]
+  },
+  {
+    "id": "couscous-erbsen-ruehrei-pfanne",
+    "title": "Couscous-Pfanne mit Erbsen, Karotte und Rührei",
+    "ageRecommendation": 8,
+    "prepTime": "15 Minuten",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Couscous (oder zarte Hirseflocken)",
+        "amount": "70 g"
+      },
+      {
+        "name": "kochendes Wasser",
+        "amount": "110 ml"
+      },
+      {
+        "name": "Erbsen, tiefgekühlt",
+        "amount": "60 g"
+      },
+      {
+        "name": "kleine Karotte, fein geraspelt",
+        "amount": "1 Stück (etwa 60 g)"
+      },
+      {
+        "name": "Eier (Größe M)",
+        "amount": "2 Stück"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 TL"
+      },
+      {
+        "name": "Frischkäse natur",
+        "amount": "1 EL"
+      },
+      {
+        "name": "glatte Petersilie, fein gehackt (optional)",
+        "amount": "1 TL"
+      }
+    ],
+    "instructions": "1. Übergieß den Couscous in einer Schüssel mit dem kochenden Wasser, deck ihn ab und lass ihn 5 Minuten quellen. 2. Erhitze inzwischen das Öl in einer Pfanne und dünste Karotte und Erbsen mit 2 EL Wasser zugedeckt etwa 5 Minuten weich. 3. Verquirl die Eier, gieß sie zum Gemüse und rühr so lange, bis sie vollständig gestockt sind. 4. Lockere den Couscous mit einer Gabel auf, gib ihn in die Pfanne und rühr den Frischkäse und die Petersilie unter. 5. Nimm die Babyportion ab, zerdrück die Erbsen leicht und lass alles etwas abkühlen. Erwachsene würzen ihre Portion mit Salz und Pfeffer.",
+    "tips": [
+      "Couscous muss nicht gekocht werden, er quillt in heißem Wasser. Damit ist das Gericht an hektischen Abenden schnell fertig.",
+      "Erbsen für Babys unter einem Jahr leicht zerdrücken, ganz und rund können sie ein Erstickungsrisiko sein.",
+      "Das Ei muss vollständig fest sein. Für jüngere Babys ist Rührei deshalb besser geeignet als ein weiches Ei.",
+      "Mit Hirseflocken statt Couscous wird das Gericht glutenfrei."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "vegetarisch",
+      "ohne-nuesse",
+      "schnell",
+      "familienessen",
+      "pfanne"
+    ]
+  },
+  {
+    "id": "rote-linsen-gemuese-pfaennchen",
+    "title": "Warmes Rote-Linsen-Pfännchen mit Zucchini und Paprika",
+    "ageRecommendation": 8,
+    "prepTime": "20 Minuten",
+    "categories": [
+      "gemuese"
+    ],
+    "ingredients": [
+      {
+        "name": "rote Linsen",
+        "amount": "60 g"
+      },
+      {
+        "name": "Wasser",
+        "amount": "200 ml"
+      },
+      {
+        "name": "Zucchini, fein gewürfelt",
+        "amount": "80 g"
+      },
+      {
+        "name": "rote Paprika, entkernt und fein gewürfelt",
+        "amount": "50 g"
+      },
+      {
+        "name": "passierte Tomaten ohne Salzzusatz",
+        "amount": "3 EL"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 TL"
+      },
+      {
+        "name": "mildes Currypulver",
+        "amount": "1 Prise"
+      },
+      {
+        "name": "gemahlener Kreuzkümmel",
+        "amount": "1 Prise"
+      },
+      {
+        "name": "Naturjoghurt, 3,5 % Fett",
+        "amount": "2 EL"
+      }
+    ],
+    "instructions": "1. Spül die Linsen in einem Sieb gründlich ab. 2. Erhitze das Öl in einer kleinen Pfanne oder einem Topf und dünste Zucchini und Paprika 2 bis 3 Minuten an. 3. Gib Linsen, Wasser, passierte Tomaten und die Gewürze dazu und lass alles zugedeckt bei kleiner Hitze 10 bis 12 Minuten köcheln, bis die Linsen zerfallen und das Gemüse weich ist. Wird es zu trocken, etwas Wasser nachgießen. 4. Lass das Pfännchen kurz abkühlen und setz einen Klecks Joghurt darauf. 5. Für jüngere Babys mit der Gabel zerdrücken, ältere löffeln es stückig.",
+    "tips": [
+      "Rote Linsen liefern pflanzliches Eisen und Eiweiß. Paprika und Tomate bringen Vitamin C mit, das die Eisenaufnahme verbessert.",
+      "Der Joghurt mildert die Gewürze und kühlt das Gericht ab. Ohne Joghurt ist das Pfännchen vegan.",
+      "Erwachsene würzen ihre Portion mit Salz, Chili und frischem Koriander und essen Fladenbrot dazu.",
+      "Reste portionsweise einfrieren und beim Aufwärmen einen Schluck Wasser zugeben."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "vegetarisch",
+      "ohne-ei",
+      "glutenfrei",
+      "ohne-nuesse",
+      "einfrierbar",
+      "familienessen",
+      "pfanne"
+    ]
+  },
+  {
+    "id": "ueberbackene-brot-haeppchen",
+    "title": "Überbackene Gemüse-Brothäppchen aus dem Ofen",
+    "ageRecommendation": 12,
+    "prepTime": "10 Minuten + 10 Minuten Backen",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "weiches Vollkorn- oder Mischbrot",
+        "amount": "2 Scheiben"
+      },
+      {
+        "name": "Frischkäse natur (oder Tomatenmark ohne Salzzusatz)",
+        "amount": "2 EL"
+      },
+      {
+        "name": "reife Tomate, ohne Kerne fein gewürfelt",
+        "amount": "½ Stück"
+      },
+      {
+        "name": "Zucchini oder aufgetauter Blattspinat, fein gehackt",
+        "amount": "30 g"
+      },
+      {
+        "name": "junger Gouda, fein gerieben",
+        "amount": "20 g"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 180 °C Ober-/Unterhitze vor und leg ein Blech mit Backpapier aus. 2. Bestreich die Brotscheiben dünn mit Frischkäse. 3. Verteil Tomate und Zucchini darauf und streu den Käse darüber. 4. Back die Brote 8 bis 10 Minuten, bis der Käse geschmolzen ist. 5. Lass sie abkühlen und schneid sie in Streifen oder kleine Quadrate. Geschmolzener Käse bleibt lange heiß, deshalb vor dem Servieren die Temperatur prüfen.",
+    "tips": [
+      "Brot und Käse enthalten Salz. Deshalb ist das Rezept erst ab etwa einem Jahr gedacht und lieber nicht jeden Tag.",
+      "Gut für den Abend, wenn alle Hunger haben: Erwachsene belegen ihre Scheiben zusätzlich mit Schinken, Oliven oder würzigerem Käse.",
+      "Statt Brot funktionieren auch halbierte Vollkornbrötchen."
+    ],
+    "tags": [
+      "abendessen",
+      "snack",
+      "fingerfood",
+      "brot-broetchen",
+      "vegetarisch",
+      "ohne-ei",
+      "ohne-nuesse",
+      "familienessen",
+      "ofen"
+    ]
+  },
+  {
+    "id": "hirse-gemuese-auflauf-kaese",
+    "title": "Goldhirse-Gemüse-Auflauf mit Käsehaube",
+    "ageRecommendation": 10,
+    "prepTime": "20 Minuten + 25 Minuten Backen",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Goldhirse",
+        "amount": "100 g"
+      },
+      {
+        "name": "Wasser",
+        "amount": "250 ml"
+      },
+      {
+        "name": "Zucchini, geraspelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "Karotte, geraspelt",
+        "amount": "100 g"
+      },
+      {
+        "name": "Erbsen, tiefgekühlt",
+        "amount": "80 g"
+      },
+      {
+        "name": "Eier (Größe M)",
+        "amount": "2 Stück"
+      },
+      {
+        "name": "Milch",
+        "amount": "100 ml"
+      },
+      {
+        "name": "Frischkäse natur",
+        "amount": "2 EL"
+      },
+      {
+        "name": "junger Gouda, gerieben",
+        "amount": "40 g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 TL"
+      }
+    ],
+    "instructions": "1. Spül die Hirse heiß ab, bring sie mit dem Wasser zum Kochen und lass sie zugedeckt bei kleiner Hitze 15 Minuten quellen. 2. Heiz den Ofen auf 180 °C Ober-/Unterhitze vor und fette eine Auflaufform mit dem Öl ein. 3. Dünste Zucchini, Karotte und Erbsen in einer Pfanne mit 3 EL Wasser etwa 5 Minuten weich. 4. Verquirl Eier, Milch und Frischkäse und misch Hirse und Gemüse darunter. 5. Füll die Masse in die Form, streu den Käse darüber und back den Auflauf 20 bis 25 Minuten, bis er fest und goldbraun ist. 6. Nimm die Babyportion ab und lass sie gut abkühlen. Erwachsene würzen am Tisch mit Salz, Pfeffer und Muskat.",
+    "tips": [
+      "Hirse ist von Natur aus glutenfrei und liefert Eisen und Magnesium.",
+      "Pfannen-Variante: Die Masse ohne Ofen in einer beschichteten Pfanne bei kleiner Hitze mit Deckel 10 Minuten stocken lassen.",
+      "Für Fingerfood den abgekühlten Auflauf in fingerdicke Streifen schneiden.",
+      "Die Eimasse muss vollständig gestockt sein. Prüf das mit einem Messer in der Mitte."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "vegetarisch",
+      "glutenfrei",
+      "ohne-nuesse",
+      "familienessen",
+      "ofen"
+    ]
+  },
+  {
+    "id": "suesskartoffel-linsen-eintopf",
+    "title": "Süßkartoffel-Linsen-Eintopf mit Spinat",
+    "ageRecommendation": 8,
+    "prepTime": "10 Minuten + 20 Minuten Köcheln",
+    "categories": [
+      "gemuese"
+    ],
+    "ingredients": [
+      {
+        "name": "Süßkartoffeln, gewürfelt",
+        "amount": "300 g"
+      },
+      {
+        "name": "rote Linsen",
+        "amount": "80 g"
+      },
+      {
+        "name": "Karotte, gewürfelt",
+        "amount": "1 Stück (etwa 80 g)"
+      },
+      {
+        "name": "Blattspinat, tiefgekühlt",
+        "amount": "80 g"
+      },
+      {
+        "name": "passierte Tomaten ohne Salzzusatz",
+        "amount": "200 ml"
+      },
+      {
+        "name": "Wasser",
+        "amount": "400 ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      },
+      {
+        "name": "Kokosmilch aus der Dose, ungesüßt",
+        "amount": "3 EL"
+      },
+      {
+        "name": "mildes Currypulver",
+        "amount": "½ TL"
+      },
+      {
+        "name": "gemahlener Kreuzkümmel",
+        "amount": "1 Prise"
+      }
+    ],
+    "instructions": "1. Erhitze das Öl in einem Topf und dünste Süßkartoffel und Karotte 2 Minuten an. 2. Gib die abgespülten Linsen, Gewürze, passierte Tomaten und Wasser dazu und bring alles zum Kochen. 3. Lass den Eintopf zugedeckt 12 bis 15 Minuten köcheln, bis die Linsen zerfallen und das Gemüse weich ist. 4. Rühr den Spinat und die Kokosmilch ein und lass alles noch 3 Minuten ziehen. 5. Nimm die Babyportion ab, zerdrück sie je nach Alter grob oder fein und lass sie abkühlen. Den Rest für Erwachsene mit Salz, Pfeffer, Knoblauch und einem Spritzer Zitrone abschmecken.",
+    "tips": [
+      "Ein vollständig pflanzliches Gericht mit Eisen aus Linsen und Spinat. Die Tomate liefert Vitamin C dazu.",
+      "Spinat enthält Nitrat. Reste schnell abkühlen, im Kühlschrank aufbewahren und nur einmal aufwärmen.",
+      "Der Eintopf lässt sich gut in Portionen einfrieren und wird beim Auftauen eher noch sämiger.",
+      "Für Fingerfood-Fans Süßkartoffelwürfel etwas größer schneiden und vor dem Pürieren herausnehmen."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "suppe",
+      "vegetarisch",
+      "vegan",
+      "ohne-ei",
+      "ohne-milch",
+      "glutenfrei",
+      "ohne-nuesse",
+      "einfrierbar",
+      "one-pot",
+      "familienessen"
+    ]
+  },
+  {
+    "id": "herzhafte-polenta-zucchini-schnitten",
+    "title": "Herzhafte Polenta-Zucchini-Schnitten",
+    "ageRecommendation": 8,
+    "prepTime": "15 Minuten + 60 Minuten Kühlen + 10 Minuten Braten",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Maisgrieß (Polenta)",
+        "amount": "80 g"
+      },
+      {
+        "name": "Milch (unter 1 Jahr: zur Hälfte Wasser)",
+        "amount": "250 ml"
+      },
+      {
+        "name": "Wasser",
+        "amount": "150 ml"
+      },
+      {
+        "name": "Zucchini, fein geraspelt und ausgedrückt (oder 40 g gehackter Blattspinat)",
+        "amount": "60 g"
+      },
+      {
+        "name": "Butter",
+        "amount": "1 TL"
+      },
+      {
+        "name": "junger Gouda, fein gerieben (optional)",
+        "amount": "15 g"
+      },
+      {
+        "name": "Rapsöl zum Braten",
+        "amount": "1 TL"
+      }
+    ],
+    "instructions": "1. Bring Milch und Wasser in einem Topf zum Kochen und lass den Maisgrieß unter Rühren einrieseln. 2. Rühr Zucchini, Butter und nach Wunsch den Käse ein und lass die Polenta bei kleiner Hitze 5 Minuten unter Rühren dick einkochen. 3. Streich die Masse etwa 1,5 cm dick auf ein mit Backpapier ausgelegtes Brett oder in eine flache Form und lass sie mindestens 1 Stunde fest werden. 4. Schneid die Polenta in fingerlange Streifen. 5. Brat sie im Öl bei mittlerer Hitze pro Seite 3 bis 4 Minuten an oder back sie bei 200 °C 15 Minuten im Ofen. 6. Abkühlen lassen und zum Selbstgreifen servieren.",
+    "tips": [
+      "Maisgrieß ist glutenfrei und eignet sich gut als Abwechslung zu Weizen und Dinkel.",
+      "Die Polenta lässt sich am Vortag kochen und abgedeckt im Kühlschrank fest werden lassen.",
+      "Erwachsene essen die Schnitten mit Tomatensoße, Parmesan und Salat.",
+      "Unter einem Jahr den Käse weglassen oder nur sehr wenig verwenden, weil er Salz enthält."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "snack",
+      "fingerfood",
+      "vegetarisch",
+      "ohne-ei",
+      "glutenfrei",
+      "ohne-nuesse",
+      "vorkochen",
+      "familienessen",
+      "pfanne",
+      "ofen"
+    ]
+  },
+  {
+    "id": "lachs-reis-pfanne-gemuese",
+    "title": "Lachs-Reis-Pfanne mit Zucchini und Erbsen",
+    "ageRecommendation": 8,
+    "prepTime": "30 Minuten",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Reis (Rohgewicht)",
+        "amount": "120 g"
+      },
+      {
+        "name": "Lachsfilet ohne Haut, grätenfrei",
+        "amount": "200 g"
+      },
+      {
+        "name": "Zucchini, gewürfelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "Karotte, fein gewürfelt",
+        "amount": "1 Stück (etwa 80 g)"
+      },
+      {
+        "name": "Erbsen, tiefgekühlt",
+        "amount": "80 g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      },
+      {
+        "name": "Naturjoghurt, 3,5 % Fett, oder Kochsahne",
+        "amount": "3 EL"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": "1 TL"
+      },
+      {
+        "name": "Dill oder Petersilie, fein gehackt",
+        "amount": "1 TL"
+      }
+    ],
+    "instructions": "1. Koch den Reis in reichlich ungesalzenem Wasser weich und gieß ihn ab. 2. Schneid den Lachs in kleine Würfel und prüf ihn dabei noch einmal mit den Fingern auf Gräten. 3. Dünste Karotte, Zucchini und Erbsen im Öl mit 3 EL Wasser zugedeckt etwa 6 Minuten weich. 4. Leg die Lachswürfel aufs Gemüse und gare sie zugedeckt bei kleiner Hitze 4 bis 5 Minuten, bis sie innen nicht mehr glasig sind. 5. Rühr Reis, Joghurt oder Sahne, Zitronensaft und Kräuter vorsichtig unter. 6. Nimm die Babyportion ab und zerdrück Lachs und Erbsen leicht. Erwachsene würzen mit Salz und Pfeffer nach.",
+    "tips": [
+      "Mit Hähnchenbrust statt Lachs gelingt das Gericht genauso. Das Fleisch muss dann vollständig durchgegart sein, innen darf nichts mehr rosa sein.",
+      "Lachs liefert Omega-3-Fettsäuren und Vitamin D. Ein- bis zweimal Fisch pro Woche ist für Kinder ideal.",
+      "Reis kann Arsen enthalten. Koch ihn in reichlich Wasser, gieß den Rest ab und biete ihn nicht täglich an.",
+      "Gekochten Reis schnell abkühlen lassen und gekühlt höchstens einen Tag aufbewahren."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "fisch",
+      "ohne-ei",
+      "glutenfrei",
+      "ohne-nuesse",
+      "familienessen",
+      "pfanne"
+    ]
+  },
+  {
+    "id": "milde-gemuesesuppe-sternchennudeln",
+    "title": "Milde Wurzelgemüsesuppe mit Sternchennudeln",
+    "ageRecommendation": 8,
+    "prepTime": "10 Minuten + 25 Minuten Köcheln",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Karotten, klein gewürfelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "Kartoffeln, klein gewürfelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "Pastinake oder Knollensellerie, klein gewürfelt",
+        "amount": "100 g"
+      },
+      {
+        "name": "Wasser oder ungesalzene, selbst gekochte Gemüsebrühe",
+        "amount": "800 ml"
+      },
+      {
+        "name": "Sternchen- oder Hörnchennudeln",
+        "amount": "40 g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 TL"
+      },
+      {
+        "name": "glatte Petersilie, fein gehackt",
+        "amount": "1 EL"
+      }
+    ],
+    "instructions": "1. Erhitze das Öl in einem Topf und dünste das Gemüse 2 Minuten an. 2. Gieß das Wasser dazu und lass die Suppe zugedeckt 15 bis 20 Minuten köcheln, bis das Gemüse ganz weich ist. 3. Gib die Nudeln dazu und gare sie 6 bis 8 Minuten, bis sie weich sind. 4. Rühr die Petersilie ein. 5. Füll die Babyportion vor dem Würzen ab, zerdrück die Gemüsestücke bei Bedarf und lass sie abkühlen. Den Rest für die Erwachsenen mit Salz, Pfeffer und Muskat abschmecken. Dazu passt frisches Brot.",
+    "tips": [
+      "Statt Nudeln passen auch selbst gemachter Eierstich oder kleine Grießklößchen als Einlage. Beides muss vollständig durchgegart sein.",
+      "Sellerie gehört zu den häufigen Allergenen. Ist Sellerie für dein Baby noch neu, nimm lieber Pastinake.",
+      "Die Suppe schmeckt am nächsten Tag oft noch besser. Zum Einfrieren die Nudeln weglassen und erst beim Aufwärmen frisch dazugeben.",
+      "Für mehr Cremigkeit einen Teil der Suppe pürieren oder einen Klecks Butter einrühren."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "suppe",
+      "vegetarisch",
+      "vegan",
+      "ohne-ei",
+      "ohne-milch",
+      "ohne-nuesse",
+      "einfrierbar",
+      "one-pot",
+      "familienessen"
+    ]
+  },
+  {
+    "id": "nudel-hack-auflauf",
+    "title": "Cremiger Nudel-Hack-Auflauf mit Zucchini",
+    "ageRecommendation": 10,
+    "prepTime": "25 Minuten + 25 Minuten Backen",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "kurze Nudeln (zum Beispiel Spirelli oder Hörnchen)",
+        "amount": "200 g"
+      },
+      {
+        "name": "Rinderhackfleisch",
+        "amount": "250 g"
+      },
+      {
+        "name": "Zucchini, fein gewürfelt",
+        "amount": "200 g"
+      },
+      {
+        "name": "Karotte, fein geraspelt",
+        "amount": "1 Stück (etwa 80 g)"
+      },
+      {
+        "name": "passierte Tomaten ohne Salzzusatz",
+        "amount": "400 ml"
+      },
+      {
+        "name": "Milch",
+        "amount": "120 ml"
+      },
+      {
+        "name": "junger Gouda, gerieben",
+        "amount": "50 g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      },
+      {
+        "name": "getrockneter Oregano",
+        "amount": "½ TL"
+      }
+    ],
+    "instructions": "1. Koch die Nudeln in ungesalzenem Wasser etwas länger als angegeben, bis sie weich sind, und gieß sie ab. 2. Heiz den Ofen auf 180 °C Umluft vor. 3. Brat das Hackfleisch im Öl krümelig, bis es vollständig durchgegart ist. 4. Gib Zucchini und Karotte dazu und lass sie 3 Minuten mitdünsten. 5. Gieß passierte Tomaten und Milch an, rühr den Oregano ein und lass die Soße 5 Minuten köcheln. 6. Misch Nudeln und Soße in einer Auflaufform, streu den Käse darüber und back den Auflauf 20 bis 25 Minuten, bis er goldbraun ist. 7. Babyportion abnehmen und gut abkühlen lassen. Erwachsene salzen und pfeffern am Teller nach.",
+    "tips": [
+      "Wer die Babyportion ganz ohne Käse möchte, füllt vor dem Bestreuen eine kleine Form separat ab.",
+      "Rindfleisch ist eine der besten Eisenquellen für Babys und Kleinkinder.",
+      "Spiral- und Röhrennudeln lassen sich gut greifen und halten die Soße fest.",
+      "Der Auflauf lässt sich portionsweise einfrieren und im Ofen oder in der Mikrowelle aufwärmen."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "pasta",
+      "fleisch",
+      "ohne-ei",
+      "ohne-nuesse",
+      "einfrierbar",
+      "familienessen",
+      "ofen"
+    ]
+  },
+  {
+    "id": "hack-kartoffel-topf",
+    "title": "Butterweicher Hackfleisch-Kartoffel-Topf",
+    "ageRecommendation": 8,
+    "prepTime": "10 Minuten + 20 Minuten Köcheln",
+    "categories": [
+      "gemuese"
+    ],
+    "ingredients": [
+      {
+        "name": "Rinderhackfleisch",
+        "amount": "200 g"
+      },
+      {
+        "name": "mehligkochende Kartoffeln, klein gewürfelt",
+        "amount": "400 g"
+      },
+      {
+        "name": "Karotten, klein gewürfelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "Erbsen oder Brokkoliröschen, tiefgekühlt",
+        "amount": "100 g"
+      },
+      {
+        "name": "Wasser oder ungesalzene Gemüsebrühe",
+        "amount": "400 ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      },
+      {
+        "name": "Naturjoghurt oder Frischkäse",
+        "amount": "2 EL"
+      },
+      {
+        "name": "glatte Petersilie, fein gehackt",
+        "amount": "1 EL"
+      }
+    ],
+    "instructions": "1. Brat das Hackfleisch im Öl in einem Topf krümelig an, bis es nicht mehr rosa ist. 2. Gib Kartoffeln, Karotten und Wasser dazu und bring alles zum Kochen. 3. Lass den Topf zugedeckt 15 Minuten köcheln. 4. Gib Erbsen oder Brokkoli dazu und gare alles weitere 5 Minuten, bis das Gemüse butterweich ist. 5. Zerdrück einen Teil der Kartoffeln am Topfrand, damit der Eintopf sämig wird, und rühr Joghurt und Petersilie unter. 6. Babyportion abnehmen und je nach Alter grob zerdrücken. Den Rest für Erwachsene mit Salz, Pfeffer, Kräutern oder etwas Senf abschmecken.",
+    "tips": [
+      "Ein bodenständiger Eintopf, bei dem alle aus einem Topf essen. Kartoffeln und Fleisch ergeben zusammen eine gute Eisenquelle.",
+      "Für ältere Babys kannst du Kartoffel- und Karottenwürfel etwas größer lassen und als Fingerfood anbieten.",
+      "Erbsen für Babys unter einem Jahr leicht zerdrücken.",
+      "Ohne Joghurt eingefroren hält der Eintopf etwa 3 Monate; Joghurt erst beim Aufwärmen einrühren."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "fleisch",
+      "ohne-ei",
+      "glutenfrei",
+      "ohne-nuesse",
+      "einfrierbar",
+      "one-pot",
+      "familienessen"
+    ]
+  },
+  {
+    "id": "gefuellte-paprika-hack-reis",
+    "title": "Gefüllte Spitzpaprika mit Hack und Reis",
+    "ageRecommendation": 10,
+    "prepTime": "20 Minuten + 30 Minuten Backen",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "rote Spitzpaprika (oder 2 kleine Zucchini)",
+        "amount": "4 Stück"
+      },
+      {
+        "name": "Rinderhackfleisch",
+        "amount": "200 g"
+      },
+      {
+        "name": "gekochter Reis (oder Couscous)",
+        "amount": "100 g"
+      },
+      {
+        "name": "kleine Karotte, fein geraspelt",
+        "amount": "1 Stück (etwa 60 g)"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "passierte Tomaten ohne Salzzusatz",
+        "amount": "250 ml"
+      },
+      {
+        "name": "Mozzarella, klein gewürfelt",
+        "amount": "50 g"
+      },
+      {
+        "name": "getrockneter Oregano",
+        "amount": "1 Prise"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 180 °C Umluft vor. 2. Halbier die Paprika längs und entferne Kerne und weiße Trennhäute. 3. Verknete Hackfleisch, Reis, Karotte, Ei und Oregano zu einer gleichmäßigen Füllung. 4. Füll die Paprikahälften damit und setz sie in eine Auflaufform. 5. Gieß die passierten Tomaten rundherum in die Form, streu den Mozzarella über die Füllung und back alles 25 bis 30 Minuten. Die Füllung muss vollständig durchgegart sein. 6. Babyportion abkühlen lassen, die Füllung herauslöffeln und mit etwas Soße zerdrücken. Erwachsene würzen mit Salz und Pfeffer nach.",
+    "tips": [
+      "Die Paprikahaut ist für Babys zäh. Löffle die Füllung heraus und biete das weiche Fruchtfleisch ohne Haut an.",
+      "Mit Zucchini statt Paprika werden die Schiffchen besonders weich und lassen sich mit der Gabel zerteilen.",
+      "Ein guter Weg, Reis vom Vortag zu verwerten. Er sollte gekühlt gelagert und nicht älter als einen Tag sein.",
+      "Für die Kerntemperatur gilt bei Hackfleisch: mindestens 70 °C, innen nicht mehr rosa."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "fleisch",
+      "ohne-nuesse",
+      "reste-verwertung",
+      "familienessen",
+      "ofen"
+    ]
+  },
+  {
+    "id": "rinderhack-gemuese-bolognese",
+    "title": "Schnelle Rinderhack-Gemüse-Bolognese",
+    "ageRecommendation": 8,
+    "prepTime": "25 Minuten",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Rinderhackfleisch",
+        "amount": "250 g"
+      },
+      {
+        "name": "Karotten, fein geraspelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "Zucchini, fein geraspelt",
+        "amount": "150 g"
+      },
+      {
+        "name": "passierte Tomaten ohne Salzzusatz",
+        "amount": "500 ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      },
+      {
+        "name": "getrockneter Oregano",
+        "amount": "½ TL"
+      },
+      {
+        "name": "Nudeln (zum Beispiel Spaghetti oder Fusilli)",
+        "amount": "250 g"
+      }
+    ],
+    "instructions": "1. Koch die Nudeln in ungesalzenem Wasser weich. 2. Brat das Hackfleisch im Öl in einem Topf krümelig, bis es vollständig durchgegart ist. 3. Gib Karotten und Zucchini dazu und dünste sie 2 Minuten mit. 4. Gieß die passierten Tomaten an, rühr den Oregano ein und lass die Soße bei kleiner Hitze 10 bis 15 Minuten sanft köcheln, bis das Gemüse weich ist. 5. Schneid für dein Baby die Nudeln in kurze Stücke und misch sie mit etwas Soße. 6. Für die Erwachsenen am Tisch mit Salz, Pfeffer, Basilikum und Parmesan nachwürzen.",
+    "tips": [
+      "Durch das fein geraspelte Gemüse wird die Soße sämig und das Gemüse ist kaum zu erkennen.",
+      "Japanische Udon-Nudeln sind weich und gut zu greifen, enthalten aber oft Salz. Ein Blick auf die Zutatenliste lohnt sich.",
+      "Die Soße lässt sich gut in größeren Mengen kochen und portionsweise einfrieren.",
+      "Rindfleisch liefert gut verfügbares Eisen. Tomate und Gemüse steuern Vitamin C bei."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "pasta",
+      "fleisch",
+      "ohne-ei",
+      "ohne-milch",
+      "ohne-nuesse",
+      "einfrierbar",
+      "vorkochen",
+      "familienessen"
     ]
   }
 ]

@@ -1452,6 +1452,38 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 
 /* Lange Fenster scrollen statt oben aus dem Bildschirm zu ragen (2.7) */
 .modal-box{max-height:calc(var(--app-h,100vh) - 24px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+/* Abnahme-Runde (2.8) */
+.rf-active-coll ~ .link-btn{display:none}
+.bk-recipe-list{gap:12px!important}
+.bk-recipe-list .rec-card{margin-bottom:0!important}
+.bk-recipe-list .rec-hdr{min-height:104px}
+.rc-tags{flex-wrap:nowrap;overflow:hidden}
+.rc-tag{white-space:nowrap}
+.rc-tag.late{border:1.5px dashed var(--primary-glow);background:var(--card)}
+.rec-chevron{color:var(--color-primary)!important}
+.rf-active-coll{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;min-height:38px;padding:0 4px 0 14px;border-radius:999px;background:var(--color-primary);color:#fff;font-size:13px}
+.rf-active-coll b{font-weight:700}
+.rf-coll-x{width:34px;height:34px;border:none;background:none;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+/* Fußleiste im Filterfenster: deckt den Inhalt darunter vollständig ab */
+.modal-box:has(.rf-sheet-foot){padding-bottom:0}
+.rf-sheet-foot{margin:var(--space-1) calc(-1*var(--space-3)) 0;padding:14px var(--space-3) calc(var(--space-3) + env(safe-area-inset-bottom,0px));background:#fff;box-shadow:0 -10px 16px -6px rgba(255,255,255,1),0 -1px 0 var(--rose-ll)}
+/* Lebensmittel-Fenster: ruhige Typografie (2.8) */
+.prep-sheet-sub{font-size:14px!important}
+.prep-tab{font-size:14px!important}
+.prep-age-item{font-size:14px!important;font-weight:600;line-height:1.35!important;padding:10px 6px!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px}
+.prep-age-item small,.prep-age-item .prep-age-m{font-size:12px!important;font-weight:500}
+.prep-blocks{display:flex!important;flex-direction:column;gap:0!important;background:var(--rose-ll);border-radius:var(--radius-lg);padding:4px 14px}
+.prep-block{background:none!important;border-radius:0!important;padding:12px 0!important;border-top:1px solid rgba(255,255,255,.9)}
+.prep-block:first-child{border-top:none}
+.prep-block.danger{background:var(--destructive-soft)!important;border-radius:var(--radius-md)!important;padding:12px!important;margin:8px -6px}
+.prep-block-lbl{font-size:12px!important;margin-bottom:4px!important}
+.prep-block-txt{font-size:14px!important;font-weight:400!important;line-height:1.55!important}
+.prep-recipe-chip-name{font-size:14px!important}
+/* Lebensmittel-Fenster: Aktionsleiste wie im Rezept (2.8) */
+.prep-acts{position:sticky;bottom:0;display:flex;gap:12px;margin:var(--space-2) calc(-1*var(--space-3)) 0;padding:12px var(--space-3) calc(12px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.97);border-top:1px solid var(--rose-ll)}
+.prep-acts .btn{flex:2;min-height:48px;max-width:none!important}
+.prep-sheet-inner:has(.prep-acts){padding-bottom:0!important}
+.prep-acts .prep-react-btn{flex:1;min-height:48px;color:var(--red);border-color:var(--destructive-soft)}
 </style>
 </head>
 <body>
@@ -4770,7 +4802,7 @@ function prepMarkTried(){
   if(curTab===2){ render({preserveScroll:true}); }
   // Update button in-place
   const btn = document.getElementById('prep-tried-btn');
-  if(btn){btn.innerHTML=icon('check','icon-sm')+' Bereits probiert';btn.disabled=true;}
+  if(btn){btn.textContent='Schon probiert';btn.disabled=true;}
   const badge = document.getElementById('prep-tried-badge');
   if(badge) badge.style.display='';
   // Patch kachel class without full re-render
@@ -4872,12 +4904,12 @@ function renderPrepSheetContent(){
 
   // Action buttons
   const isLocked = (() => { const f2=getFoodById(food.id); return f2&&(isFoodAgeLocked(f2)||isFoodNitrateLocked(f2)); })();
-  h += `<div class="prep-sheet-acts">
-    <button type="button" class="prep-sheet-btn danger" onclick="prepOpenReaction()">Reaktion</button>
-    <button type="button" id="prep-tried-btn" class="prep-sheet-btn primary"
+  h += `<div class="prep-acts">
+    <button type="button" class="btn-ghost prep-react-btn" onclick="prepOpenReaction()">Reaktion</button>
+    <button type="button" id="prep-tried-btn" class="btn"
       onclick="prepMarkTried()"
       ${tried?'disabled':''}
-    >${tried?`${icon('check','icon-sm')} Bereits gekocht`:isLocked?`${icon('lock-open','icon-sm')} Freischalten`:`${icon('check','icon-sm')} Als gekocht markieren`}</button>
+    >${tried?'Schon probiert':isLocked?'Freischalten':'Als probiert markieren'}</button>
   </div>`;
 
   return h;
@@ -4899,7 +4931,7 @@ function renderPrepContentArea(){
     h += `<div class="prep-age-lbl">${tab==='brei'?'Konsistenz':'BLW-Größe'} nach Alter</div>
     <div class="prep-age-bar">
       ${ages.map(a => `<div class="prep-age-item${a.a===curPhase?' on':''}">
-        ${escHtml(a.t)}<br><span style="font-size:8px;opacity:.7">${fmtCount(a.a,'Monat','Monate')}</span>
+        <span>${escHtml(a.t)}</span><span class="prep-age-m">${(()=>{const v=String(a.a);if(/\+$/.test(v))return`ab ${v.replace('+','')} Monaten`;if(/[–-]/.test(v))return`${toBis(v)} Monate`;return fmtCount(Number(v)||v,'Monat','Monate')})()}</span>
       </div>`).join('')}
     </div>`;
   }
@@ -5101,7 +5133,7 @@ function renderBeikost(){
       <div class="bk-hub-hero-main">
         <div>
           <div class="bk-hub-hero-title">${recipeView?`${iconInline('chef-hat')} Rezepte & Ideen`:`${iconInline('leafy-green')} Lebensmittel im Blick`}</div>
-          <div class="bk-hub-hero-copy">${recipeView?`<span data-bk-recipe-summary>${recipeSummary}</span> · ${getBabyName()} ist ${fmtCount(ageM,'Monat','Monate')} alt.`:`${allFoods.length} Lebensmittel${customCount?` · ${customCount} selbst hinzugefügt`:''} · ${getBabyName()} ist ${fmtCount(ageM,'Monat','Monate')} alt.`}</div>
+          <div class="bk-hub-hero-copy">${recipeView?`Ideen passend zu ${babyGen()} Alter`:`${allFoods.length} Lebensmittel${customCount?` · ${customCount} selbst hinzugefügt`:''}`}</div>
         </div>
         ${recipeView?'':`<button type="button" class="bk-search-toggle" onclick="toggleBeikostSearchOpen()" title="Suchen" aria-label="Suchen">${icon('search')}</button>`}
       </div>
@@ -6795,25 +6827,26 @@ function rfSummaryText(n){
   const cnt=fmtCount(n,'Rezept','Rezepte');
   if(!RF.forHanna)return`<b>${cnt}</b> für alle Altersstufen. Für manche ist ${name} noch zu jung.`;
   const p=recipePrefs(),parts=[];
-  parts.push(ageFilterActive()?`bis ${fmtCount(ageM,'Monat','Monate')}`:'alle Altersstufen');
+  parts.push(ageFilterActive()?'passend zum Alter':'alle Altersstufen');
   if(p.diet!=='alles')parts.push(p.diet);
   const free=p.avoid.map(a=>SENTENCE_LABEL[AVOID_TAG[a]]).concat(rfSel('frei-von').map(t=>SENTENCE_LABEL[t]||TAG_LABEL[t]));
   if(free.length)parts.push(joinDe(free,'und'));
   return`<b>${cnt}</b> für ${name}: ${parts.join(', ')}.${ageFilterActive()?'':` Für manche ist ${name} noch zu jung.`}`;
 }
+const FREI_VON_NOUN={'ohne-ei':'Ei','ohne-milch':'Milch','glutenfrei':'Gluten','ohne-nuesse':'Nüssen'};
 function rfChosenParts(){
   const out=[];
   SHEET_GROUPS.forEach(g=>{
     const l=rfSel(g);if(!l.length)return;
     const lab=l.map(t=>SENTENCE_LABEL[t]||TAG_LABEL[t]);
-    out.push({g,txt:g==='frei-von'?joinDe(lab,'und'):joinDe(lab,'oder')});
+    out.push({g,txt:g==='frei-von'?joinDe(lab,'und'):joinDe(lab,'oder'),list:g==='frei-von'?joinDe(l.map(t=>FREI_VON_NOUN[t]||TAG_LABEL[t]),'und'):null});
   });
   if(RF.compatible)out.push({g:'praktisch2',txt:'nur mit Probiertem'});
   return out;
 }
 function rfChosenHtml(){
   const parts=rfChosenParts();if(!parts.length)return'';
-  if(parts.length>=3)return`<div class="rf-chosen"><b>Gewählt:</b><br>${parts.map(p=>`${GROUP_LABEL[p.g]||'Praktisch'}: ${escHtml(p.txt)}`).join('<br>')}</div>`;
+  if(parts.length>=3)return`<div class="rf-chosen"><b>Gewählt:</b><br>${parts.map(p=>`${GROUP_LABEL[p.g]||'Praktisch'}: ${escHtml(p.list||p.txt)}`).join('<br>')}</div>`;
   return`<div class="rf-chosen"><b>Gewählt:</b> ${escHtml(parts.map(p=>p.txt).join(', '))}</div>`;
 }
 function rfChip(g,t,label,count,on,handler){
@@ -6855,7 +6888,7 @@ function renderFilterSheetBody(){
     if(g==='praktisch'){const c=rfFiltered({compatible:true}).length;if(c>0||RF.compatible)chips.push(rfChip('','','Nur mit Probiertem',c,RF.compatible,'rfToggleCompatible()'))}
     if(!chips.length)return;
     sec+=`<div class="rf-sec${first?' first':''}"><div class="rf-sec-t">${GROUP_LABEL[g]}</div><div class="rf-chips">${chips.join('')}</div>
-      ${g==='frei-von'?'<div class="rf-note">Eine Filterhilfe: Bitte prüfe bei Allergien trotzdem immer die Zutaten.</div>':''}</div>`;
+</div>`;
     first=false;
   });
   const n=rfFiltered().length;
@@ -6870,7 +6903,7 @@ function hpBody(withAge){
   const name=getBabyName(),ageM=corrMonths();
   const seg=['alles','vegetarisch','vegan'].map(d=>`<button type="button" class="hp-seg${_hp.diet===d?' on':''}" aria-pressed="${_hp.diet===d}" onclick="hpSetDiet('${d}')">${d==='alles'?'Alles':d==='vegetarisch'?'Vegetarisch':'Vegan'}</button>`).join('');
   return`${withAge?`<p class="info-p" style="margin-top:0">Diese Einstellungen gelten für alle Rezepte, solange „Für ${name}“ an ist.</p>
-    <div class="hp-row"><div style="flex:1"><div class="hp-t">Passend zum Alter</div><div class="hp-d">${_hp.ageOn?`Nur Rezepte bis ${fmtCount(ageM,'Monat','Monate')}`:'Auch Rezepte für ältere Kinder, mit dem Hinweis „noch zu früh“'}</div></div>
+    <div class="hp-row"><div style="flex:1"><div class="hp-t">Passend zum Alter</div><div class="hp-d">${_hp.ageOn?'Nur Rezepte, die schon zum Alter passen':'Auch Rezepte für ältere Kinder, mit dem Hinweis „noch zu früh“'}</div></div>
       <button type="button" class="stats-switch${_hp.ageOn?' on':''}" role="switch" aria-checked="${_hp.ageOn}" aria-label="Passend zum Alter" onclick="hpToggleAge()"><span class="stats-switch-knob"></span></button></div>`:''}
     <div class="hp-t" style="margin-top:var(--space-2)">Ernährung</div><div class="hp-segs" role="group" aria-label="Ernährung">${seg}</div>
     ${_hp.diet==='vegan'?`<div class="al al-amb" style="margin:var(--space-2) 0 0"><div class="at">Vegan im ersten Lebensjahr</div><p>Wird dein Baby dauerhaft vegan ernährt, stimme das bitte eng mit eurer Kinderarztpraxis ab. Es braucht dann unbedingt Vitamin B12 und eine gut geplante Ernährung.</p></div>`:''}
@@ -6907,7 +6940,8 @@ function renderRecipeFilterBar(){
     <div class="rf-chips">${rfChip('','',`Für ${getBabyNameRaw()}`,null,RF.forHanna,'toggleForHanna()')}${quick('essform','brei','Brei')}${quick('essform','fingerfood','Fingerfood')}</div>
     <div class="rf-chips">${quick('mahlzeit','fruehstueck','Frühstück')}${quick('mahlzeit','mittagessen','Mittagessen')}${quick('mahlzeit','abendessen','Abendessen')}${quick('mahlzeit','snack','Snack')}</div>
     <div class="rf-chips"><button type="button" class="rf-more" onclick="openFilterSheet()">${icon('sliders-horizontal','icon-sm')} Mehr Filter${n?`<span class="rf-badge">${n}</span>`:''}</button></div>
-    ${colls.length?`<div class="rf-colls-l">Sammlungen</div><div class="rf-colls">${colls.map((x,i)=>`<button type="button" class="rf-coll rf-coll-${i}" onclick="rfApplyTag('${x.g}','${x.t}')"><span class="rf-coll-t">${escHtml(x.l)}</span><span class="rf-coll-c">${fmtCount(x.c,'Rezept','Rezepte')}</span></button>`).join('')}</div>`:''}
+    ${colls.length&&!rfAnySession()&&!q.trim()?`<div class="rf-colls-l">Sammlungen</div><div class="rf-colls">${colls.map((x,i)=>`<button type="button" class="rf-coll rf-coll-${i}" onclick="rfApplyTag('${x.g}','${x.t}')"><span class="rf-coll-t">${escHtml(x.l)}</span><span class="rf-coll-c">${fmtCount(x.c,'Rezept','Rezepte')}</span></button>`).join('')}</div>`:''}
+    ${(()=>{const a=[['anlass','familienessen','Familienessen'],['praktisch','unterwegs','Für unterwegs'],['praktisch','vorkochen','Zum Vorkochen'],['anlass','fest','Geburtstag & Fest']].find(([g,t])=>rfSel(g).length===1&&rfSel(g)[0]===t&&Object.keys(RF.sel).filter(k=>rfSel(k).length).length===1);return a?`<div class="rf-active-coll">Sammlung <b>${escHtml(a[2])}</b><button type="button" class="rf-coll-x" onclick="rfReset()" aria-label="Sammlung schließen">${icon('x','icon-sm')}</button></div>`:''})()}
     <div class="rf-summary" data-rf-summary>${rfSummaryText(n2)}</div>
     ${rfAnySession()?`<button type="button" class="link-btn" style="padding:0" onclick="rfReset()">Filter zurücksetzen</button>`:''}
   </div>`;
@@ -6915,10 +6949,10 @@ function renderRecipeFilterBar(){
 // ── Rezeptkarte: Merkmale ──
 function recipeCardTags(r){
   const age=Number(r.ageRecommendation)||0,late=age>corrMonths();
-  const out=[`<span class="rc-tag${late?' late':''}">ab ${fmtCount(age,'Monat','Monaten')}${late?` · noch zu früh für ${getBabyName()}`:''}</span>`];
+  const out=[`<span class="rc-tag${late?' late':''}"${late?` title="noch zu früh für ${getBabyName()}"`:''}>ab ${fmtCount(age,'Monat','Monaten')}${late?'<span class="sr-only">, noch zu früh</span>':''}</span>`];
+  // höchstens zwei Merkmale, damit alle Karten gleich hoch bleiben
   if(hasTag(r,'fingerfood'))out.push('<span class="rc-tag">Fingerfood</span>');else if(hasTag(r,'brei'))out.push('<span class="rc-tag">Brei</span>');
-  const pr=['schnell','einfrierbar','unterwegs','vorkochen'].find(t=>hasTag(r,t));
-  if(pr)out.push(`<span class="rc-tag">${pr==='schnell'?'Schnell':TAG_LABEL[pr]}</span>`);
+  else{const pr=['schnell','einfrierbar','unterwegs','vorkochen'].find(t=>hasTag(r,t));if(pr)out.push(`<span class="rc-tag">${pr==='schnell'?'Schnell':TAG_LABEL[pr]}</span>`)}
   return`<div class="rc-tags">${out.join('')}</div>`;
 }
 function recipeTraits(r){
