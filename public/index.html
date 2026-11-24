@@ -1308,6 +1308,150 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 .stats-switch{position:relative}
 .stats-switch-knob{position:absolute;left:3px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform var(--transition-soft)}
 .stats-switch.on .stats-switch-knob{transform:translateX(18px)}
+/* Onboarding-Anleitung (2.6) */
+.ob-steps{list-style:none;margin:var(--space-1) 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.ob-steps li{display:flex;gap:12px;align-items:flex-start}
+.ob-step-n{width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--secondary);color:var(--primary-deep);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.ob-step-t{font-weight:600;font-size:15px;line-height:1.4;color:var(--color-text-heading);padding-top:3px}
+.ob-step-d{font-size:13px;line-height:1.5;color:var(--color-text-body);margin-top:2px}
+.ob-key{display:inline-flex;align-items:center;justify-content:center;vertical-align:-7px;width:28px;height:28px;border-radius:8px;background:#fff;border:1px solid var(--border);color:#1c1c1e}
+.ob-key svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ob-safari{margin-top:10px;padding:10px 8px 8px;border-radius:18px;background:linear-gradient(180deg,#f4f4f6,#ececf0)}
+.ob-safari-bar{display:flex;align-items:center;gap:8px;height:44px;padding:0 12px;border-radius:999px;background:rgba(255,255,255,.95);box-shadow:0 2px 10px rgba(0,0,0,.08);color:#1c1c1e}
+.ob-safari-bar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ob-safari-menu{display:flex;padding:4px;border-radius:10px;outline:2.5px solid var(--color-primary);outline-offset:1px}
+.ob-safari-url{flex:1;text-align:center;font-size:13px}
+.ob-safari-reload{display:flex;color:#8e8e93}
+.ob-note{font-size:12px;line-height:1.5;color:var(--text-l);margin-top:var(--space-2)}
+/* Beikost-Teaser und Start (2.6) */
+.bk-teaser{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:14px 16px;margin-bottom:var(--space-2);border:none;border-radius:var(--r);background:var(--card);box-shadow:var(--shadow);font-family:var(--font-ui);cursor:pointer;color:var(--color-text-heading)}
+.bk-teaser-icon{width:38px;height:38px;flex-shrink:0;border-radius:50%;background:var(--accent);color:var(--warm-foreground);display:flex;align-items:center;justify-content:center}
+.bk-teaser-body{flex:1;display:flex;flex-direction:column;gap:2px}
+.bk-teaser-t{font-weight:600;font-size:15px}
+.bk-teaser-d{font-size:13px;line-height:1.45;color:var(--color-text-body)}
+.bk-teaser-chev{color:var(--color-primary);display:flex}
+.readiness-title{margin:0 0 6px;font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--color-text-heading)}
+.readiness-item{border:none!important;border-top:1px solid var(--rose-ll)!important;border-radius:0!important;background:none!important;padding:12px 0!important}
+.readiness-box{border-radius:50%!important;width:26px!important;height:26px!important}
+.bk-start-p{font-size:14px;line-height:1.6;color:var(--color-text-body);margin:0 0 6px}
+.bk-start-tabs{display:flex;gap:4px;padding:4px;border-radius:16px;background:var(--secondary);margin:var(--space-1) 0 var(--space-2)}
+.bk-start-tab{flex:1;min-height:40px;border:none;border-radius:12px;background:none;font-family:var(--font-ui);font-weight:600;font-size:14px;color:var(--color-text-heading);cursor:pointer}
+.bk-start-tab.on{background:var(--color-primary);color:#fff}
+.bk-step{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--rose-ll)}
+.bk-step-l{flex-shrink:0;width:72px;font-size:12px;font-weight:700;color:var(--primary-deep);padding-top:2px}
+.bk-step-t{font-weight:600;font-size:15px;line-height:1.35;color:var(--color-text-heading)}
+.bk-step-d{font-size:13px;line-height:1.5;color:var(--color-text-body);margin-top:2px}
+.bk-start-recipes{display:flex;flex-direction:column;gap:8px;margin-top:var(--space-2)}
+.bk-start-recipes-l{font-size:12px;font-weight:600;color:var(--text-l)}
+.bk-start-recipe{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:12px 14px;border:none;border-radius:var(--radius-md);background:var(--secondary);font-family:var(--font-ui);font-weight:600;font-size:14px;color:var(--color-text-heading);cursor:pointer}
+.bk-start-recipe span:first-child{flex:1}
+.bk-start-recipe-age{font-size:12px;font-weight:400;color:var(--text-l)}
+/* Schlaf (2.6) */
+.sleep-meta{font-size:12px;color:var(--text-l)}
+.sleep-status{display:flex;align-items:center;gap:12px;padding:14px;border-radius:var(--radius-lg);background:var(--secondary);margin-bottom:var(--space-2)}
+.sleep-status.night{background:linear-gradient(135deg,#3d2f5c,#6b4f9a);color:#fff}
+.sleep-status-icon{display:flex;color:#e9dcff}.sleep-status-icon.sun{color:#c79233}
+.sleep-status-icon svg{width:26px;height:26px}
+.sleep-status-body{flex:1;min-width:0}
+.sleep-status-l{font-size:12px;color:var(--color-text-body)}
+.sleep-status.night .sleep-status-l{color:#e3d6f5}
+.sleep-status-s{font-size:13px;color:var(--color-text-body);margin-top:2px}
+.sleep-clock{font-family:var(--font-display);font-weight:700;font-size:28px;letter-spacing:.5px}
+.sleep-big{font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.25;color:var(--color-text-heading)}
+.sleep-guide-big{font-family:var(--font-display);font-weight:700;font-size:19px;line-height:1.35;color:var(--color-text-heading);margin-top:2px}
+.sleep-noise{display:flex;align-items:center;gap:6px;font-size:12px;color:#e3d6f5;flex-shrink:0}
+.sleep-btns{display:flex;gap:var(--space-1)}
+.sleep-main-btn{flex:1;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px}
+.sleep-noise-btn{width:50px;min-height:50px;flex-shrink:0;border-radius:var(--radius-lg);border:1.5px solid var(--color-primary);background:var(--card);color:var(--primary-deep);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sleep-noise-btn.on{background:var(--color-primary);color:#fff}
+.sleep-next{font-family:var(--font-display);font-weight:700;font-size:24px;color:var(--color-text-heading)}
+.sleep-src{font-size:13px;line-height:1.5;color:var(--text-l)}
+.sleep-empty{font-size:13px;color:var(--text-l);padding:var(--space-1) 0}
+.nap-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--rose-ll)}
+.nap-row-icon{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--secondary);color:var(--primary-deep);display:flex;align-items:center;justify-content:center}
+.nap-row-body{flex:1}.nap-row-t{font-weight:600;font-size:15px;color:var(--color-text-heading)}.nap-row-d{font-size:13px;color:var(--color-text-body)}
+.nap-add{width:100%;min-height:48px;margin-top:var(--space-1);border-radius:var(--radius-md);border:1.5px dashed var(--primary-glow);background:var(--card);color:var(--primary-deep);font-family:var(--font-ui);font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.nap-times{display:flex;gap:var(--space-1)}.nap-times .ob-field{flex:1;min-width:0}
+/* Zahnung (2.6) */
+.teeth-count{font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--color-text-heading);margin-bottom:var(--space-1)}
+.teeth-bar{display:flex;gap:3px;margin-bottom:var(--space-1)}
+.teeth-bar-seg{flex:1;height:6px;border-radius:6px;background:var(--secondary)}
+.teeth-bar-seg.on{background:var(--color-primary)}.teeth-bar-seg.half{background:#f6d9a8}
+.teeth-sub{font-size:13px;line-height:1.5;color:var(--color-text-body)}
+.teeth-arch{display:block;width:100%;max-width:300px;margin:0 auto}
+.teeth-arch-l{font-family:var(--font-ui);font-size:12px;fill:var(--text-l)}
+.teeth-arch .tooth{fill:#fff;stroke:#d9cce4;stroke-width:1.6;cursor:pointer}
+.teeth-arch .tooth.present{fill:var(--color-primary);stroke:var(--color-primary)}
+.teeth-arch .tooth.teething{fill:#f6d9a8;stroke:#d9a35b}
+.teeth-legend2{display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--color-text-body);margin-top:var(--space-1);flex-wrap:wrap}
+.teeth-legend2 span{display:flex;align-items:center;gap:6px}
+.teeth-legend2 .tl{width:12px;height:12px;border-radius:4px;border:1.5px solid #d9cce4;box-sizing:border-box}
+.teeth-legend2 .tl.present{background:var(--color-primary);border-color:var(--color-primary)}
+.teeth-legend2 .tl.teething{background:#f6d9a8;border-color:#d9a35b}
+.teeth-hint{font-size:12px;text-align:center;color:var(--text-l);margin-top:var(--space-1)}
+.teeth-next-l{font-size:12px;font-weight:600;color:var(--primary-deep)}
+.teeth-next-t{font-family:var(--font-display);font-weight:600;font-size:17px;color:var(--color-text-heading);margin:2px 0 4px}
+.teeth-chron{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--rose-ll);font-size:14px;color:var(--color-text-heading)}
+.teeth-chron span:last-child{color:var(--text-l);flex-shrink:0}
+/* Rezeptfilter (2.7) */
+.rf-bar{display:flex;flex-direction:column;gap:10px;margin-top:var(--space-2)}
+.rf-chips{display:flex;flex-wrap:wrap;gap:8px}
+.rf-chip{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 13px;border-radius:999px;border:1.5px solid var(--rose-l);background:var(--card);font-family:var(--font-ui);font-size:13px;font-weight:600;color:var(--color-text-heading);cursor:pointer}
+.rf-chip.on{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+.rf-count{font-weight:500;opacity:.75}
+.rf-more{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 13px;border:none;border-radius:999px;background:var(--secondary);font-family:var(--font-ui);font-size:13px;font-weight:600;color:var(--color-text-heading);cursor:pointer}
+.rf-badge{min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--color-primary);color:#fff;font-size:11px;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box}
+.rf-colls-l{font-size:12px;font-weight:600;color:var(--text-l);margin-top:4px}
+.rf-colls{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.rf-colls::-webkit-scrollbar{display:none}
+.rf-coll{flex-shrink:0;width:150px;text-align:left;padding:14px;border:none;border-radius:18px;font-family:var(--font-ui);cursor:pointer;color:var(--color-text-heading);display:flex;flex-direction:column;gap:4px}
+.rf-coll-0{background:linear-gradient(135deg,#f6e3cf,#fbeee3)}.rf-coll-1{background:linear-gradient(135deg,#efe6f8,#f9e9ef)}.rf-coll-2{background:linear-gradient(135deg,#e6f0e8,#f1f6ef)}.rf-coll-3{background:linear-gradient(135deg,#f9e2ea,#fbeef2)}
+.rf-coll-t{font-weight:700;font-size:14px;line-height:1.3}.rf-coll-c{font-size:12px;color:var(--color-text-body)}
+.rf-summary{font-size:13px;line-height:1.5;color:var(--color-text-body)}.rf-summary b{color:var(--color-text-heading)}
+.rf-sec{padding:14px 0;border-top:1px solid var(--rose-ll)}.rf-sec.first{border-top:none}
+.rf-sec-t{font-weight:700;font-size:15px;margin-bottom:10px;color:var(--color-text-heading)}
+.rf-note{font-size:12px;line-height:1.5;color:var(--text-l);margin-top:8px}
+.rf-chosen{margin-top:var(--space-1);padding:10px 12px;border-radius:12px;background:var(--secondary);font-size:13px;line-height:1.6;color:var(--color-text-body)}
+.rf-chosen b{color:var(--color-text-heading)}
+.rf-sheet-foot{position:sticky;bottom:0;display:flex;gap:10px;padding:14px 0 4px;background:#fff;margin-top:var(--space-1)}
+.rf-sheet-foot .btn{flex:1;min-height:50px;max-width:none!important;width:100%}
+.rf-sheet-foot{box-shadow:0 -8px 12px -8px rgba(74,63,74,.12)}.rf-sheet-foot .btn-ghost{min-height:50px}
+.rf-hanna-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--secondary);font-size:13px;line-height:1.5;color:var(--color-text-body);margin-bottom:var(--space-1)}
+.rf-hanna-row b{color:var(--color-text-heading)}
+.rf-hanna-card{position:relative;padding:14px;border-radius:16px;background:linear-gradient(135deg,#efe6f8 0%,#f9e9ef 100%);margin-bottom:var(--space-1)}
+.rf-hanna-close{position:absolute;right:4px;top:4px;width:40px;height:40px;border:none;background:none;color:var(--text-l);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.rf-hanna-t{font-weight:700;font-size:15px;padding-right:32px;color:var(--color-text-heading)}
+.rf-hanna-d{font-size:13px;line-height:1.5;color:var(--color-text-body);margin-top:2px;padding-right:20px}
+.rf-hanna-btn{margin-top:10px;min-height:40px;padding:0 14px;border:none;border-radius:12px;background:#fff;color:var(--primary-deep);font-family:var(--font-ui);font-weight:600;font-size:14px;cursor:pointer}
+.rf-hanna-link{padding:0;margin-bottom:var(--space-1)}
+.hp-row{display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--rose-ll)}
+.hp-row .stats-switch{margin:0}
+.hp-t{font-weight:700;font-size:15px;color:var(--color-text-heading)}
+.hp-d{font-size:12.5px;line-height:1.5;color:var(--text-l);margin-top:2px}
+.hp-segs{display:flex;gap:4px;padding:4px;border-radius:14px;background:var(--secondary);margin-top:8px}
+.hp-seg{flex:1;min-height:40px;border:none;border-radius:10px;background:none;font-family:var(--font-ui);font-weight:600;font-size:14px;color:var(--color-text-heading);cursor:pointer}
+.hp-seg.on{background:var(--color-primary);color:#fff}
+.rc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rc-tag{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--secondary);color:var(--color-text-body)}
+.rc-tag.late{background:var(--card);border:1.5px dashed var(--primary-glow)}
+.rt-l{font-size:12px;font-weight:600;color:var(--text-l);margin:10px 0 6px}
+.rt-chips{display:flex;flex-wrap:wrap;gap:6px}
+.rt-chip{font-family:var(--font-ui);font-size:13px;padding:5px 11px;border:none;border-radius:999px;background:var(--secondary);color:var(--color-text-heading);cursor:pointer;min-height:32px}
+.rt-hint{font-size:12px;color:var(--text-l);margin-top:10px}
+.rec-card{overflow:clip!important}
+.rec-actions{position:sticky;bottom:0;display:flex;align-items:center;gap:12px;margin:var(--space-2) calc(-1*var(--space-2)) calc(-1*var(--space-2));padding:12px var(--space-2);background:rgba(255,255,255,.97);border-top:1px solid var(--rose-ll)}
+.rec-actions-l{flex:1;font-size:12px;line-height:1.4;color:var(--text-l)}.rec-actions-l b{color:var(--color-text-heading);font-size:13px}
+.rec-actions .btn{flex:2;min-height:48px}
+.profile-sec{font-size:12px;font-weight:700;color:var(--primary-deep);margin:var(--space-2) 0 0}
+.pe-food-sec{padding-top:var(--space-2);border-top:1px solid var(--rose-ll);margin-bottom:var(--space-2)}
+.pe-food-h{font-family:var(--font-display);font-weight:600;font-size:16px;color:var(--color-text-heading);margin-bottom:var(--space-1)}
+.bday-card{background:linear-gradient(135deg,#f6e3cf 0%,#f9e9ef 100%);border-radius:var(--r);padding:var(--space-2);margin-bottom:var(--space-2);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.bday-p{margin:0;font-size:13px;line-height:1.5;color:var(--color-text-body)}
+.bday-item{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;padding:12px 14px;border:none;border-radius:14px;background:rgba(255,255,255,.85);font-family:var(--font-ui);font-weight:600;font-size:14px;color:var(--color-text-heading);cursor:pointer}
+.bday-item svg{color:var(--color-primary)}
+
+/* Lange Fenster scrollen statt oben aus dem Bildschirm zu ragen (2.7) */
+.modal-box{max-height:calc(var(--app-h,100vh) - 24px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 </style>
 </head>
 <body>
@@ -1359,21 +1503,33 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 
     <!-- Step 1: Installieren -->
     <div class="ob-step active" data-step="install">
-      <div class="ob-title" id="ob-install-title">App auf dem Home-Bildschirm</div>
-      <div class="ob-sub" id="ob-install-sub">So öffnest du sie mit einem Tipp, wie jede andere App.</div>
+      <div class="ob-title" id="ob-install-title">App auf den Home-Bildschirm</div>
+      <div class="ob-sub" id="ob-install-sub">So öffnest du sie mit einem Tipp, wie jede andere App. Das dauert nur einen Moment.</div>
       <div class="ob-installed" id="ob-install-done" style="display:none" role="status">
         <div class="ob-installed-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d='M20 6 9 17l-5-5' /></svg></div>
         <div class="ob-installed-title">Perfekt, die App ist installiert!</div>
-        <div class="ob-installed-text">Du findest sie ab jetzt auf deinem Home-Bildschirm. Jetzt brauchen wir nur noch ein paar Angaben zu deinem Baby.</div>
+        <div class="ob-installed-text">Ab jetzt öffnest du sie mit einem Tipp vom Home-Bildschirm. Jetzt brauchen wir nur noch ein paar Angaben zu deinem Baby.</div>
       </div>
-      <div class="ob-hint on" id="ob-install-ios" style="display:none">Tippe unten in Safari auf <b>Teilen</b> und wähle <b>„Zum Home-Bildschirm"</b>.</div>
+      <div id="ob-install-ios" style="display:none">
+        <ol class="ob-steps">
+          <li><span class="ob-step-n">1</span><div><div class="ob-step-t">Tippe links neben der Adresse auf <span class="ob-key"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M4 7h16' /><path d='M4 12h16' /><path d='M4 17h10' /></svg></span></div>
+            <div class="ob-step-d">Das Symbol sitzt in der Adressleiste unten am Bildschirm.</div>
+            <div class="ob-safari" aria-hidden="true"><div class="ob-safari-bar"><span class="ob-safari-menu"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M4 7h16' /><path d='M4 12h16' /><path d='M4 17h10' /></svg></span><span class="ob-safari-url">app.allesbabyapp.de</span><span class="ob-safari-reload"><svg viewBox='0 0 24 24' aria-hidden='true'><path d='M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8' /><path d='M21 3v5h-5' /></svg></span></div></div></div></li>
+          <li><span class="ob-step-n">2</span><div><div class="ob-step-t">Tippe im Menü auf „Teilen“</div></div></li>
+          <li><span class="ob-step-n">3</span><div><div class="ob-step-t">Wähle „Zum Home-Bildschirm“</div><div class="ob-step-d">Scrolle etwas nach unten, falls du den Eintrag nicht gleich siehst.</div></div></li>
+          <li><span class="ob-step-n">4</span><div><div class="ob-step-t">Tippe auf „Hinzufügen“</div><div class="ob-step-d">Danach öffnest du Alles Baby direkt vom Home-Bildschirm.</div></div></li>
+        </ol>
+        <div class="ob-note">Auf älteren iPhones findest du „Teilen“ als Symbol direkt in der Leiste unten.</div>
+      </div>
       <div id="ob-install-android" style="display:none">
-        <button type="button" class="ob-btn" id="ob-android-install-btn" style="display:none" onclick="obTriggerInstall()">Hinzufügen</button>
-        <div class="ob-hint on" id="ob-android-fallback">Öffne das Menü oben rechts und wähle <b>„App installieren"</b>.</div>
+        <button type="button" class="ob-btn" id="ob-android-install-btn" style="display:none" onclick="obTriggerInstall()">App installieren</button>
+        <ol class="ob-steps" id="ob-android-fallback">
+          <li><span class="ob-step-n">1</span><div><div class="ob-step-t">Tippe oben rechts auf <span class="ob-key"><svg viewBox='0 0 24 24' aria-hidden='true'><circle cx='12' cy='5' r='1.6' fill='currentColor' /><circle cx='12' cy='12' r='1.6' fill='currentColor' /><circle cx='12' cy='19' r='1.6' fill='currentColor' /></svg></span></div><div class="ob-step-d">Das Menü deines Browsers.</div></div></li>
+          <li><span class="ob-step-n">2</span><div><div class="ob-step-t">Wähle „App installieren“</div><div class="ob-step-d">Je nach Browser heißt der Eintrag auch „Zum Startbildschirm hinzufügen“.</div></div></li>
+          <li><span class="ob-step-n">3</span><div><div class="ob-step-t">Bestätige mit „Installieren“</div></div></li>
+        </ol>
       </div>
       <div class="ob-hint on" id="ob-install-desktop" style="display:none">Öffne diese Seite auf deinem Handy, um sie dort zum Home-Bildschirm hinzuzufügen.</div>
-      <button type="button" class="ob-restore-link" onclick="startImport()">Sicherung wiederherstellen</button>
-      <div class="ob-hint ob-hint-info" id="ob-hint"><span class="ob-hint-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx='12' cy='12' r='10' /> <path d='M12 16v-4' /> <path d='M12 8h.01' /></svg></span><span id="ob-hint-text"></span></div>
     </div>
 
     <!-- Step 2: Name + Anrede -->
@@ -1505,6 +1661,8 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 // Runtime-Abhängigkeit funktioniert. 'tooth' ist die einzige bewusste
 // Ausnahme: Lucide hat kein Zahn-Icon (§4), eigenes SVG im gleichen Stil.
 const ICON_PATHS={
+  'cake':"<path d='M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8' /> <path d='M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1' /> <path d='M2 21h20' /> <path d='M7 8v3' /> <path d='M12 8v3' /> <path d='M17 8v3' /> <path d='M7 4h.01' /> <path d='M12 4h.01' /> <path d='M17 4h.01' />",
+  'audio-lines':"<path d='M2 10v3' /> <path d='M6 6v11' /> <path d='M10 3v18' /> <path d='M14 8v7' /> <path d='M18 5v13' /> <path d='M22 10v3' />",
   'pencil':"<path d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z' /> <path d='m15 5 4 4' />",
   'trash':"<path d='M3 6h18' /> <path d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6' /> <path d='M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2' />",
   'download':"<path d='M12 15V3' /> <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' /> <path d='m7 10 5 5 5-5' />",
@@ -1871,6 +2029,7 @@ window.addEventListener('beforeinstallprompt',function(e){
   if(btn)btn.style.display='block';
   if(fb)fb.style.display='none';
 });
+window.addEventListener('appinstalled',()=>{const fb=document.getElementById('ob-android-fallback');if(fb)fb.style.display='none'});
 
 function obTriggerInstall(){
   if(!obDeferredInstallPrompt)return;
@@ -1889,20 +2048,11 @@ function obDetectInstallState(){
   else if(isIOS)document.getElementById('ob-install-ios').style.display='block';
   else if(isAndroid)document.getElementById('ob-install-android').style.display='block';
   else document.getElementById('ob-install-desktop').style.display='block';
-  // Home-Screen-Web-Apps haben auf iOS einen eigenen Speicher-Container. Wer die App
-  // vorher im Safari-Browser benutzt hat, landet hier erneut im Onboarding und findet
-  // seine Einträge nicht wieder — dieser Hinweis erklärt, wo sie noch liegen. Gerade in
-  // diesem Fall (standalone + Onboarding nötig) ist er besonders relevant.
   if(standalone){
-    // Erfolgszustand: Titel/Untertitel der Anleitung ausblenden, Erfolgskarte trägt die Botschaft.
+    // Erfolgszustand: nur die Erfolgsmeldung. Wiederherstellen liegt bewusst unter Mehr, Datensicherung (Randfall).
     const t=document.getElementById('ob-install-title'),sub=document.getElementById('ob-install-sub');
     if(t)t.textContent='Willkommen!';
     if(sub)sub.style.display='none';
-    const hint=document.getElementById('ob-hint'),txt=document.getElementById('ob-hint-text');
-    if(hint&&txt&&isIOS){
-      txt.innerHTML='<b>Vorher schon in Safari benutzt?</b> Auf dem iPhone hat die App auf dem Home-Bildschirm einen eigenen Speicher. Deine bisherigen Einträge liegen noch im Safari-Browser, öffne die Seite dort, um sie zu sehen.';
-      hint.classList.add('on');
-    }
   }
 }
 
@@ -2323,11 +2473,11 @@ const IDEA_BY_MS=(()=>{const m={};JOURNEY_PHASES.forEach(p=>p.ideas.forEach(i=>{
 
 
 const SLEEP_G=[
-  {min:0,max:6,naps:'4–6',napDur:'30–90 Minuten',bed:'20–22',total:'16–18 Stunden',wake:50,routine:['Wickeln','Stillen/Flasche','Sanft schaukeln','Schlaflied']},
-  {min:6,max:12,naps:'3–5',napDur:'30–90 Minuten',bed:'20–21',total:'15–17 Stunden',wake:70,routine:['Bad (2×/Wo)','Massage','Stillen/Flasche','Schlaflied']},
-  {min:12,max:20,naps:'3–4',napDur:'45–120 Minuten',bed:'19–20:30',total:'14–16 Stunden',wake:105,routine:['Bad','Massage','Schlafanzug','Schlaflied','Stillen/Flasche','Licht aus']},
-  {min:20,max:30,naps:'3',napDur:'60–120 Minuten',bed:'19–20',total:'14–15 Stunden',wake:130,routine:['Abendessen','Bad','Buch','Stillen/Flasche','Schlaflied','Dunkel']},
-  {min:30,max:52,naps:'2',napDur:'60–120 Minuten',bed:'19–20',total:'13–14 Stunden',wake:150,routine:['Abendessen','Bad','Schlafanzug','Buch','Stillen/Flasche','Schlaflied']},
+  {min:0,max:6,naps:'4–6',napDur:'30–90 Minuten',bed:'20–22',total:'16–18 Stunden',wake:50,routine:['Wickeln','Stillen oder Flasche','Sanft schaukeln','Schlaflied']},
+  {min:6,max:12,naps:'3–5',napDur:'30–90 Minuten',bed:'20–21',total:'15–17 Stunden',wake:70,routine:['Bad, zweimal pro Woche','Massage','Stillen oder Flasche','Schlaflied']},
+  {min:12,max:20,naps:'3–4',napDur:'45–120 Minuten',bed:'19–20:30',total:'14–16 Stunden',wake:105,routine:['Bad','Massage','Schlafanzug','Schlaflied','Stillen oder Flasche','Licht aus']},
+  {min:20,max:30,naps:'3',napDur:'60–120 Minuten',bed:'19–20',total:'14–15 Stunden',wake:130,routine:['Abendessen','Bad','Buch','Stillen oder Flasche','Schlaflied','Dunkel']},
+  {min:30,max:52,naps:'2',napDur:'60–120 Minuten',bed:'19–20',total:'13–14 Stunden',wake:150,routine:['Abendessen','Bad','Schlafanzug','Buch','Stillen oder Flasche','Schlaflied']},
 ];
 
 const SONGS={
@@ -2934,6 +3084,7 @@ function recipesForAge(ageMonths=corrMonths()){
   return getRecipes()
     .filter(r=>(Number(r.ageRecommendation)||0)<=ageMonths)
     .filter(r=>!isRecipeNitrateBlocked(r))
+    .filter(r=>passesPrefs(r))
     .sort((a,b)=>(a.title||'').localeCompare(b.title||'','de'));
 }
 function todayRecipeSuggestion(){
@@ -3096,7 +3247,8 @@ function markRecipeCooked(id, options={}){
 function toggleRecipeExpand(id){
   tapFeedback();
   if(!S.recipeExpanded)S.recipeExpanded={};
-  S.recipeExpanded[id]=!S.recipeExpanded[id];
+  const willOpen=!S.recipeExpanded[id];
+  S.recipeExpanded={};if(willOpen)S.recipeExpanded[id]=true;
   dbSave();
   render({preserveScroll:true});
 }
@@ -3104,7 +3256,7 @@ function getRotatingHomeTip(){
   const age=corrMonths();
   const day=Math.floor(Date.now()/86400000);
   const nutrition=NUTRITION_TIPS.filter(t=>age>=t.minMonths);
-  if(nutrition.length){const t=nutrition[day%nutrition.length];return{kind:'nutrition',title:t.title,text:t.text}}
+  if(nutrition.length&&beikostActive()){const t=nutrition[day%nutrition.length];return{kind:'nutrition',title:t.title,text:t.text}}
   // Vor dem Beikost-Alter: eine Spielidee der Phase (nicht dieselbe wie in der Karte „Eure Phase“)
   const ph=JOURNEY_PHASES[curPhaseIndex()],idea=ph.ideas[(day+1)%ph.ideas.length];
   return{kind:'play',title:idea.title,text:idea.text};
@@ -3138,6 +3290,7 @@ let S={
   feedings:[],
   prepNotes:{},
   beikostSigns:{},beikostReady:false,
+  recipePrefs:null,rfHintClosed:false,
 };
 
 // ════════════════ HELPERS ════════════════════════════════
@@ -3158,54 +3311,6 @@ function getActs(){
   if(w<8) return{play:['Mobile beobachten','Gesichter imitieren','Hautkontakt'],toys:['Schwarzweiß-Mobile','Tragetuch'],ev:['Dein Gesicht nah','Taschenlampe','Rascheln']};
   if(w<16)return{play:['Rasseln','Kitzeln','Tummy Time','Spiegel'],toys:['Rassel','Beißring','Buntes Tuch'],ev:['Holzlöffel als Rassel','Wasserflasche','Texturen']};
   return{play:['Peek-a-Boo','Spielzeug verstecken','Lieder mit Gesten','Bücher'],toys:['Aktivity-Würfel','Stapelbecher','Soft-Bücher'],ev:['Topf & Holzlöffel','Becher stapeln','Knistertuch']};
-}
-function sleepPat(){
-  const n=S.naps.filter(x=>x.end&&x.type==='nap').sort((a,b)=>new Date(a.start)-new Date(b.start));
-  if(n.length<2)return null;
-  const dayKeys=[...new Set(n.map(x=>new Date(x.start).toISOString().slice(0,10)))].slice(-3);
-  const recent=n.filter(x=>dayKeys.includes(new Date(x.start).toISOString().slice(0,10)));
-  const morningWins=[],eveningWins=[],allWins=[];
-  for(let i=1;i<recent.length;i++){
-    const prev=recent[i-1],cur=recent[i];
-    const g=new Date(cur.start)-new Date(prev.end);
-    if(g<=0||g>6*3600000)continue;
-    allWins.push(g);
-    const h=new Date(cur.start).getHours();
-    if(h<14)morningWins.push(g);else eveningWins.push(g);
-  }
-  const avg=v=>v.length?v.reduce((a,b)=>a+b,0)/v.length:null;
-  const avgMorning=avg(morningWins),avgEvening=avg(eveningWins),avgWin=avg(allWins);
-  const nowHour=new Date().getHours();
-  const adaptiveWin=(nowHour<14?avgMorning:avgEvening)||avgWin;
-  const durs=recent.map(x=>new Date(x.end)-new Date(x.start)).filter(d=>d>600000&&d<4*3600000);
-  const avgDur=durs.length?durs.reduce((a,b)=>a+b)/durs.length:null;
-  const last=S.naps.filter(x=>x.end).slice(-1)[0];
-  const awakeMs=!S.activeNap&&last?Date.now()-new Date(last.end):null;
-  return{
-    avgWin,avgDur,awakeMs,
-    avgMorning,avgEvening,
-    window:adaptiveWin||sg().wake*60000,
-    learned:!!adaptiveWin,
-    byPart:!!(avgMorning||avgEvening),
-  };
-}
-function napRec(){const p=sleepPat();if(!p||p.awakeMs===null)return null;return{rem:p.window-p.awakeMs,win:p.window,learned:p.learned}}
-function nextNapTime(){
-  const p=sleepPat();if(!p)return null;
-  const last=S.naps.filter(x=>x.end).slice(-1)[0];
-  if(!last||S.activeNap)return null;
-  return fmtT(new Date(new Date(last.end).getTime()+p.window));
-}
-function wakeSuggestion(){
-  if(S.activeNap)return null;
-  const p=sleepPat();
-  const last=S.naps.filter(x=>x.end).slice(-1)[0];
-  if(!p||!last||p.awakeMs===null)return null;
-  const limit=p.window*1.25;
-  if(p.awakeMs<limit)return null;
-  return{
-    text:`${getBabyName()} schläft meistens um ${fmtT(new Date(new Date(last.end).getTime()+p.window))} Uhr - jetzt Schlaf eintragen?`,
-  };
 }
 
 // ════════════════ HEADER GRADIENT ════════════════════════
@@ -3487,6 +3592,8 @@ function sanitizeState(raw){
     feedings:sanitizeFeedings(src.feedings),
     beikostSigns:Object.fromEntries(Object.entries(asObj(src.beikostSigns)).filter(([k,v])=>v===true)),
     beikostReady:src.beikostReady===true,
+    recipePrefs:(src.recipePrefs&&typeof src.recipePrefs==='object')?{ageOn:src.recipePrefs.ageOn!==false,diet:['vegetarisch','vegan'].includes(src.recipePrefs.diet)?src.recipePrefs.diet:'alles',avoid:asArray(src.recipePrefs.avoid).filter(a=>['ei','milch','gluten','nuesse'].includes(a))}:null,
+    rfHintClosed:src.rfHintClosed===true,
     prepNotes:Object.fromEntries(Object.entries(asObj(src.prepNotes)).filter(([k,v])=>typeof v==='string'&&v.trim()).map(([k,v])=>[String(k),v.slice(0,2000)])),
   };
   return clean;
@@ -3600,6 +3707,13 @@ function openSubPage(sp){
   render();
 }
 
+// Kurze Bestätigung, verschwindet von selbst
+let _toastTimer=null;
+function showToast(text){
+  const root=document.getElementById('toast-root');if(!root)return;
+  root.innerHTML=`<div class="toast-success" role="status"><span class="toast-icon">${icon('check')}</span><span>${escHtml(text)}</span></div>`;
+  clearTimeout(_toastTimer);_toastTimer=setTimeout(()=>{root.innerHTML=''},3800);
+}
 function renderToast(){
   const root=document.getElementById('toast-root');
   if(!root)return;
@@ -3679,7 +3793,7 @@ function renderRecipeCard(r,opts={}){
       <div class="rec-hdr-text">
         <div class="rec-title">${escHtml(r.title)}</div>
         <div class="rec-sub"><span class="recipe-status${cooked?' tried':''}">${prepTimeText}${cooked?` ${icon('check','icon-xs')} probiert`:''}</span></div>
-        ${compact?`<div class="rec-sub" style="margin-top:4px">${escHtml(previewText)}</div>`:''}
+        ${compact?`<div class="rec-sub" style="margin-top:4px">${escHtml(previewText)}</div>`:recipeCardTags(r)}
       </div>
       <span class="rec-chevron">${icon(open?'chevron-down':'chevron-right','icon-sm')}</span>
     </div>
@@ -3689,7 +3803,8 @@ function renderRecipeCard(r,opts={}){
       <div class="recipe-section-label">Zubereitung</div>
       <div class="rec-list">${escHtml(r.instructions||'')}</div>
       ${tips?`<div class="recipe-section-label">Tipps & Varianten</div>${tips}`:''}
-      ${opts.showCookBtn?`<button type="button" class="btn btn-sage" style="margin-top:var(--space-2)" onclick="event.stopPropagation();openRecipeCookedChoice('${r.id}')" ${cooked?'disabled':''}>${cooked?'Bereits gekocht':'Als gekocht markieren'}</button>`:''}
+      ${compact?'':recipeTraits(r)}
+      ${opts.showCookBtn?`<div class="rec-actions"><div class="rec-actions-l">Zuletzt gekocht<br><b>${S.recipesCooked?.[r.id]?fmt(S.recipesCooked[r.id]):'noch nie'}</b></div><button type="button" class="btn" onclick="event.stopPropagation();openRecipeCookedChoice('${r.id}')">Als gekocht markieren</button></div>`:''}
     </div>
   </div>`;
 }
@@ -3793,6 +3908,7 @@ const HOME_CARDS=[
   {key:'spoon',icon:'cooking-pot',label:'Heute auf dem Löffel',sub:'Rezept des Tages'},
   {key:'outfit',icon:'shirt',label:'Outfit des Tages',sub:'Wetter & Kleidung'},
   {key:'leap',icon:'sprout',label:'Eure Phase',sub:'Entwicklung & Idee für heute'},
+  {key:'sleep',icon:'moon',label:'Schlaf',sub:'Timer und Richtwerte'},
   {key:'feeding',icon:'milk',label:'Stillen & Fläschchen',sub:'Mahlzeiten eintragen'},
   {key:'tip',icon:'apple',label:'Gut zu wissen',sub:'Täglich wechselnder Tipp zur Ernährung'},
   {key:'suggestions',icon:'chef-hat',label:'Rezept-Vorschläge',sub:'Passend zum Alter'},
@@ -3859,17 +3975,74 @@ function startBeikost(){
   try{if(!localStorage.getItem(BABY_BEIKOST_KEY))localStorage.setItem(BABY_BEIKOST_KEY,isoDate(startOfToday()))}catch(e){}
   render();
 }
+function renderBeikostTeaser(){
+  return`<button type="button" class="bk-teaser" onclick="goTab(2)">
+    <span class="bk-teaser-icon">${icon('cooking-pot','icon-sm')}</span>
+    <span class="bk-teaser-body"><span class="bk-teaser-t">Bereit für den ersten Brei?</span><span class="bk-teaser-d">Schau in Ruhe, ob ${getBabyName()} die Beikostreifezeichen schon zeigt.</span></span>
+    <span class="bk-teaser-chev">${icon('chevron-right','icon-sm')}</span>
+  </button>`;
+}
 function renderReadinessCard(){
   const signs=S.beikostSigns||{};
-  const done=READINESS_SIGNS.filter(x=>signs[x.k]).length,all=done===READINESS_SIGNS.length;
+  const all=READINESS_SIGNS.every(x=>signs[x.k]);
   return`<div class="card readiness-card">
-    <div class="ct"><div class="ct-left">${iconInline('cooking-pot')} Bereit für den ersten Brei?</div><span class="readiness-count">${done} von ${READINESS_SIGNS.length}</span></div>
-    <p class="readiness-intro">Beikost wird meist frühestens ab Beginn des 5. und spätestens ab Beginn des 7. Monats empfohlen. Diese Zeichen zeigen, dass ${getBabyName()} so weit sein könnte:</p>
+    <h2 class="readiness-title">Bereit für den ersten Brei?</h2>
+    <p class="readiness-intro">Meist geht es zwischen Anfang des 5. und Anfang des 7. Monats los. Diese Zeichen helfen dir einzuschätzen, ob ${getBabyName()} so weit ist. Hake ab, was du schon beobachtest.</p>
     <div class="readiness-list">${READINESS_SIGNS.map(x=>`<button type="button" class="readiness-item${signs[x.k]?' on':''}" aria-pressed="${!!signs[x.k]}" onclick="toggleReadinessSign('${x.k}')">
       <span class="readiness-box">${signs[x.k]?icon('check','icon-sm'):''}</span>
       <span><span class="readiness-t">${escHtml(x.t)}</span><span class="readiness-d">${escHtml(x.d)}</span></span></button>`).join('')}</div>
+    <div class="tip-compact" style="margin:var(--space-2) 0 0"><span class="sr-only">Tipp: </span>Jedes Baby hat sein eigenes Tempo, es gibt keinen Grund zur Eile. Im Zweifel frag deine Hebamme oder deinen Kinderarzt.</div>
     ${all?`<button type="button" class="btn btn-wrap" style="width:100%;margin-top:var(--space-2)" onclick="startBeikost()">Mit der Beikost starten</button>`
-         :`<p class="readiness-note">Kein Grund zur Eile: Jedes Baby kommt in seinem Tempo dahin. Im Zweifel sprich mit eurer Kinderarztpraxis.</p>`}
+         :`<p class="readiness-note">Sind alle Zeichen da, kannst du hier mit der Beikost starten.</p>`}
+  </div>`;
+}
+let _bkStartMode='brei';
+function setBkStartMode(m){tapFeedback();_bkStartMode=m==='blw'?'blw':'brei';render({preserveScroll:true})}
+function bkStep(label,title,text){return`<div class="bk-step"><span class="bk-step-l">${label}</span><div><div class="bk-step-t">${title}</div><div class="bk-step-d">${text}</div></div></div>`}
+function renderBeikostStartCard(){
+  const mode=_bkStartMode;
+  const tab=(k,t)=>`<button type="button" class="bk-start-tab${mode===k?' on':''}" aria-pressed="${mode===k}" onclick="setBkStartMode('${k}')">${t}</button>`;
+  const recipe=(id)=>{const r=getRecipes().find(x=>x.id===id);return r?`<button type="button" class="bk-start-recipe" onclick="prepOpenRecipe('${escHtml(r.id)}')"><span>${escHtml(r.title)}</span><span class="bk-start-recipe-age">ab ${Number(r.ageRecommendation)||5} Monaten</span>${icon('chevron-right','icon-sm')}</button>`:''};
+  const body=mode==='brei'?`
+    <p class="bk-start-p">Los geht es mittags mit einem einzigen Gemüse, zum Beispiel Karotte, Pastinake oder Kürbis.</p>
+    ${bkStep('Woche 1','Ein Gemüse mit Öl','Fein püriert, anfangs ein paar Löffel. Von Anfang an einen Teelöffel Rapsöl oder Beikostöl unterrühren.')}
+    ${bkStep('Woche 2','Kartoffel und Vitamin C dazu','Gekochte Kartoffel untermischen und 2 bis 3 Esslöffel Vitamin-C-reichen Saft oder Obstmus dazugeben, zum Beispiel Apfeldirektsaft.')}
+    ${bkStep('Woche 3','Fleisch oder Fisch dazu','Daraus wird der Gemüse-Kartoffel-Fleisch-Brei, die erste vollständige Breimahlzeit.')}
+    <div class="tip-compact" style="margin:var(--space-2) 0 0"><span class="sr-only">Tipp: </span><b>Warum Vitamin C?</b><br>Es hilft dem Körper, das Eisen aus Gemüse, Kartoffel und Getreide aufzunehmen. Eisen ist ab jetzt besonders wichtig.</div>
+    <div class="bk-start-recipes"><div class="bk-start-recipes-l">Passende Rezepte</div>${recipe('anfaengerbrei')}${recipe('kartoffelbrei-mit-zucchini')}</div>`
+  :`
+    <p class="bk-start-p">Beim Baby-led Weaning isst ${getBabyName()} von Anfang an selbst. Wichtig ist, dass dafür sicheres Sitzen ohne Hilfe klappt.</p>
+    ${bkStep('Form','Weich und fingerlang','Stücke, die sich zwischen Zunge und Gaumen zerdrücken lassen, zum Beispiel gedämpfte Karotte oder reife Avocado.')}
+    ${bkStep('Eisen','Jeden Tag etwas Eisenreiches','Zum Beispiel weich gegartes Fleisch, Hülsenfrüchte oder Hirse, dazu Obst oder Gemüse mit Vitamin C.')}
+    ${bkStep('Sicherheit','Würgen ist normal','Würgen schützt vor dem Verschlucken. Immer aufrecht sitzen lassen und beim Essen nie allein lassen.')}
+    <div class="tip-compact" style="margin:var(--space-2) 0 0"><span class="sr-only">Tipp: </span>Zu jedem Lebensmittel findest du unter „Baby-Led Weaning“ die passende Form und Größe nach Alter.</div>`;
+  return`<div class="card bk-start-card">
+    <h2 class="readiness-title">Der Start in die Beikost</h2>
+    <p class="bk-start-p">Ob mit Brei, mit Fingerfood oder beidem gemischt: Alles ist möglich. Wählt, was zu euch passt.</p>
+    <div class="bk-start-tabs" role="group" aria-label="Art des Einstiegs">${tab('brei','Mit Brei')}${tab('blw','Mit Fingerfood')}</div>
+    ${body}
+  </div>`;
+}
+// Start-Karte: vor dem Start immer, danach noch 4 Wochen lang
+function showBeikostStartCard(){
+  if(!beikostActive())return Math.max(0,corrW())>=17;
+  const bk=parseDateValue(localStorage.getItem(BABY_BEIKOST_KEY));
+  return !!bk&&(startOfToday()-bk)<28*864e5;
+}
+
+function renderBirthdayCard(){
+  const aw=Math.max(0,ageW());
+  if(aw<Math.round(11*4.345)||aw>Math.round(13*4.345))return'';
+  const fest=getRecipes().filter(r=>hasTag(r,'fest')&&passesPrefs(r));
+  if(!fest.length)return'';
+  const prefer=['bananentorte-erster-geburtstag','hafer-bananen-smash-cake','apfelmus-cranberry-muffins-kokos'];
+  const pick=prefer.map(id=>fest.find(r=>r.id===id)).filter(Boolean).concat(fest.filter(r=>!prefer.includes(r.id))).slice(0,3);
+  const past=aw>=52;
+  return`<div class="bday-card">
+    <div class="ct"><div class="ct-left">${iconInline('cake')} ${past?`${getBabyName()} hatte gerade Geburtstag`:`Bald ist ${babyGen()} erster Geburtstag`}</div></div>
+    <p class="bday-p">Ideen ohne Zucker, die auch den Gästen schmecken.</p>
+    ${pick.map(r=>`<button type="button" class="bday-item" onclick="openFestCollection()"><span>${escHtml(r.title)}</span>${icon('chevron-right','icon-sm')}</button>`).join('')}
+    <button type="button" class="link-btn" style="padding:0" onclick="openFestCollection()">Alle ${fmtCount(fest.length,'Fest-Rezept','Fest-Rezepte')} ansehen</button>
   </div>`;
 }
 
@@ -3879,10 +4052,9 @@ function renderHome(){
   const suggestions=getHomeRecipeSuggestions(3);
   const tip=getRotatingHomeTip();
   const spoonPreview=spoon?getRecipeIngredientPreview(spoon,4):'';
-  let h='';
+  let h=renderBirthdayCard();
 
   // 1. Rezept des Tages (erst wenn Beikost begonnen hat), vorher ab 4 Monaten die Reifezeichen
-  if(homeCardVisible('spoon')&&!beikostActive()&&showReadiness())h+=renderReadinessCard();
   if(homeCardVisible('spoon')&&beikostActive())h+=`<div class="spoon-card">
     <div class="ct ct-sage" style="margin-bottom:var(--space-2)"><div class="ct-left">${iconInline('cooking-pot')} Heute auf dem Löffel</div></div>
     ${spoon?`
@@ -3903,6 +4075,12 @@ function renderHome(){
 
   // 3. Eure Phase
   if(homeCardVisible('leap'))h+=renderPhaseHomeCard();
+
+  // 3a. Beikost-Teaser (ab Beginn des 5. Monats, bis die Beikost startet)
+  if(homeCardVisible('spoon')&&!beikostActive()&&showReadiness())h+=renderBeikostTeaser();
+
+  // 3b. Schlaf
+  if(homeCardVisible('sleep'))h+=renderSleepTimerCard(true);
 
   // 4. Stillen & Fläschchen
   if(homeCardVisible('feeding'))h+=renderFeedingCard();
@@ -3928,131 +4106,170 @@ function renderHome(){
 function todayKey(d=new Date()){
   return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 }
-function getSleepLogForDate(key=todayKey()){
-  return(S.sleepDaily||[]).find(d=>d.date===key)||null;
+// ════════════════ SCHLAF (2.6): Timer, Vorhersage, Nachtragen ════════════
+const toBis=v=>String(v||'').replace(/\s*[–-]\s*/g,' bis ');
+function fmtDurMs(ms){
+  const m=Math.max(0,Math.round(ms/60000)),h=Math.floor(m/60),r=m%60;
+  if(h&&r)return`${fmtCount(h,'Stunde','Stunden')} ${fmtCount(r,'Minute','Minuten')}`;
+  if(h)return fmtCount(h,'Stunde','Stunden');
+  return fmtCount(r,'Minute','Minuten');
 }
-function sleepLogStats(days=7){
-  const logs=(S.sleepDaily||[]).slice(-days);
-  if(!logs.length)return null;
-  const avgCount=logs.reduce((a,d)=>a+d.napCount,0)/logs.length;
-  const avgMin=logs.reduce((a,d)=>a+d.totalMin,0)/logs.length;
-  const starts=logs.map(d=>d.typicalStart).filter(Boolean);
-  let avgStart='';
-  if(starts.length){
-    const mins=starts.map(t=>{
-      const [h,m]=t.split(':').map(Number);
-      return(h||0)*60+(m||0);
-    });
-    const avg=Math.round(mins.reduce((a,b)=>a+b,0)/mins.length);
-    avgStart=`${String(Math.floor(avg/60)).padStart(2,'0')}:${String(avg%60).padStart(2,'0')}`;
+function fmtClock(ms){const m=Math.max(0,Math.floor(ms/60000));return`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}`}
+function roughDur(min){return'etwa '+fmtDurMs(Math.round(min/15)*15*60000)}
+function napsToday(){const t=startOfToday();return(S.naps||[]).filter(n=>n.type==='nap'&&n.end&&new Date(n.start)>=t).sort((a,b)=>new Date(a.start)-new Date(b.start))}
+// Vorhersage: Mittelwert (Median) der Wachphasen der letzten 7 Tage. Ausreißer (vergessene Einträge)
+// fallen raus, das Ergebnis bleibt in einer Spanne um den Richtwert fürs Alter. Unter 3 Wachphasen: Richtwert.
+function napPrediction(){
+  const W=(sg().wake||120)*60000;
+  const naps=(S.naps||[]).filter(n=>n.type==='nap'&&n.end).sort((a,b)=>new Date(a.start)-new Date(b.start));
+  const cutoff=Date.now()-7*864e5,gaps=[];
+  for(let i=1;i<naps.length;i++){
+    const a=naps[i-1],b=naps[i];
+    if(new Date(b.start)<cutoff)continue;
+    if(new Date(a.end).toDateString()!==new Date(b.start).toDateString())continue;
+    const g=new Date(b.start)-new Date(a.end);
+    if(g>=0.4*W&&g<=1.75*W)gaps.push(g);
   }
-  return{days:logs.length,avgCount,avgMin,avgStart};
+  let win=W,learned=false;
+  if(gaps.length>=3){
+    gaps.sort((x,y)=>x-y);
+    const mid=gaps.length%2?gaps[(gaps.length-1)/2]:(gaps[gaps.length/2-1]+gaps[gaps.length/2])/2;
+    win=Math.min(1.5*W,Math.max(0.6*W,mid));learned=true;
+  }
+  const last=napsToday().slice(-1)[0];
+  const lastEnd=last?new Date(last.end):null;
+  return{win,learned,lastEnd,at:(!S.activeNap&&lastEnd)?new Date(lastEnd.getTime()+win):null};
 }
-function saveSleepDaily(){
-  tapFeedback();
-  const napCount=parseInt(document.getElementById('sd-count')?.value,10);
-  const totalMin=parseInt(document.getElementById('sd-min')?.value,10);
-  const typicalStart=document.getElementById('sd-start')?.value||'';
-  if(!Number.isFinite(napCount)||napCount<0||!Number.isFinite(totalMin)||totalMin<0){
-    alert('Bitte gültige Werte für Anzahl und Dauer eingeben.');
-    return;
+function startNap(){tapFeedback();if(S.activeNap)return;S.activeNap={start:new Date().toISOString(),type:'nap'};dbSave();render({preserveScroll:true})}
+function endNap(){
+  tapFeedback();const a=S.activeNap;if(!a)return;
+  const end=new Date(),ms=end-new Date(a.start);S.activeNap=null;
+  if(ms>=60000){
+    const h=new Date(a.start).getHours();
+    const night=(h>=18||h<5)&&ms>4*3600000; // lange Abend-/Nachtschläfe zählen nicht als Schläfchen
+    S.naps.push({start:a.start,end:end.toISOString(),type:night?'night':'nap'});
+    S.naps.sort((x,y)=>new Date(x.start)-new Date(y.start));
   }
-  if(!S.sleepDaily)S.sleepDaily=[];
-  const key=todayKey();
-  const entry={date:key,napCount,totalMin,typicalStart};
-  const idx=S.sleepDaily.findIndex(d=>d.date===key);
-  if(idx>=0)S.sleepDaily[idx]=entry;else S.sleepDaily.push(entry);
-  S.sleepDaily.sort((a,b)=>a.date.localeCompare(b.date));
-  if(S.sleepDaily.length>120)S.sleepDaily=S.sleepDaily.slice(-120);
-  dbSave();
-  go(1);
+  dbSave();render({preserveScroll:true});
+}
+function toggleSleepNoise(){toggleWN(2);setTimeout(()=>render({preserveScroll:true}),80)}
+function updateLiveTimes(){
+  document.querySelectorAll('[data-live-since]').forEach(el=>{
+    const ms=Date.now()-Date.parse(el.dataset.liveSince);
+    el.textContent=el.dataset.liveFmt==='clock'?fmtClock(ms):fmtDurMs(ms);
+  });
+}
+setInterval(updateLiveTimes,20000);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')updateLiveTimes()});
+function renderSleepTimerCard(withPred){
+  const g=sg(),today=napsToday(),pred=napPrediction();
+  const meta=today.length?`<span class="sleep-meta">heute ${fmtCount(today.length,'Schläfchen','Schläfchen')}</span>`:'';
+  const head=`<div class="ct"><div class="ct-left">${iconInline('moon')} Schlaf</div>${meta}</div>`;
+  const noiseOn=wn1On||wn2On;
+  if(S.activeNap){
+    const since=S.activeNap.start;
+    return`<div class="card sleep-card">${head}
+      <div class="sleep-status night"><span class="sleep-status-icon">${icon('moon')}</span>
+        <div class="sleep-status-body"><div class="sleep-status-l">${getBabyName()} schläft seit ${fmtT(since)} Uhr</div>
+        <div class="sleep-clock" data-live-since="${escHtml(since)}" data-live-fmt="clock">${fmtClock(Date.now()-Date.parse(since))}</div></div>
+        ${noiseOn?`<span class="sleep-noise">${icon('audio-lines','icon-sm')} Rauschen läuft</span>`:''}</div>
+      <button type="button" class="btn sleep-main-btn" onclick="endNap()">${icon('sun','icon-sm')} Aufgewacht</button>
+    </div>`;
+  }
+  const noiseBtn=`<button type="button" class="sleep-noise-btn${wn2On?' on':''}" onclick="toggleSleepNoise()" aria-label="${wn2On?'Rosa Rauschen stoppen':'Rosa Rauschen abspielen'}" aria-pressed="${wn2On}">${icon('audio-lines')}</button>`;
+  const btns=`<div class="sleep-btns"><button type="button" class="btn sleep-main-btn" onclick="startNap()">${icon('moon','icon-sm')} Schläfchen starten</button>${noiseBtn}</div>`;
+  if(pred.lastEnd){
+    return`<div class="card sleep-card">${head}
+      <div class="sleep-status"><span class="sleep-status-icon sun">${icon('sun')}</span>
+        <div class="sleep-status-body"><div class="sleep-status-l">Wach seit</div>
+        <div class="sleep-big" data-live-since="${escHtml(pred.lastEnd.toISOString())}" data-live-fmt="dur">${fmtDurMs(Date.now()-pred.lastEnd)}</div>
+        ${withPred&&pred.at?`<div class="sleep-status-s">Nächstes Schläfchen etwa ab ${fmtT(pred.at)} Uhr</div>`:''}</div></div>
+      ${btns}</div>`;
+  }
+  const bed=String(g.bed||'').split(/\s*[–-]\s*/);
+  return`<div class="card sleep-card">${head}
+    <div class="sleep-status"><div class="sleep-status-body"><div class="sleep-status-l">In ${babyGen()} Alter üblich</div>
+      <div class="sleep-guide-big">${toBis(g.naps)} Schläfchen, dazwischen ${roughDur(g.wake)} wach</div>
+      <div class="sleep-status-s">Ins Bett meist zwischen ${bed[0]} und ${bed[1]||bed[0]} Uhr</div></div></div>
+    ${btns}</div>`;
 }
 function renderSleep(){
-  const sgg=sg(),wakeHint=wakeSuggestion();
-  const todayLog=getSleepLogForDate();
-  const stats=sleepLogStats(7);
-  let h='';
-
-  h+=`<div class="card"><div class="ct"><div class="ct-left">Empfehlung für ${babyGen()} Alter</div></div>
-    <div class="sleep-rec-grid">
-      <div class="sb"><div class="sl">Schläfchen / Tag</div><div class="sv">${sgg.naps}</div></div>
-      <div class="sb"><div class="sl">Dauer pro Schlaf</div><div class="sv">${sgg.napDur}</div></div>
-      <div class="sb"><div class="sl">Gesamtschlaf</div><div class="sv">${sgg.total}</div></div>
-      <div class="sb"><div class="sl">Abends ins Bett</div><div class="sv">${sgg.bed} Uhr</div></div>
-    </div>
-    <div style="font-size:13px;color:var(--color-text-body);margin-top:var(--space-2);line-height:1.6">Orientierung für ${corrW()} Wochen (korrigiert). Jede Baby ist anders, dein Tagebuch hilft, ${babyGen()} Muster zu erkennen.</div>
+  const g=sg(),pred=napPrediction(),today=napsToday();
+  let h=renderSleepTimerCard(false);
+  if(!S.activeNap){
+    h+=`<div class="card"><div class="ct"><div class="ct-left">Nächstes Schläfchen</div></div>
+      <div class="sleep-next">${pred.at?`etwa ab ${fmtT(pred.at)} Uhr`:`nach ${roughDur(pred.win/60000)} Wachzeit`}</div>
+      <div class="sleep-src">${pred.learned?'Gelernt aus euren Einträgen der letzten Tage.':`Richtwert für ${babyGen()} Alter.`}</div>
+      <div class="tip-compact" style="margin:var(--space-2) 0 0"><span class="sr-only">Tipp: </span><b>Die Uhrzeit ist nur ein Anhaltspunkt.</b> Achte vor allem auf ${babyGen()} Müdigkeitszeichen: Augenreiben, Gähnen, Wegschauen oder Quengeln.</div>
+    </div>`;
+  }
+  const total=today.reduce((a,n)=>a+(new Date(n.end)-new Date(n.start)),0);
+  h+=`<div class="card"><div class="ct"><div class="ct-left">Heute</div>${today.length?`<span class="sleep-meta">${fmtCount(today.length,'Schläfchen','Schläfchen')} · ${fmtDurMs(total)}</span>`:''}</div>
+    ${today.length?today.map(n=>`<div class="nap-row"><span class="nap-row-icon">${icon('moon','icon-sm')}</span>
+      <div class="nap-row-body"><div class="nap-row-t">${fmtT(n.start)} bis ${fmtT(n.end)} Uhr</div><div class="nap-row-d">${fmtDurMs(new Date(n.end)-new Date(n.start))}</div></div>
+      <button type="button" class="icon-btn" onclick="openNapEditor(${escHtml(JSON.stringify(n.start))})" aria-label="Schläfchen von ${fmtT(n.start)} Uhr bearbeiten">${icon('pencil','icon-sm')}</button></div>`).join('')
+      :`<div class="sleep-empty">Heute ist noch kein Schläfchen eingetragen.</div>`}
+    <button type="button" class="nap-add" onclick="openNapEditor('')">${icon('plus','icon-sm')} Schläfchen nachtragen</button>
   </div>`;
-
-  h+=`<div class="card"><div class="ct"><div class="ct-left">Wie lief der Schlaf heute?</div></div>
-    <div class="sleep-log-form">
-      <div>
-        <label for="sd-count">Anzahl Schläfchen</label>
-        <input type="number" id="sd-count" min="0" max="12" value="${todayLog?.napCount??''}" placeholder="3"/>
-      </div>
-      <div>
-        <label for="sd-min">Gesamtdauer (Minuten)</label>
-        <input type="number" id="sd-min" min="0" max="720" value="${todayLog?.totalMin??''}" placeholder="180"/>
-      </div>
-      <div>
-        <label for="sd-start">Typischer Start (1. Schläfchen)</label>
-        <input type="time" id="sd-start" value="${todayLog?.typicalStart||''}"/>
-      </div>
-      <button type="button" class="btn" onclick="saveSleepDaily()">${todayLog?'Aktualisieren':'Heute speichern'}</button>
-      </div>
-    </div>`;
-
-  if(stats&&stats.days>=3){
-    h+=`<div class="card"><div class="ct"><div class="ct-left">${babyGen()} Muster</div><span class="pill p-sage">${stats.days} Tage</span></div>
-      <div class="sleep-eval">
-        <div class="g2">
-          <div class="sb"><div class="sl">Schläfchen im Schnitt</div><div class="sv">${fmtDec(stats.avgCount)}</div></div>
-          <div class="sb"><div class="sl">Tagesdauer im Schnitt</div><div class="sv">${Math.round(stats.avgMin)} Minuten</div></div>
-          ${stats.avgStart?`<div class="sb" style="grid-column:1/-1"><div class="sl">Erstes Schläfchen im Schnitt</div><div class="sv">etwa ${stats.avgStart} Uhr</div></div>`:''}
-      </div>
-        <div style="font-size:13px;color:var(--color-text-body);margin-top:var(--space-2)">Basierend auf den letzten ${stats.days} Einträgen.</div>
-      </div>
-    </div>`;
-  }else{
-    h+=`<div class="card"><div class="ct"><div class="ct-left">Auswertung</div></div>
-      <div style="font-size:13px;color:var(--color-text-body);line-height:1.6">Trage noch ${3-(stats?.days||0)} Tag${3-(stats?.days||0)===1?'':'e'} ein, dann zeigt die App ${babyGen()} persönliche Durchschnittswerte.</div>
+  const cell=(l,v)=>`<div class="sb"><div class="sl">${l}</div><div class="sv">${v}</div></div>`;
+  h+=`<div class="card"><div class="ct"><div class="ct-left">Was für ${babyGen()} Alter üblich ist</div></div>
+    <div class="sleep-rec-grid">${cell('Schläfchen am Tag',toBis(g.naps))}${cell('Wach dazwischen',roughDur(g.wake))}${cell('Schlaf insgesamt',toBis(g.total))}${cell('Ins Bett',toBis(g.bed)+' Uhr')}</div>
+    <div class="sleep-src" style="margin-top:var(--space-2)">Grobe Richtwerte für ${fmtCount(Math.max(0,corrW()),'Woche','Wochen')} (korrigiert). Viele Babys schlafen mehr oder weniger, beides ist normal.</div>
+  </div>`;
+  const legacy=(S.sleepDaily||[]).slice(-5).reverse();
+  if(legacy.length){
+    h+=`<div class="card"><div class="ct"><div class="ct-left">Frühere Tageseinträge</div></div>
+      ${legacy.map(d=>`<div class="nap-row"><div class="nap-row-body"><div class="nap-row-t">${d.date.split('-').reverse().join('.')}</div><div class="nap-row-d">${fmtCount(Number(d.napCount)||0,'Schläfchen','Schläfchen')} · ${fmtCount(Number(d.totalMin)||0,'Minute','Minuten')}</div></div></div>`).join('')}
     </div>`;
   }
-
-  if(wakeHint){
-    h+=`<div class="tip-compact"><span class="sr-only">Tipp: </span><b>Vorschlag für heute</b><br>${wakeHint.text}</div>`;
-  }
-
-  const recent=(S.sleepDaily||[]).slice(-5).reverse();
-  if(recent.length){
-    h+=`<div class="card"><div class="ct"><div class="ct-left">Letzte Tage</div></div>
-      ${recent.map(d=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-2) 0;border-bottom:1px solid var(--rose-ll);font-size:13px">
-        <span style="font-weight:600;color:var(--color-text-heading)">${d.date.split('-').reverse().join('.')}</span>
-        <span style="color:var(--color-text-body)">${d.napCount}× · ${d.totalMin} Minuten${d.typicalStart?` · ab ${d.typicalStart}`:''}</span>
-      </div>`).join('')}
-    </div>`;
-  }
-
   h+=`<div class="card"><div class="ct"><div class="ct-left">Abendroutine</div></div>
     <div style="display:flex;flex-wrap:wrap;gap:var(--space-1)">
-      ${sgg.routine.map((s,i)=>`<div style="background:var(--rose-ll);border-radius:12px;padding:var(--space-1) var(--space-2);font-size:13px;color:var(--color-text-heading)"><b>${i+1}.</b> ${s}</div>`).join('')}
+      ${g.routine.map((x,i)=>`<div style="background:var(--rose-ll);border-radius:12px;padding:var(--space-1) var(--space-2);font-size:13px;color:var(--color-text-heading)"><b>${i+1}.</b> ${escHtml(x)}</div>`).join('')}
     </div>
   </div>`;
-
-  h+=`<div class="card">${renderWhiteNoise()}</div>`;
-
+  h+=`<div class="card"><div class="ct"><div class="ct-left">Beruhigende Geräusche</div></div>${renderWhiteNoise()}</div>`;
   return h;
 }
+function openNapEditor(key){
+  tapFeedback();
+  const n=key?(S.naps||[]).find(x=>x.start===key):null;
+  const d=n?new Date(n.start):new Date(),e=n?new Date(n.end):null;
+  const hm=x=>x?`${String(x.getHours()).padStart(2,'0')}:${String(x.getMinutes()).padStart(2,'0')}`:'';
+  openAppModal(n?'Schläfchen bearbeiten':'Schläfchen nachtragen',`
+    <div class="ob-field"><label for="nap-day">Tag</label><input type="date" id="nap-day" value="${isoDate(d)}" max="${isoDate(new Date())}"/></div>
+    <div class="nap-times"><div class="ob-field"><label for="nap-start">Eingeschlafen</label><input type="time" id="nap-start" value="${n?hm(d):''}"/></div>
+      <div class="ob-field"><label for="nap-end">Aufgewacht</label><input type="time" id="nap-end" value="${hm(e)}"/></div></div>
+    <div class="field-err" id="nap-err" role="alert"></div>
+    <div class="modal-btns">${n?`<button type="button" class="btn-ghost" onclick="deleteNap(${escHtml(JSON.stringify(key))})">Löschen</button>`:`<button type="button" class="btn-ghost" onclick="closeModal()">Abbrechen</button>`}<button type="button" class="btn" onclick="saveNap(${escHtml(JSON.stringify(key||''))})">Speichern</button></div>`);
+}
+function saveNap(key){
+  const day=document.getElementById('nap-day')?.value,st=document.getElementById('nap-start')?.value,en=document.getElementById('nap-end')?.value;
+  const err=document.getElementById('nap-err');const fail=m=>{if(err)err.textContent=m};
+  if(!day||!st||!en)return fail('Bitte Tag, Einschlaf- und Aufwachzeit eingeben.');
+  const start=new Date(`${day}T${st}`),end=new Date(`${day}T${en}`);
+  if(Number.isNaN(start.getTime())||Number.isNaN(end.getTime()))return fail('Die Zeiten konnten nicht gelesen werden.');
+  if(end<=start)return fail('„Aufgewacht“ muss nach „Eingeschlafen“ liegen.');
+  if(end.getTime()>Date.now()+60000)return fail('Das Schläfchen liegt in der Zukunft.');
+  if(end-start>5*3600000)return fail('Ein Schläfchen dauert höchstens 5 Stunden. Den Nachtschlaf brauchst du nicht einzutragen.');
+  const others=(S.naps||[]).filter(n=>n.start!==key&&n.end);
+  if(others.some(n=>new Date(n.start)<end&&new Date(n.end)>start))return fail('Es überschneidet sich mit einem anderen Schläfchen.');
+  S.naps=others.concat((S.naps||[]).filter(n=>!n.end&&n.start!==key));
+  S.naps.push({start:start.toISOString(),end:end.toISOString(),type:'nap'});
+  S.naps.sort((a,b)=>new Date(a.start)-new Date(b.start));
+  dbSave();closeModal();render({preserveScroll:true});
+}
+function deleteNap(key){S.naps=(S.naps||[]).filter(n=>n.start!==key);dbSave();closeModal();render({preserveScroll:true})}
 
 function renderWhiteNoise(){
   return`<div class="wn-card">
-    <div class="wn-info"><div class="wn-title">Staubsauger 1</div><div class="wn-sub">∞ Loop</div></div>
+    <div class="wn-info"><div class="wn-title">Staubsauger</div><div class="wn-sub">Endlos, gleichmäßig</div></div>
     <button type="button" class="wn-btn${wn1On?' playing':''}" id="wn1-btn" onclick="toggleWN(1)" aria-label="Staubsauger-Geräusch abspielen" aria-pressed="${wn1On}">${wn1On?icon('pause','icon-sm'):icon('play','icon-sm')}</button>
   </div>
   <div class="wn-card" style="background:linear-gradient(135deg,#8c6ebd,#8c6ebd)">
-    <div class="wn-info"><div class="wn-title">Rosa Rauschen</div><div class="wn-sub">∞ Loop · tiefer Ton</div></div>
+    <div class="wn-info"><div class="wn-title">Rosa Rauschen</div><div class="wn-sub">Endlos, tiefer Ton</div></div>
     <button type="button" class="wn-btn${wn2On?' playing':''}" id="wn2-btn" onclick="toggleWN(2)" aria-label="Rosa Rauschen abspielen" aria-pressed="${wn2On}">${wn2On?icon('pause','icon-sm'):icon('play','icon-sm')}</button>
   </div>
-  <div style="font-size:11px;color:var(--text-l);margin-bottom:var(--space-2)">Tipp: Audio läuft im Hintergrund weiter. Lautstärke am Gerät anpassen.</div>`;
+  <div style="font-size:11px;color:var(--text-l);margin-bottom:var(--space-2)">Läuft im Hintergrund weiter. Lautstärke am Gerät anpassen.</div>`;
 }
 
 function toggleWN(n){
@@ -4095,7 +4312,7 @@ function stopTone(id){
   try{if(audioCtx[id]){audioCtx[id].src.stop();audioCtx[id].ctx.close();delete audioCtx[id]}}catch(e){}
 }
 
-function closeModal(){const m=document.getElementById('modal');m.classList.remove('open');m.style.zIndex=''}
+function closeModal(){const m=document.getElementById('modal');m.classList.remove('open');m.style.zIndex='';delete m.dataset.sheet}
 
 
 // ════════════════ SPIELIDEEN ═════════════════════════════
@@ -4640,7 +4857,7 @@ function renderPrepSheetContent(){
       const base = resolveBaseFood(ing.name);
       // über getFoodById, damit auch zusammengelegte Doppel-Einträge treffen
       return !!base && (base.id === food.id || getFoodById(base.id)?.id === food.id);
-    }) && (Number(r.ageRecommendation)||0) <= ageM
+    }) && (Number(r.ageRecommendation)||0) <= ageM && passesPrefs(r)
   ).sort((a,b)=>(a.title||'').localeCompare(b.title||'','de')).slice(0,3);
 
   if(matchingRecipes.length){
@@ -4783,15 +5000,6 @@ function recipeMatchesFilter(recipe, filter){
   }
   return true;
 }
-function getFilteredRecipeHubRecipes(){
-  const ageM=corrMonths();
-  const q=(S.beikostRecipeQuery||'').trim();
-  const filter=S.beikostRecipeFilter||'all';
-  return recipesForAge(ageM)
-    .filter(r=>recipeMatchesSearch(r,q))
-    .filter(r=>recipeMatchesFilter(r,filter))
-    .sort((a,b)=>(a.title||'').localeCompare(b.title||'','de'));
-}
 // Nur zählen, was tatsächlich in der Liste steht – sonst zählen Altlasten mit,
 // deren Eintrag inzwischen aufgeräumt wurde.
 function getTriedFoodCount(){
@@ -4826,7 +5034,7 @@ function beikostRecipeSummaryText(count){
   return `${count} Rezept${count===1?'':'e'}${(S.beikostRecipeQuery||'').trim()?' gefunden':' passend'}`;
 }
 function renderBeikostRecipeListInner(recipes){
-  if(!recipes.length)return `<div class="bk-recipe-empty">Keine Rezepte passen zu deiner Suche oder Auswahl. Probiere einen anderen Filter oder einen anderen Suchbegriff.</div>`;
+  if(!recipes.length)return `<div class="bk-recipe-empty">Keine Rezepte passen zu deiner Suche oder Auswahl. Probiere einen anderen Filter oder einen anderen Suchbegriff.${rfAnySession()?` <button type="button" class="link-btn" style="padding:0" onclick="rfReset()">Filter zurücksetzen</button>`:''}</div>`;
   return recipes.map(r=>renderRecipeCard(r,{showCookBtn:true})).join('');
 }
 // Patch only the result list + summary. A full render() would replace the search
@@ -4838,6 +5046,7 @@ function refreshBeikostRecipeResults(){
   list.innerHTML=renderBeikostRecipeListInner(recipes);
   const summary=beikostRecipeSummaryText(recipes.length);
   document.querySelectorAll('[data-bk-recipe-summary]').forEach(el=>{el.textContent=summary;});
+  document.querySelectorAll('[data-rf-summary]').forEach(el=>{el.innerHTML=rfSummaryText(recipes.length);});
   const clearBtn=document.querySelector('.bk-search-clear');
   if(clearBtn)clearBtn.hidden=!(S.beikostRecipeQuery||'').length;
 }
@@ -4884,14 +5093,17 @@ function renderBeikost(){
   const recipeView=S.beikostHubTab==='recipes';
   const recipeResults=getFilteredRecipeHubRecipes();
   const recipeSummary = beikostRecipeSummaryText(recipeResults.length);
-  let h=`<div class="card-grad" style="background:linear-gradient(135deg,var(--sage-ll),#fff2f8)">
+  let pre='';
+  if(!beikostActive()&&Math.max(0,corrW())>=17)pre+=renderReadinessCard();
+  if(showBeikostStartCard())pre+=renderBeikostStartCard();
+  let h=pre+`<div class="card-grad" style="background:linear-gradient(135deg,var(--sage-ll),#fff2f8)">
     <div class="bk-hub-hero">
       <div class="bk-hub-hero-main">
         <div>
           <div class="bk-hub-hero-title">${recipeView?`${iconInline('chef-hat')} Rezepte & Ideen`:`${iconInline('leafy-green')} Lebensmittel im Blick`}</div>
           <div class="bk-hub-hero-copy">${recipeView?`<span data-bk-recipe-summary>${recipeSummary}</span> · ${getBabyName()} ist ${fmtCount(ageM,'Monat','Monate')} alt.`:`${allFoods.length} Lebensmittel${customCount?` · ${customCount} selbst hinzugefügt`:''} · ${getBabyName()} ist ${fmtCount(ageM,'Monat','Monate')} alt.`}</div>
         </div>
-        <button type="button" class="bk-search-toggle" onclick="toggleBeikostSearchOpen()" title="Suchen" aria-label="Suchen">${icon('search')}</button>
+        ${recipeView?'':`<button type="button" class="bk-search-toggle" onclick="toggleBeikostSearchOpen()" title="Suchen" aria-label="Suchen">${icon('search')}</button>`}
       </div>
       <div class="bk-hub-toggle" role="tablist" aria-label="Beikost Ansicht wechseln">
         <button type="button" class="bk-hub-tab ${recipeView?'':'active'}" onclick="setBeikostHubTab('foods')">${iconInline('leafy-green')} Lebensmittel</button>
@@ -4899,22 +5111,13 @@ function renderBeikost(){
       </div>
     </div>
     ${nitrateInfo?`<div class="al al-amb" style="margin-top:var(--space-2);margin-bottom:0"><div class="at">Nitrat-Sperre aktiv</div><p>Beikost-Woche ${nitrateInfo.beikostWeek} von 8, nitrathaltiges Gemüse (zum Beispiel Spinat, Fenchel, Mangold, Rote Bete) ist noch gesperrt.</p></div>`:''}
-    ${recipeView?`<div class="bk-search-shell" ${(!S.beikostRecipeSearchOpen&&!(S.beikostRecipeQuery||'').trim())?'style="display:none"':''}>
-      <div class="bk-search-field">
-        <input id="bk-recipe-search" type="text" class="bk-search-input" value="${escHtml(S.beikostRecipeQuery||'')}" placeholder="Rezept oder Zutat suchen..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" oninput="setBeikostRecipeQuery(this.value)" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}"/>
-        <button type="button" class="bk-search-clear" aria-label="Suche leeren" onclick="clearBeikostRecipeQuery()" ${(S.beikostRecipeQuery||'').length?'':'hidden'}>${icon('x','icon-sm')}</button>
-      </div>
-      <div class="bk-filter-row">
-        ${['all','brei','fingerfood','quick','compatible'].map(filter=>`<button type="button" class="bk-filter-chip ${S.beikostRecipeFilter===filter?'active':''}" data-filter="${filter}" onclick="setBeikostRecipeFilter('${filter}')">${filter==='all'?'Alle':filter==='brei'?'Brei':filter==='fingerfood'?'Fingerfood':filter==='quick'?'Schnell':'Nur verträgliche Zutaten'}</button>`).join('')}
-      </div>
-    </div>`:''}
     <div class="bk-hub-pill-row">
-      ${recipeView?`<span class="pill p-sage" data-bk-recipe-summary>${recipeSummary}</span>`:`<span class="pill p-sage">${triedCount} probiert</span>${reactCount?`<span class="pill p-red">${reactCount} Reaktion${reactCount===1?'':'en'}</span>`:''}`}
+      ${recipeView?'':`<span class="pill p-sage">${triedCount} probiert</span>${reactCount?`<span class="pill p-red">${reactCount} Reaktion${reactCount===1?'':'en'}</span>`:''}`}
     </div>
   </div>`;
 
   if(recipeView){
-    h+=`<div class="bk-recipe-list" id="bk-recipe-list" style="margin-top:var(--space-2)">${renderBeikostRecipeListInner(recipeResults)}</div>`;
+    h+=renderRecipeFilterBar()+`<div class="bk-recipe-list" id="bk-recipe-list" style="margin-top:var(--space-2)">${renderBeikostRecipeListInner(recipeResults)}</div>`;
     return h;
   }
 
@@ -5170,26 +5373,26 @@ function renderDatenschutz(){
 }
 
 const TOOTH_MAP=[
-  {id:'ul-a',x:20,y:35,w:26,h:34,label:'OK links 2. Molar'},
-  {id:'ul-b',x:50,y:30,w:24,h:34,label:'OK links 1. Molar'},
-  {id:'ul-c',x:78,y:26,w:22,h:34,label:'OK links Eckzahn'},
-  {id:'ul-d',x:104,y:24,w:20,h:34,label:'OK links seitl. Schneidezahn'},
-  {id:'ul-e',x:128,y:22,w:20,h:34,label:'OK links mittl. Schneidezahn'},
-  {id:'ur-e',x:212,y:22,w:20,h:34,label:'OK rechts mittl. Schneidezahn'},
-  {id:'ur-d',x:236,y:24,w:20,h:34,label:'OK rechts seitl. Schneidezahn'},
-  {id:'ur-c',x:260,y:26,w:22,h:34,label:'OK rechts Eckzahn'},
-  {id:'ur-b',x:286,y:30,w:24,h:34,label:'OK rechts 1. Molar'},
-  {id:'ur-a',x:314,y:35,w:26,h:34,label:'OK rechts 2. Molar'},
-  {id:'ll-a',x:20,y:152,w:26,h:34,label:'UK links 2. Molar'},
-  {id:'ll-b',x:50,y:156,w:24,h:34,label:'UK links 1. Molar'},
-  {id:'ll-c',x:78,y:160,w:22,h:34,label:'UK links Eckzahn'},
-  {id:'ll-d',x:104,y:164,w:20,h:34,label:'UK links seitl. Schneidezahn'},
-  {id:'ll-e',x:128,y:166,w:20,h:34,label:'UK links mittl. Schneidezahn'},
-  {id:'lr-e',x:212,y:166,w:20,h:34,label:'UK rechts mittl. Schneidezahn'},
-  {id:'lr-d',x:236,y:164,w:20,h:34,label:'UK rechts seitl. Schneidezahn'},
-  {id:'lr-c',x:260,y:160,w:22,h:34,label:'UK rechts Eckzahn'},
-  {id:'lr-b',x:286,y:156,w:24,h:34,label:'UK rechts 1. Molar'},
-  {id:'lr-a',x:314,y:152,w:26,h:34,label:'UK rechts 2. Molar'},
+  {id:'ul-a',label:'Oben links, zweiter Backenzahn'},
+  {id:'ul-b',label:'Oben links, erster Backenzahn'},
+  {id:'ul-c',label:'Oben links, Eckzahn'},
+  {id:'ul-d',label:'Oben links, seitlicher Schneidezahn'},
+  {id:'ul-e',label:'Oben links, mittlerer Schneidezahn'},
+  {id:'ur-a',label:'Oben rechts, zweiter Backenzahn'},
+  {id:'ur-b',label:'Oben rechts, erster Backenzahn'},
+  {id:'ur-c',label:'Oben rechts, Eckzahn'},
+  {id:'ur-d',label:'Oben rechts, seitlicher Schneidezahn'},
+  {id:'ur-e',label:'Oben rechts, mittlerer Schneidezahn'},
+  {id:'ll-a',label:'Unten links, zweiter Backenzahn'},
+  {id:'ll-b',label:'Unten links, erster Backenzahn'},
+  {id:'ll-c',label:'Unten links, Eckzahn'},
+  {id:'ll-d',label:'Unten links, seitlicher Schneidezahn'},
+  {id:'ll-e',label:'Unten links, mittlerer Schneidezahn'},
+  {id:'lr-a',label:'Unten rechts, zweiter Backenzahn'},
+  {id:'lr-b',label:'Unten rechts, erster Backenzahn'},
+  {id:'lr-c',label:'Unten rechts, Eckzahn'},
+  {id:'lr-d',label:'Unten rechts, seitlicher Schneidezahn'},
+  {id:'lr-e',label:'Unten rechts, mittlerer Schneidezahn'}
 ];
 
 function ensureTeethingState(){
@@ -5269,26 +5472,55 @@ function openToothMenu(id,label){
   document.getElementById('modal').classList.add('open');
 }
 
+// Typische Reihenfolge der Milchzähne mit grobem Alter (Monate). Jedes Kind ist anders.
+const TOOTH_GROUPS=[
+  {ids:['ll-e','lr-e'],name:'Die unteren mittleren Schneidezähne',age:'6 bis 10'},
+  {ids:['ul-e','ur-e'],name:'Die oberen mittleren Schneidezähne',age:'8 bis 12'},
+  {ids:['ul-d','ur-d'],name:'Die oberen seitlichen Schneidezähne',age:'9 bis 13'},
+  {ids:['ll-d','lr-d'],name:'Die unteren seitlichen Schneidezähne',age:'10 bis 16'},
+  {ids:['ul-b','ur-b','ll-b','lr-b'],name:'Die ersten Backenzähne',age:'13 bis 19'},
+  {ids:['ul-c','ur-c','ll-c','lr-c'],name:'Die Eckzähne',age:'16 bis 23'},
+  {ids:['ul-a','ur-a','ll-a','lr-a'],name:'Die zweiten Backenzähne',age:'23 bis 33'},
+];
+function toothArchSvg(){
+  const order={u:['ul-a','ul-b','ul-c','ul-d','ul-e','ur-e','ur-d','ur-c','ur-b','ur-a'],l:['ll-a','ll-b','ll-c','ll-d','ll-e','lr-e','lr-d','lr-c','lr-b','lr-a']};
+  const sizes=[[26,23],[23,22],[18,22],[16,23],[17,25]];
+  const label=Object.fromEntries(TOOTH_MAP.map(t=>[t.id,t.label]));
+  let out='';
+  [['u',150,122,104,84],['l',150,150,98,80]].forEach(([k,cx,cy,rx,ry])=>{
+    order[k].forEach((id,i)=>{
+      const a=Math.PI*(i+.5)/10,x=cx-rx*Math.cos(a),y=k==='u'?cy-ry*Math.sin(a):cy+ry*Math.sin(a);
+      const [w,h]=sizes[Math.min(i,9-i)];let ang=a*180/Math.PI-90;if(k==='l')ang=-ang;
+      out+=`<rect class="tooth ${toothClass(id)}" x="${(x-w/2).toFixed(1)}" y="${(y-h/2).toFixed(1)}" width="${w}" height="${h}" rx="5" transform="rotate(${ang.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)})" onclick="openToothMenu('${id}','${escHtml(label[id])}')" aria-label="${escHtml(label[id])}"></rect>`;
+    });
+  });
+  return`<svg class="teeth-arch" viewBox="0 0 300 270" role="group" aria-label="Zahnkarte mit Ober- und Unterkiefer">
+    <text x="150" y="14" text-anchor="middle" class="teeth-arch-l">Oberkiefer</text>${out}<text x="150" y="266" text-anchor="middle" class="teeth-arch-l">Unterkiefer</text></svg>`;
+}
 function renderTeething(){
   ensureTeethingState();
+  const T=S.teething.teeth,label=Object.fromEntries(TOOTH_MAP.map(t=>[t.id,t.label]));
+  const present=Object.entries(T).filter(([,v])=>v.status==='present');
+  const teething=Object.entries(T).filter(([,v])=>v.status==='teething');
+  const last=present.filter(([,v])=>v.date).sort((a,b)=>String(b[1].date).localeCompare(String(a[1].date)))[0];
+  const bar=Array.from({length:20},(_,i)=>`<span class="teeth-bar-seg ${i<present.length?'on':i<present.length+teething.length?'half':''}"></span>`).join('');
+  const next=TOOTH_GROUPS.find(g=>g.ids.some(id=>T[id]?.status!=='present'));
+  const chron=present.slice().sort((a,b)=>String(b[1].date||'').localeCompare(String(a[1].date||'')));
+  let summary=present.length?`Zuletzt: ${escHtml(label[last?.[0]]||'')}${last?.[1].date?` am ${formatToothDate(last[1].date)}`:''}.`:'Noch kein Zahn eingetragen.';
+  if(teething.length)summary+=` ${teething.length===1?'Ein Zahn kommt':`${teething.length} Zähne kommen`} gerade.`;
   return bb()+`
-  <div class="card">
-    <div class="ct"><div class="ct-left">${iconInline('tooth')} Interaktive Zahnungskarte</div></div>
-    <div class="teeth-card">
-      <svg class="teeth-map" viewBox="0 0 360 220" aria-label="Milchgebiss">
-        ${TOOTH_MAP.map(t=>`<rect class="tooth ${toothClass(t.id)}" rx="8" x="${t.x}" y="${t.y}" width="${t.w}" height="${t.h}" onclick="openToothMenu('${t.id}','${t.label}')"></rect>`).join('')}
-      </svg>
-      <div class="teeth-legend">
-        <span><i class="legend-dot" style="background:#fbe0c1"></i>Zahnt gerade</span>
-        <span><i class="legend-dot" style="background:var(--color-accent)"></i>Zahn ist da</span>
-      </div>
-    </div>
-    <div class="teeth-help">
-      <b>Tipps zum Zahnen:</b> Häufige Zeichen sind mehr Sabbern, stärkeres Kauen auf Händen, unruhiger Schlaf und gereiztes Zahnfleisch.<br/>
-      Helfen kann: gekühlter Beißring, sanfte Zahnfleischmassage, viel Nähe und kurze Beruhigungsrituale.<br/><br/>
-      <b>Typischer Zeitplan (Milchzähne):</b> erste Schneidezähne oft ab 6.–10. Monat, seitliche Schneidezähne bis etwa 16. Monat, Eckzähne bis etwa 23. Monat, erste und zweite Molaren meist bis etwa 33. Monat.
-    </div>
-  </div>`;
+  <div class="card"><div class="teeth-count">${present.length} von 20 Zähnen</div><div class="teeth-bar">${bar}</div><div class="teeth-sub">${summary}</div></div>
+  <div class="card"><div class="ct"><div class="ct-left">${iconInline('tooth')} Zahnkarte</div></div>
+    ${toothArchSvg()}
+    <div class="teeth-legend2"><span><i class="tl present"></i>Ist da</span><span><i class="tl teething"></i>Kommt gerade</span><span><i class="tl"></i>Noch nicht</span></div>
+    <div class="teeth-hint">Tippe auf einen Zahn, um ihn einzutragen.</div>
+  </div>
+  ${next?`<div class="card"><div class="teeth-next-l">Als Nächstes kommen meist</div><div class="teeth-next-t">${next.name}</div><div class="teeth-sub">Oft mit etwa ${next.age} Monaten. Die Reihenfolge ist bei jedem Kind etwas anders.</div></div>`:''}
+  ${chron.length?`<div class="card"><div class="ct"><div class="ct-left">Eure Zahn-Chronik</div></div>
+    ${chron.map(([id,v])=>`<div class="teeth-chron"><span>${escHtml(label[id]||id)}</span><span>${v.date?formatToothDate(v.date):''}</span></div>`).join('')}</div>`:''}
+  ${renderTipCard('Wenn es zahnt','Ein gekühlter, nicht gefrorener Beißring, sanfte Zahnfleischmassage mit sauberem Finger und viel Nähe helfen vielen Babys.')}
+  ${renderTipCard('Putzen ab dem ersten Zahn','Zweimal täglich mit einer reiskorngroßen Menge Kinderzahnpasta mit Fluorid. Ab dem 6. Monat gibt es außerdem zahnärztliche Vorsorge für Babys.')}
+  <div class="al al-amb"><div class="at">Keine Bernsteinketten</div><p>Ketten am Hals oder Handgelenk bergen Erstickungs- und Strangulationsgefahr. Hohes Fieber kommt nicht vom Zahnen, dann bitte ärztlich abklären.</p></div>`;
 }
 
 // ════════════════ SUB PAGES ═══════════════════════════════
@@ -5626,12 +5858,18 @@ function renderProfile(){
         <span class="profile-avatar-badge">${icon('camera')}</span>
       </div>
     </div>
+    <div class="profile-sec">Daten</div>
     <dl class="profile-facts">
       <dt>Geburtstag</dt><dd>${long(BIRTH)}</dd>
       <dt>Errechneter Termin</dt><dd>${long(DUE)}</dd>
       ${bkD?`<dt>Beikost-Start</dt><dd>${long(bkD)}</dd>`:''}
       <dt>Tatsächliches Alter</dt><dd>${fmtCount(Math.max(0,ageW()),'Woche','Wochen')}</dd>
       <dt>Korrigiertes Alter</dt><dd>${fmtCount(Math.max(0,corrW()),'Woche','Wochen')}</dd>
+    </dl>
+    <div class="profile-sec">Essen</div>
+    <dl class="profile-facts">
+      <dt>Ernährung</dt><dd>${{alles:'Alles',vegetarisch:'Vegetarisch',vegan:'Vegan'}[recipePrefs().diet]}</dd>
+      <dt>Verträgt nicht</dt><dd>${recipePrefs().avoid.length?recipePrefs().avoid.map(a=>AVOID_LABEL[a]).join(', '):'nichts eingetragen'}</dd>
     </dl>
   </div>
   ${renderMeasureCard('w')}
@@ -5688,6 +5926,7 @@ function openProfileEdit(){
       <div class="ob-field"><label for="pe-due">Errechneter Termin</label><input type="date" id="pe-due" value="${v(BABY_DUE_KEY)}"/><div class="field-err" id="pe-due-err" role="alert"></div></div>
       <div class="ob-field"><label for="pe-beikost">Beikost-Start <span style="font-weight:400;color:var(--text-l)">optional</span></label><input type="date" id="pe-beikost" value="${v(BABY_BEIKOST_KEY)}"/><div class="field-err" id="pe-beikost-err" role="alert"></div></div>
       <div class="ob-field"><label id="pe-pronoun-label">Junge oder Mädchen?</label><div class="ob-chip-row" id="pe-pronoun" role="group" aria-labelledby="pe-pronoun-label">${chip('er','Junge')}${chip('sie','Mädchen')}${chip('neutral','Lieber nicht sagen')}</div></div>
+      <div class="pe-food-sec"><div class="pe-food-h">Essen</div><div id="pe-food">${(()=>{_hpFrom='profile';_hp=JSON.parse(JSON.stringify(recipePrefs()));return hpBody(false)})()}</div></div>
       <div class="pe-info">${icon('info','icon-sm')}<span>Alter, Empfehlungen und Phase werden neu berechnet. Deine Einträge und abgehakten Meilensteine bleiben erhalten.</span></div>
       <div class="ob-err" id="pe-err" role="alert"></div>
       <div class="modal-btns"><button type="button" class="btn-ghost" onclick="closeModal()">Abbrechen</button><button type="button" class="btn" onclick="saveProfileEdit()">Speichern</button></div>
@@ -5723,6 +5962,7 @@ function saveProfileEdit(){
     if(k)localStorage.setItem(BABY_BEIKOST_KEY,k);else localStorage.removeItem(BABY_BEIKOST_KEY);
     const sel=document.querySelector('#pe-pronoun .ob-chip.sel');
     if(sel)localStorage.setItem(BABY_PRONOUN_KEY,sel.dataset.val);
+    if(_hp){S.recipePrefs={...recipePrefs(),diet:_hp.diet,avoid:_hp.avoid};dbSave()}
   }catch(err){warnSaveFailed(err);return}
   applyBabyProfile();updateAgeBadge();
   closeModal();subPage='profile';render();
@@ -6490,17 +6730,205 @@ if(typeof window!=='undefined'){
   Object.assign(window,{
     tapFeedback,goTab,onScroll,loadAvatar,openSubPage,render,closeModal,
     openMehrSubPage,closeMehrSubPage,toggleHomeCard,openFeedingModal,saveFeeding,deleteFeeding,
-    saveSleepDaily,toggleBeikostCat,toggleBeikostTried,saveBeikostReaction,clearBeikostReaction,addCustomFood,
+    toggleBeikostCat,toggleBeikostTried,saveBeikostReaction,clearBeikostReaction,addCustomFood,
     openPrepSheet,closePrepSheet,setPrepTab,savePrepNote,prepMarkTried,prepOpenReaction,prepOpenRecipe,
     openBeikostUnlockPop,closeBeikostUnlockPop,confirmBeikostUnlock,
     openBeikostNitratePop,closeBeikostNitratePop,
     openBeikostTriedPop,closeBeikostTriedPop,confirmBeikostTried,
     markRecipeCooked,toggleRecipeExpand,
-    toggleWN,rankEv,setIdeaFilter,toggleStats,toggleReadinessSign,startBeikost,openProfileEdit,peSelectPronoun,saveProfileEdit,toggleMeasureAll,askDeleteMeasure,deleteMeasure,startImport,onBackupFile,confirmImport,
+    toggleWN,rankEv,rfResetSheet,rfToggle,rfToggleCompatible,toggleForHanna,rfReset,rfApplyTag,openFestCollection,openFilterSheet,closeHannaHint,openHannaPrefs,saveHannaPrefs,hpSetDiet,hpToggleAvoid,hpToggleAge,startNap,endNap,toggleSleepNoise,openNapEditor,saveNap,deleteNap,setIdeaFilter,toggleStats,setBkStartMode,toggleReadinessSign,startBeikost,openProfileEdit,peSelectPronoun,saveProfileEdit,toggleMeasureAll,askDeleteMeasure,deleteMeasure,startImport,onBackupFile,confirmImport,
     setToothStatus,saveToothDate,openToothMenu,toggleMs,setDevTab,selectPhase,openPhaseMilestones,openPhaseView,resetOutfitLocation,
     addNote,delNote,saveWeight,saveHeight,exportData,
     openSupportLink,dismissSaveWarning,
   });
+}
+
+const TAG_CATALOG=[{"id": "fruehstueck", "label": "Frühstück", "group": "mahlzeit"}, {"id": "mittagessen", "label": "Mittagessen", "group": "mahlzeit"}, {"id": "abendessen", "label": "Abendessen", "group": "mahlzeit"}, {"id": "snack", "label": "Snack", "group": "mahlzeit"}, {"id": "brei", "label": "Brei", "group": "essform"}, {"id": "fingerfood", "label": "Fingerfood", "group": "essform"}, {"id": "waffeln", "label": "Waffeln", "group": "gerichtsart"}, {"id": "pancakes", "label": "Pancakes & Pfannkuchen", "group": "gerichtsart"}, {"id": "muffins", "label": "Muffins", "group": "gerichtsart"}, {"id": "kuchen", "label": "Kuchen", "group": "gerichtsart"}, {"id": "brot-broetchen", "label": "Brot & Brötchen", "group": "gerichtsart"}, {"id": "riegel-baellchen", "label": "Riegel & Bällchen", "group": "gerichtsart"}, {"id": "puffer", "label": "Puffer & Taler", "group": "gerichtsart"}, {"id": "pasta", "label": "Pasta", "group": "gerichtsart"}, {"id": "suppe", "label": "Suppe", "group": "gerichtsart"}, {"id": "aufstrich-dip", "label": "Aufstrich & Dip", "group": "gerichtsart"}, {"id": "getraenk", "label": "Getränk", "group": "gerichtsart"}, {"id": "vegetarisch", "label": "Vegetarisch", "group": "ernaehrung"}, {"id": "vegan", "label": "Vegan", "group": "ernaehrung"}, {"id": "fleisch", "label": "Mit Fleisch", "group": "ernaehrung"}, {"id": "fisch", "label": "Mit Fisch", "group": "ernaehrung"}, {"id": "ohne-ei", "label": "Ohne Ei", "group": "frei-von"}, {"id": "ohne-milch", "label": "Ohne Milch", "group": "frei-von"}, {"id": "glutenfrei", "label": "Glutenfrei", "group": "frei-von"}, {"id": "ohne-nuesse", "label": "Ohne Nüsse", "group": "frei-von"}, {"id": "einfrierbar", "label": "Einfrierbar", "group": "praktisch"}, {"id": "unterwegs", "label": "Für unterwegs", "group": "praktisch"}, {"id": "schnell", "label": "Schnell (bis 15 Minuten)", "group": "praktisch"}, {"id": "one-pot", "label": "One-Pot", "group": "praktisch"}, {"id": "reste-verwertung", "label": "Resteverwertung", "group": "praktisch"}, {"id": "vorkochen", "label": "Zum Vorkochen", "group": "praktisch"}, {"id": "familienessen", "label": "Familienessen", "group": "anlass"}, {"id": "fest", "label": "Geburtstag & Fest", "group": "anlass"}, {"id": "ofen", "label": "Ofen", "group": "zubereitung"}, {"id": "pfanne", "label": "Pfanne", "group": "zubereitung"}, {"id": "waffeleisen", "label": "Waffeleisen", "group": "zubereitung"}, {"id": "ohne-kochen", "label": "Ohne Kochen", "group": "zubereitung"}];
+// ════════════════ REZEPTFILTER (2.7) ═══════════════════════
+// „Für Hanna“ = dauerhafte Einstellungen (Alter, Ernährung, Unverträglichkeiten, S.recipePrefs).
+// Alle übrigen Filter gelten nur in dieser Sitzung (RF.sel). Innerhalb einer Gruppe „oder“,
+// zwischen Gruppen „und“. Ausnahme „Frei von“: immer „und“ (Allergien!).
+const TAG_LABEL=Object.fromEntries(TAG_CATALOG.map(t=>[t.id,t.label]));
+const TAG_GROUP=Object.fromEntries(TAG_CATALOG.map(t=>[t.id,t.group]));
+const GROUP_LABEL={mahlzeit:'Mahlzeit',essform:'Essform',gerichtsart:'Gerichtsart',ernaehrung:'Ernährung','frei-von':'Frei von',praktisch:'Praktisch',anlass:'Anlass',zubereitung:'Zubereitung'};
+const SHEET_GROUPS=['frei-von','ernaehrung','gerichtsart','praktisch','anlass','zubereitung'];
+const AVOID_TAG={ei:'ohne-ei',milch:'ohne-milch',gluten:'glutenfrei',nuesse:'ohne-nuesse'};
+const AVOID_LABEL={ei:'Ei',milch:'Milch',gluten:'Gluten',nuesse:'Nüsse'};
+const TAG_SHORT={schnell:'Schnell'};
+const SENTENCE_LABEL={'ohne-ei':'ohne Ei','ohne-milch':'ohne Milch','glutenfrei':'glutenfrei','ohne-nuesse':'ohne Nüsse',vegetarisch:'vegetarisch',vegan:'vegan',fleisch:'mit Fleisch',fisch:'mit Fisch',schnell:'schnell',einfrierbar:'einfrierbar',unterwegs:'für unterwegs','one-pot':'One-Pot','reste-verwertung':'Resteverwertung',vorkochen:'zum Vorkochen'};
+function recipePrefs(){
+  const p=S.recipePrefs||{};
+  return{ageOn:p.ageOn!==false,diet:['vegetarisch','vegan'].includes(p.diet)?p.diet:'alles',avoid:Array.isArray(p.avoid)?p.avoid.filter(a=>AVOID_TAG[a]):[]};
+}
+function hasPrefs(){const p=recipePrefs();return p.diet!=='alles'||p.avoid.length>0||!p.ageOn}
+const hasTag=(r,t)=>Array.isArray(r.tags)&&r.tags.includes(t);
+// Ernährung und Unverträglichkeiten (ohne Alter): gilt auch für Home-Vorschläge und Lebensmittel-Sheet
+function passesPrefs(r){
+  const p=recipePrefs();
+  if(p.diet==='vegetarisch'&&!(hasTag(r,'vegetarisch')||hasTag(r,'vegan')))return false;
+  if(p.diet==='vegan'&&!hasTag(r,'vegan'))return false;
+  return p.avoid.every(a=>hasTag(r,AVOID_TAG[a]));
+}
+let RF={forHanna:true,ageOverride:false,sel:{},compatible:false};
+const rfSel=g=>RF.sel[g]||[];
+function ageFilterActive(){return RF.forHanna&&recipePrefs().ageOn&&!RF.ageOverride}
+function passesHanna(r,ageM){
+  if(!RF.forHanna)return true;
+  if(ageFilterActive()&&(Number(r.ageRecommendation)||0)>ageM)return false;
+  if(isRecipeNitrateBlocked(r))return false;
+  return passesPrefs(r);
+}
+function passesGroup(r,g,list){if(!list.length)return true;return g==='frei-von'?list.every(t=>hasTag(r,t)):list.some(t=>hasTag(r,t))}
+function rfFiltered(opt={}){
+  const ageM=corrMonths(),q=(S.beikostRecipeQuery||'').trim();
+  const compat=opt.compatible!=null?opt.compatible:RF.compatible;
+  return getRecipes().filter(r=>passesHanna(r,ageM)&&recipeMatchesSearch(r,q)&&(!compat||recipeMatchesFilter(r,'compatible'))
+    &&Object.keys(RF.sel).every(g=>g===opt.exceptGroup||passesGroup(r,g,rfSel(g)))&&(!opt.extra||opt.extra(r)));
+}
+function rfCount(g,t){return g==='frei-von'?rfFiltered({extra:r=>hasTag(r,t)}).length:rfFiltered({exceptGroup:g,extra:r=>hasTag(r,t)}).length}
+function rfSheetCount(){return SHEET_GROUPS.reduce((a,g)=>a+rfSel(g).length,0)+(RF.compatible?1:0)}
+function rfAnySession(){return Object.values(RF.sel).some(a=>a.length)||RF.compatible}
+function joinDe(list,word){if(list.length<2)return list.join('');return list.slice(0,-1).join(', ')+` ${word} `+list[list.length-1]}
+function getFilteredRecipeHubRecipes(){return rfFiltered().sort((a,b)=>(a.title||'').localeCompare(b.title||'','de'))}
+function rfSummaryText(n){
+  const name=getBabyName(),ageM=corrMonths();
+  const cnt=fmtCount(n,'Rezept','Rezepte');
+  if(!RF.forHanna)return`<b>${cnt}</b> für alle Altersstufen. Für manche ist ${name} noch zu jung.`;
+  const p=recipePrefs(),parts=[];
+  parts.push(ageFilterActive()?`bis ${fmtCount(ageM,'Monat','Monate')}`:'alle Altersstufen');
+  if(p.diet!=='alles')parts.push(p.diet);
+  const free=p.avoid.map(a=>SENTENCE_LABEL[AVOID_TAG[a]]).concat(rfSel('frei-von').map(t=>SENTENCE_LABEL[t]||TAG_LABEL[t]));
+  if(free.length)parts.push(joinDe(free,'und'));
+  return`<b>${cnt}</b> für ${name}: ${parts.join(', ')}.${ageFilterActive()?'':` Für manche ist ${name} noch zu jung.`}`;
+}
+function rfChosenParts(){
+  const out=[];
+  SHEET_GROUPS.forEach(g=>{
+    const l=rfSel(g);if(!l.length)return;
+    const lab=l.map(t=>SENTENCE_LABEL[t]||TAG_LABEL[t]);
+    out.push({g,txt:g==='frei-von'?joinDe(lab,'und'):joinDe(lab,'oder')});
+  });
+  if(RF.compatible)out.push({g:'praktisch2',txt:'nur mit Probiertem'});
+  return out;
+}
+function rfChosenHtml(){
+  const parts=rfChosenParts();if(!parts.length)return'';
+  if(parts.length>=3)return`<div class="rf-chosen"><b>Gewählt:</b><br>${parts.map(p=>`${GROUP_LABEL[p.g]||'Praktisch'}: ${escHtml(p.txt)}`).join('<br>')}</div>`;
+  return`<div class="rf-chosen"><b>Gewählt:</b> ${escHtml(parts.map(p=>p.txt).join(', '))}</div>`;
+}
+function rfChip(g,t,label,count,on,handler){
+  return`<button type="button" class="rf-chip${on?' on':''}" aria-pressed="${on}" onclick="${handler||`rfToggle('${g}','${t}')`}">${on?icon('check','icon-xs'):''}<span>${escHtml(label)}</span>${count!=null?`<span class="rf-count">${count}</span>`:''}</button>`;
+}
+function rfRefresh(){
+  const m=document.getElementById('modal');
+  if(m&&m.classList.contains('open')&&m.dataset.sheet==='filter'){document.getElementById('modal-body').innerHTML=renderFilterSheetBody();return}
+  render({preserveScroll:true});
+}
+function rfToggle(g,t){tapFeedback();const a=rfSel(g);RF.sel[g]=a.includes(t)?a.filter(x=>x!==t):a.concat(t);rfRefresh()}
+function rfToggleCompatible(){tapFeedback();RF.compatible=!RF.compatible;rfRefresh()}
+function toggleForHanna(){tapFeedback();RF.forHanna=!RF.forHanna;RF.ageOverride=false;render({preserveScroll:true})}
+function rfReset(){tapFeedback();RF.sel={};RF.compatible=false;RF.ageOverride=false;rfRefresh()}
+// Im Filterfenster: nur die Filter aus dem Fenster zurücksetzen, die Schnellfilter oben bleiben
+function rfResetSheet(){tapFeedback();SHEET_GROUPS.forEach(g=>delete RF.sel[g]);RF.compatible=false;rfRefresh()}
+function rfSheetAny(){return rfSheetCount()>0}
+function rfApplyTag(g,t){tapFeedback();RF.sel={};RF.compatible=false;RF.sel[g]=[t];if(S.recipeExpanded)S.recipeExpanded={};S.beikostHubTab='recipes';closeModal();goTab(2);setTimeout(()=>{const c=document.getElementById('cnt');if(c)c.scrollTop=0},30)}
+function openFestCollection(){RF.forHanna=true;RF.ageOverride=true;rfApplyTag('anlass','fest')}
+// ── Mehr Filter ──
+function renderFilterSheetBody(){
+  const p=recipePrefs(),name=getBabyName();
+  let top='';
+  if(hasPrefs()){
+    const parts=[p.ageOn?'passend zum Alter':'alle Altersstufen'];
+    if(p.diet!=='alles')parts.push(p.diet);
+    p.avoid.forEach(a=>parts.push(`ohne ${AVOID_LABEL[a]}`));
+    top=`<div class="rf-hanna-row"><div><b>Immer für ${name}:</b> ${escHtml(parts.join(', '))}</div><button type="button" class="link-btn" onclick="openHannaPrefs('filter')">Ändern</button></div>`;
+  }else if(!S.rfHintClosed){
+    top=`<div class="rf-hanna-card"><button type="button" class="rf-hanna-close" onclick="closeHannaHint()" aria-label="Hinweis schließen">${icon('x','icon-sm')}</button>
+      <div class="rf-hanna-t">Immer für ${name}</div><div class="rf-hanna-d">Allergien oder vegetarisch? Einmal festlegen, dann gilt es für alle Rezepte.</div>
+      <button type="button" class="rf-hanna-btn" onclick="openHannaPrefs('filter')">Einrichten</button></div>`;
+  }else top=`<button type="button" class="link-btn rf-hanna-link" onclick="openHannaPrefs('filter')">Immer für ${name} einrichten</button>`;
+  let sec='',first=true;
+  SHEET_GROUPS.forEach(g=>{
+    let chips=TAG_CATALOG.filter(t=>t.group===g).filter(t=>!(g==='frei-von'&&p.avoid.some(a=>AVOID_TAG[a]===t.id)))
+      .map(t=>({t,c:rfCount(g,t.id),on:rfSel(g).includes(t.id)})).filter(x=>x.c>0||x.on)
+      .map(x=>rfChip(g,x.t.id,TAG_SHORT[x.t.id]||x.t.label,x.c,x.on));
+    if(g==='praktisch'){const c=rfFiltered({compatible:true}).length;if(c>0||RF.compatible)chips.push(rfChip('','','Nur mit Probiertem',c,RF.compatible,'rfToggleCompatible()'))}
+    if(!chips.length)return;
+    sec+=`<div class="rf-sec${first?' first':''}"><div class="rf-sec-t">${GROUP_LABEL[g]}</div><div class="rf-chips">${chips.join('')}</div>
+      ${g==='frei-von'?'<div class="rf-note">Eine Filterhilfe: Bitte prüfe bei Allergien trotzdem immer die Zutaten.</div>':''}</div>`;
+    first=false;
+  });
+  const n=rfFiltered().length;
+  return`${top}${sec}${rfChosenHtml()}
+    <div class="rf-sheet-foot">${rfSheetAny()?'<button type="button" class="btn-ghost" onclick="rfResetSheet()">Zurücksetzen</button>':''}<button type="button" class="btn" onclick="closeModal();render({preserveScroll:true})">${fmtCount(n,'Rezept','Rezepte')} anzeigen</button></div>`;
+}
+function openFilterSheet(){tapFeedback();openAppModal('Mehr Filter',renderFilterSheetBody());document.getElementById('modal').dataset.sheet='filter'}
+function closeHannaHint(){tapFeedback();S.rfHintClosed=true;dbSave();rfRefresh()}
+// ── Immer für Hanna ──
+let _hp=null,_hpFrom='';
+function hpBody(withAge){
+  const name=getBabyName(),ageM=corrMonths();
+  const seg=['alles','vegetarisch','vegan'].map(d=>`<button type="button" class="hp-seg${_hp.diet===d?' on':''}" aria-pressed="${_hp.diet===d}" onclick="hpSetDiet('${d}')">${d==='alles'?'Alles':d==='vegetarisch'?'Vegetarisch':'Vegan'}</button>`).join('');
+  return`${withAge?`<p class="info-p" style="margin-top:0">Diese Einstellungen gelten für alle Rezepte, solange „Für ${name}“ an ist.</p>
+    <div class="hp-row"><div style="flex:1"><div class="hp-t">Passend zum Alter</div><div class="hp-d">${_hp.ageOn?`Nur Rezepte bis ${fmtCount(ageM,'Monat','Monate')}`:'Auch Rezepte für ältere Kinder, mit dem Hinweis „noch zu früh“'}</div></div>
+      <button type="button" class="stats-switch${_hp.ageOn?' on':''}" role="switch" aria-checked="${_hp.ageOn}" aria-label="Passend zum Alter" onclick="hpToggleAge()"><span class="stats-switch-knob"></span></button></div>`:''}
+    <div class="hp-t" style="margin-top:var(--space-2)">Ernährung</div><div class="hp-segs" role="group" aria-label="Ernährung">${seg}</div>
+    ${_hp.diet==='vegan'?`<div class="al al-amb" style="margin:var(--space-2) 0 0"><div class="at">Vegan im ersten Lebensjahr</div><p>Wird dein Baby dauerhaft vegan ernährt, stimme das bitte eng mit eurer Kinderarztpraxis ab. Es braucht dann unbedingt Vitamin B12 und eine gut geplante Ernährung.</p></div>`:''}
+    <div class="hp-t" style="margin-top:var(--space-2)">Verträgt nicht</div><div class="hp-d" style="margin-bottom:8px">Rezepte mit diesen Zutaten werden ausgeblendet.</div>
+    <div class="rf-chips">${Object.keys(AVOID_TAG).map(a=>rfChip('',a,AVOID_LABEL[a],null,_hp.avoid.includes(a),`hpToggleAvoid('${a}')`)).join('')}</div>
+    <div class="rf-note">Eine Filterhilfe: Bitte prüfe bei Allergien trotzdem immer die Zutaten.</div>`;
+}
+function hpRefresh(){const el=document.getElementById(_hpFrom==='profile'?'pe-food':'hp-body');if(el)el.innerHTML=hpBody(_hpFrom!=='profile')}
+function hpSetDiet(d){tapFeedback();_hp.diet=d;hpRefresh()}
+function hpToggleAvoid(a){tapFeedback();_hp.avoid=_hp.avoid.includes(a)?_hp.avoid.filter(x=>x!==a):_hp.avoid.concat(a);hpRefresh()}
+function hpToggleAge(){tapFeedback();_hp.ageOn=!_hp.ageOn;hpRefresh()}
+function openHannaPrefs(from){
+  tapFeedback();_hpFrom=from||'';_hp=JSON.parse(JSON.stringify(recipePrefs()));
+  openAppModal(`Immer für ${getBabyNameRaw()}`,`<div id="hp-body">${hpBody(true)}</div>
+    <div class="modal-btns"><button type="button" class="btn-ghost" onclick="${_hpFrom==='filter'?'openFilterSheet()':'closeModal()'}">Abbrechen</button><button type="button" class="btn" onclick="saveHannaPrefs()">Speichern</button></div>`);
+  document.getElementById('modal').dataset.sheet='prefs';
+}
+function saveHannaPrefs(){
+  S.recipePrefs={ageOn:_hp.ageOn,diet:_hp.diet,avoid:_hp.avoid};dbSave();
+  if(_hpFrom==='filter'){openFilterSheet();render({preserveScroll:true});return}
+  closeModal();render({preserveScroll:true});
+}
+// ── Rezept-Tab: Kopfbereich ──
+function renderRecipeFilterBar(){
+  const name=getBabyName(),q=S.beikostRecipeQuery||'';
+  const quick=(g,t,l)=>rfChip(g,t,l,null,rfSel(g).includes(t));
+  const n=rfSheetCount();
+  const colls=[['anlass','familienessen','Familienessen'],['praktisch','unterwegs','Für unterwegs'],['praktisch','vorkochen','Zum Vorkochen'],['anlass','fest','Geburtstag & Fest']]
+    .map(([g,t,l])=>({g,t,l,c:getRecipes().filter(r=>passesHanna(r,corrMonths())&&hasTag(r,t)).length})).filter(x=>x.c>0);
+  const n2=getFilteredRecipeHubRecipes().length;
+  return`<div class="rf-bar">
+    <div class="bk-search-field"><input id="bk-recipe-search" type="text" class="bk-search-input" value="${escHtml(q)}" placeholder="Rezept oder Zutat suchen" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" oninput="setBeikostRecipeQuery(this.value)"/>
+      <button type="button" class="bk-search-clear" aria-label="Suche leeren" onclick="clearBeikostRecipeQuery()" ${q.length?'':'hidden'}>${icon('x','icon-sm')}</button></div>
+    <div class="rf-chips">${rfChip('','',`Für ${getBabyNameRaw()}`,null,RF.forHanna,'toggleForHanna()')}${quick('essform','brei','Brei')}${quick('essform','fingerfood','Fingerfood')}</div>
+    <div class="rf-chips">${quick('mahlzeit','fruehstueck','Frühstück')}${quick('mahlzeit','mittagessen','Mittagessen')}${quick('mahlzeit','abendessen','Abendessen')}${quick('mahlzeit','snack','Snack')}</div>
+    <div class="rf-chips"><button type="button" class="rf-more" onclick="openFilterSheet()">${icon('sliders-horizontal','icon-sm')} Mehr Filter${n?`<span class="rf-badge">${n}</span>`:''}</button></div>
+    ${colls.length?`<div class="rf-colls-l">Sammlungen</div><div class="rf-colls">${colls.map((x,i)=>`<button type="button" class="rf-coll rf-coll-${i}" onclick="rfApplyTag('${x.g}','${x.t}')"><span class="rf-coll-t">${escHtml(x.l)}</span><span class="rf-coll-c">${fmtCount(x.c,'Rezept','Rezepte')}</span></button>`).join('')}</div>`:''}
+    <div class="rf-summary" data-rf-summary>${rfSummaryText(n2)}</div>
+    ${rfAnySession()?`<button type="button" class="link-btn" style="padding:0" onclick="rfReset()">Filter zurücksetzen</button>`:''}
+  </div>`;
+}
+// ── Rezeptkarte: Merkmale ──
+function recipeCardTags(r){
+  const age=Number(r.ageRecommendation)||0,late=age>corrMonths();
+  const out=[`<span class="rc-tag${late?' late':''}">ab ${fmtCount(age,'Monat','Monaten')}${late?` · noch zu früh für ${getBabyName()}`:''}</span>`];
+  if(hasTag(r,'fingerfood'))out.push('<span class="rc-tag">Fingerfood</span>');else if(hasTag(r,'brei'))out.push('<span class="rc-tag">Brei</span>');
+  const pr=['schnell','einfrierbar','unterwegs','vorkochen'].find(t=>hasTag(r,t));
+  if(pr)out.push(`<span class="rc-tag">${pr==='schnell'?'Schnell':TAG_LABEL[pr]}</span>`);
+  return`<div class="rc-tags">${out.join('')}</div>`;
+}
+function recipeTraits(r){
+  const groups=[['Ernährung und frei von',['ernaehrung','frei-von']],['Praktisch',['praktisch','zubereitung']],['Passt zu',['mahlzeit','essform','gerichtsart','anlass']]];
+  const html=groups.map(([label,gs])=>{
+    const tags=(r.tags||[]).filter(t=>gs.includes(TAG_GROUP[t]));
+    if(!tags.length)return'';
+    return`<div class="rt-l">${label}</div><div class="rt-chips">${tags.map(t=>`<button type="button" class="rt-chip" onclick="event.stopPropagation();rfApplyTag('${TAG_GROUP[t]}','${t}')">${escHtml(TAG_SHORT[t]||TAG_LABEL[t])}</button>`).join('')}</div>`;
+  }).join('');
+  return html?`<div class="recipe-section-label">Merkmale</div>${html}<div class="rt-hint">Tippe auf ein Merkmal, um ähnliche Rezepte zu sehen.</div>`:'';
 }
 
 // ════════════════ DATENSICHERUNG ═══════════════════════
@@ -6616,7 +7044,7 @@ function onBackupFile(input){
 function openAppModal(title,html){
   document.getElementById('modal-title-text').textContent=title;
   document.getElementById('modal-body').innerHTML=html;
-  const m=document.getElementById('modal');
+  const m=document.getElementById('modal');delete m.dataset.sheet;
   // Über dem Onboarding anzeigen (z-index 2000)
   m.style.zIndex=needsOnboarding()?'2100':'';
   m.classList.add('open');
@@ -6645,6 +7073,7 @@ function confirmImport(){
     return;
   }
   _pendingImport=null;
+  try{sessionStorage.setItem('h_restored','1')}catch(e){}
   window.location.reload();
 }
 function renderBackup(){
@@ -6655,7 +7084,7 @@ function renderBackup(){
        <p class="info-meta" style="margin-top:var(--space-1)">${last?`Letzte Sicherung: ${fmt(last)}`:'Noch keine Sicherung erstellt.'}</p>
        <button type="button" class="btn" style="margin-top:var(--space-2);width:100%" onclick="exportData()">Sicherung erstellen</button>`)
     +infoCard(`${iconInline('upload')} Wiederherstellen`,
-      `<p class="info-p">Spielt eine Sicherung ein, zum Beispiel auf einem neuen Handy. Die aktuellen Daten auf diesem Gerät werden dabei ersetzt.</p>
+      `<p class="info-p"><b>Neues Handy oder von Safari zur installierten App gewechselt?</b> Hier holst du deine Einträge zurück. Die aktuellen Daten auf diesem Gerät werden dabei ersetzt.</p>
        <button type="button" class="btn-ghost" style="margin-top:var(--space-2);width:100%" onclick="startImport()">Sicherung auswählen</button>`);
 }
 
@@ -6726,6 +7155,7 @@ document.addEventListener('keydown',e=>{
 // ════════════════ INIT ════════════════════════════════════
 window.addEventListener('load',async()=>{
   try{initStats()}catch(e){}
+  setTimeout(()=>{try{if(sessionStorage.getItem('h_restored')){sessionStorage.removeItem('h_restored');showToast('Willkommen zurück, deine Einträge sind wieder da.')}}catch(e){}},900);
   try{
     applyBabyProfile();
     registerServiceWorker();

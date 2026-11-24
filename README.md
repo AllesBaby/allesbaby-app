@@ -30,7 +30,7 @@ Gezählt wird pro Tag: Starts (als App oder im Browser), Nutzung am Stück in vi
 ## Änderungen veröffentlichen
 
 1. Dateien in `public/` auf GitHub ändern oder neu hochladen.
-2. **Immer** in `public/sw.js` die Zeile `const CACHE = 'babyapp-v15';` um eins hochzählen. Sonst bekommen installierte Apps die Änderung nicht.
+2. **Immer** in `public/sw.js` die Zeile `const CACHE = 'babyapp-v18';` um eins hochzählen. Sonst bekommen installierte Apps die Änderung nicht.
 3. Speichern („Commit“). Netlify veröffentlicht nach etwa einer Minute automatisch.
 
 Rezepte und Lebensmittel liegen in `public/rezepte.json` und `public/prep_guide.json`. Für Texte gelten die Regeln aus dem Styleguide: keine Abkürzungen, keine Gedankenstriche, Pronomen über Platzhalter.
