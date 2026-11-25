@@ -1615,6 +1615,13 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 .outfit-home-in{display:block;font-weight:600;font-size:13px;color:var(--color-text-heading)}
 .outfit-home-out{display:block;font-size:12px;color:var(--text-l);margin-top:2px}
 .outfit-home-icon span{hyphens:manual;-webkit-hyphens:manual;max-width:100%}
+/* Lebensmittel-Fenster (2.16): Leiste sitzt immer am unteren Rand, auch bei kurzem Inhalt.
+   Vorher endete sie mit dem Inhalt, darunter blieb das erzwungene Mindestmaß des Fensters weiß. */
+.prep-sheet{display:flex;flex-direction:column}
+.prep-sheet-inner{flex:1 0 auto;display:flex;flex-direction:column}
+.prep-acts{margin-top:auto!important;box-shadow:0 -1px 0 var(--rose-ll)!important}
+/* Auf Touch-Geräten bleibt :hover nach dem Tippen hängen und lässt Buttons blass wirken */
+@media (hover:none){.btn:hover{background:var(--primary);box-shadow:var(--shadow)}}
 </style>
 </head>
 <body>
