@@ -65,6 +65,11 @@
   --radius-3xl:calc(var(--radius) + 12px);
   --shadow-soft:0 8px 30px oklch(0.6 0.12 300 / 0.12);
   --shadow-lift:0 12px 40px oklch(0.6 0.12 300 / 0.16);
+  /* Saisonfarben (2.11): nur für saisonale Karten und den Schlaf-Zustand, nie für normale Inhalte */
+  --festive-night:radial-gradient(120% 90% at 85% 0%,#6d4c9e 0%,#4a3473 55%,#33244f 100%);
+  --festive-gold:#f2cf86;
+  --festive-gold-ink:#33244f;
+  --night:linear-gradient(135deg,#3d2f5c,#6b4f9a);
   --transition-soft:320ms cubic-bezier(0.22, 1, 0.36, 1);
 
   /* ══ §4 Icons ═══════════════════════════════════════════ */
@@ -1349,7 +1354,7 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 /* Schlaf (2.6) */
 .sleep-meta{font-size:12px;color:var(--text-l)}
 .sleep-status{display:flex;align-items:center;gap:12px;padding:14px;border-radius:var(--radius-lg);background:var(--secondary);margin-bottom:var(--space-2)}
-.sleep-status.night{background:linear-gradient(135deg,#3d2f5c,#6b4f9a);color:#fff}
+.sleep-status.night{background:var(--night);color:#fff}
 .sleep-status-icon{display:flex;color:#e9dcff}.sleep-status-icon.sun{color:#c79233}
 .sleep-status-icon svg{width:26px;height:26px}
 .sleep-status-body{flex:1;min-width:0}
@@ -1484,6 +1489,107 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 .prep-acts .btn{flex:2;min-height:48px;max-width:none!important}
 .prep-sheet-inner:has(.prep-acts){padding-bottom:0!important}
 .prep-acts .prep-react-btn{flex:1;min-height:48px;color:var(--red);border-color:var(--destructive-soft)}
+/* Beikost-Start kompakt und Geburtstag (2.10) */
+.bk-start-row{display:flex;align-items:center;gap:12px;width:100%;border:none;font-family:var(--font-ui);cursor:pointer;color:var(--primary-deep)}
+.bk-start-row-t{display:block;font-weight:700;font-size:15px;color:var(--color-text-heading)}
+.bk-start-row-d{display:block;font-size:13px;line-height:1.45;color:var(--color-text-body);margin-top:2px}
+.bk-start-mini{display:flex;flex-direction:column;gap:10px}
+.bk-start-mini-top{display:flex;align-items:flex-start;gap:8px}
+.bk-start-mini-l{font-size:12px;font-weight:700;color:var(--primary-deep)}
+.bk-start-mini-t{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--color-text-heading);margin-top:2px}
+.bk-start-mini-bar{display:flex;gap:4px}.bk-start-mini-bar span{flex:1;height:6px;border-radius:6px;background:var(--secondary)}.bk-start-mini-bar span.on{background:var(--color-primary)}
+.bk-start-mini-d{margin:0;font-size:14px;line-height:1.55;color:var(--color-text-body)}
+.bday-card{position:relative;overflow:hidden;display:block!important;background:linear-gradient(135deg,oklch(0.93 0.035 300) 0%,oklch(0.95 0.03 355) 100%)!important;padding:18px var(--space-2) 14px!important}
+.bday-deco-1{right:-34px;top:-40px;width:96px;height:96px;background:oklch(0.6 0.12 300 / .14)}
+.bday-deco-2{right:26px;top:18px;width:14px;height:14px;background:oklch(0.65 0.1 355 / .25)}
+.bday-body{position:relative;display:flex;flex-direction:column}
+.bday-kicker{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary-deep)}
+.bday-title{font-family:var(--font-display);font-weight:700;font-size:21px;line-height:1.25;color:var(--color-text-heading);margin:4px 0}
+.bday-p{margin:0 0 6px!important}
+.bday-item{background:none!important;border-radius:0!important;padding:11px 0!important;border-top:1px solid oklch(0.6 0.12 300 / .15)!important}
+.bday-all{width:100%;margin-top:8px;min-height:46px;border:none;border-radius:var(--radius-md);background:#fff;color:var(--primary-deep);font-family:var(--font-ui);font-weight:600;font-size:14px;cursor:pointer}
+/* Weihnachten (2.11) */
+.xmas-card{position:relative;overflow:hidden;background:var(--festive-night);border-radius:var(--r);padding:18px var(--space-2) 14px;margin-bottom:var(--space-2);color:#fff;box-shadow:0 8px 24px rgba(51,36,79,.35)}
+.xmas-tree{position:absolute;right:44px;top:10px;width:58px;height:72px;fill:#fff;opacity:.3}
+.xmas-star{position:absolute;color:var(--festive-gold);display:flex}.xmas-star svg{width:100%;height:100%}
+.xmas-star.s1{right:60px;top:2px;width:18px;height:18px}.xmas-star.s2{right:112px;top:34px;width:10px;height:10px;opacity:.8}.xmas-star.s3{right:36px;top:58px;width:8px;height:8px;opacity:.7}
+.xmas-snow{position:absolute;border-radius:50%;background:rgba(255,255,255,.45)}
+.xmas-snow.n1{left:18px;top:14px;width:4px;height:4px}.xmas-snow.n2{left:120px;top:8px;width:3px;height:3px}.xmas-snow.n3{left:60px;top:40px;width:3px;height:3px;opacity:.6}.xmas-snow.n4{left:34px;bottom:70px;width:3px;height:3px;opacity:.5}
+.xmas-body{position:relative}
+.xmas-top{display:flex;justify-content:space-between;align-items:center}
+.xmas-kicker{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--festive-gold)}
+.xmas-kicker-star{display:flex;width:14px;height:14px}.xmas-kicker-star svg{width:100%;height:100%}
+.xmas-close{width:40px;height:40px;margin:-10px -10px 0 0;border:none;background:none;color:rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.xmas-title{font-family:var(--font-display);font-weight:700;font-size:21px;line-height:1.25;margin:2px 0 6px}
+.xmas-p{margin:0 0 4px;font-size:13px;line-height:1.5;opacity:.92}
+.xmas-p + .xmas-p{margin-bottom:6px}
+.xmas-item{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;padding:11px 0;border:none;border-top:1px solid rgba(242,207,134,.25);background:none;color:#fff;font-family:var(--font-ui);font-size:14px;font-weight:600;cursor:pointer}
+.xmas-age{font-size:12px;font-weight:500;opacity:.8;white-space:nowrap}
+.xmas-all{width:100%;margin-top:8px;min-height:46px;border:none;border-radius:var(--radius-md);background:var(--festive-gold);color:var(--festive-gold-ink);font-family:var(--font-ui);font-weight:700;font-size:14px;cursor:pointer}
+.rf-coll-xmas{position:relative;background:var(--festive-night)!important;color:#fff!important}
+.rf-coll-xmas .rf-coll-c{color:rgba(255,255,255,.85)}
+.rf-coll-star{position:absolute;right:10px;top:10px;width:14px;height:14px;color:var(--festive-gold);display:flex}.rf-coll-star svg{width:100%;height:100%}
+/* Momente und Erinnerungen (2.12) */
+.moment-prev{display:flex;justify-content:center;margin:var(--space-2) 0}
+.moment-prev img{width:240px;height:240px;border-radius:20px;box-shadow:var(--shadow);background:var(--secondary)}
+.moment-opts{padding:0 14px;border-radius:16px;background:oklch(0.97 0.01 300)}
+.moment-opt{display:flex;justify-content:space-between;align-items:center;min-height:48px;font-size:15px;font-weight:600;color:var(--color-text-heading)}
+.moment-opt+.moment-opt{border-top:1px solid var(--rose-ll)}
+.moment-opt .stats-switch{margin:0;min-height:0}
+.moment-btns{display:flex;gap:12px;margin-top:var(--space-3)}
+.moment-btns>*{flex:1;min-height:50px;display:flex;align-items:center;justify-content:center;gap:8px;max-width:none!important}
+.moment-note{margin:8px 0 0;font-size:12px;line-height:1.5;color:var(--text-l);text-align:center}
+.bday-share{width:100%;margin-top:10px;min-height:46px;display:flex;align-items:center;justify-content:center;gap:8px}
+.mehr-new{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--color-primary);color:#fff;margin-left:6px;vertical-align:2px}
+.mem-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:12px 0;border:none;border-top:1px solid var(--rose-ll);background:none;font-family:var(--font-ui);color:var(--color-text-heading);cursor:pointer}
+.mem-row.soon{cursor:default;opacity:.8}
+.mem-thumb{width:56px;height:56px;flex-shrink:0;border-radius:12px;background:linear-gradient(160deg,#efe6f8,#f9e9ef 60%,#fbeee3);color:var(--color-primary);display:flex;align-items:center;justify-content:center}
+.mem-thumb svg{width:30px;height:30px}.mem-thumb b{font-family:var(--font-display);font-size:22px;color:var(--color-primary)}
+.mem-thumb.soon{background:none;border:1.5px dashed var(--primary-glow)}
+.mem-body{flex:1;display:flex;flex-direction:column;gap:2px}
+.mem-t{font-weight:700;font-size:15px}.mem-d{font-size:13px;color:var(--color-text-body)}
+.mem-share{color:var(--color-primary);display:flex}
+.mem-soon-l{font-size:12px;font-weight:700;color:var(--primary-deep);margin:var(--space-2) 0 2px}
+.mem-bar{display:block;height:6px;border-radius:6px;background:var(--secondary);margin-top:6px}.mem-bar span{display:block;height:6px;border-radius:6px;background:var(--color-primary)}
+.mem-empty{font-size:13px;color:var(--text-l);margin:var(--space-1) 0 0}
+.mem-notify{display:flex;align-items:center;gap:12px}.mem-notify .stats-switch{margin:0}
+/* Outfit Raumtemperatur (2.13) */
+.outfit-temp{font-size:13px;color:var(--color-text-body);margin:-4px 0 8px}
+.outfit-room{display:flex;align-items:center;gap:8px;margin-bottom:var(--space-2)}
+.outfit-room>span{font-size:12px;color:var(--text-l)}
+.outfit-room .rf-chip{min-height:36px}
+#outfit-tips-wrap:not(:empty){margin-top:var(--space-2)}
+.outfit-tips{border:none!important;background:linear-gradient(135deg,oklch(0.95 0.02 300),oklch(0.96 0.02 355))!important;border-radius:var(--radius-md)!important}
+/* Vor dem Launch (2.13) */
+.rec-steps{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.6;color:var(--color-text-body)}
+.rec-steps li{padding-left:4px}.rec-steps li::marker{color:var(--primary-deep);font-weight:700}
+.consent-card{position:relative;overflow:hidden;background:linear-gradient(135deg,oklch(0.93 0.035 300) 0%,oklch(0.95 0.03 355) 100%);border-radius:var(--r);padding:18px var(--space-2) 16px;margin-bottom:var(--space-2);box-shadow:var(--shadow)}
+.consent-deco{right:-26px;top:-30px;width:90px;height:90px;background:oklch(0.6 0.12 300 / .14)}
+.consent-body{position:relative}
+.consent-kicker{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary-deep)}
+.consent-title{font-family:var(--font-display);font-weight:700;font-size:19px;line-height:1.3;color:var(--color-text-heading);margin:6px 0}
+.consent-p{margin:0;font-size:14px;line-height:1.55;color:var(--color-text-body)}
+.consent-btns{display:flex;gap:10px;margin-top:14px}
+.consent-btn{flex:1;min-height:46px;border:none;border-radius:var(--radius-md);background:#fff;color:var(--color-text-heading);font-family:var(--font-ui);font-weight:600;font-size:15px;cursor:pointer}
+.consent-more{display:block;margin:10px auto 0;padding:0}
+.safe-kicker{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary-deep);margin-bottom:4px}
+.safe-li{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--rose-ll)}
+.safe-dot{width:6px;height:6px;border-radius:50%;background:var(--color-primary);margin-top:8px;flex-shrink:0}
+.safe-t{font-weight:600;font-size:14px;color:var(--color-text-heading)}.safe-d{font-size:13px;line-height:1.5;color:var(--color-text-body)}
+.safe-note{margin:8px 0 0;font-size:12px;color:var(--text-l);text-align:center}
+.safe-row{display:flex;align-items:center;gap:12px;width:100%;border:none;background:none;padding:0;font-family:var(--font-ui);color:var(--primary-deep);cursor:pointer}
+.safe-row-icon{display:flex;color:var(--color-primary)}
+.safe-row-t{display:block;font-weight:700;font-size:15px;color:var(--color-text-heading)}.safe-row-d{display:block;font-size:13px;color:var(--color-text-body)}
+.legal-h{font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1.25;color:var(--color-text-heading);margin:0 0 var(--space-2)}
+.legal-toggle .bk-hub-tab{padding:var(--space-1) 4px;font-size:12.5px}
+.profile-facts{display:grid!important;grid-template-columns:148px 1fr!important;column-gap:12px!important}
+.profile-facts dt,.profile-facts dd{margin:0;padding:8px 0}
+/* Abnahme 2.14 */
+.prep-safety{margin:var(--space-2) 0 0}
+.prep-safety-badge{background:var(--accent)!important;color:var(--warm-foreground)!important}
+/* Leiste unten im Lebensmittel-Fenster: weiße Fläche bis zum Rand, nichts scheint durch */
+.prep-acts{position:sticky}
+.prep-acts::after{content:'';position:absolute;left:0;right:0;top:100%;height:400px;background:#fff}
 </style>
 </head>
 <body>
@@ -1693,6 +1799,8 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 // Runtime-Abhängigkeit funktioniert. 'tooth' ist die einzige bewusste
 // Ausnahme: Lucide hat kein Zahn-Icon (§4), eigenes SVG im gleichen Stil.
 const ICON_PATHS={
+  'heart':"<path d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z' />",
+  'share':"<path d='M12 2v13' /> <path d='m16 6-4-4-4 4' /> <path d='M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8' />",
   'cake':"<path d='M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8' /> <path d='M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1' /> <path d='M2 21h20' /> <path d='M7 8v3' /> <path d='M12 8v3' /> <path d='M17 8v3' /> <path d='M7 4h.01' /> <path d='M12 4h.01' /> <path d='M17 4h.01' />",
   'audio-lines':"<path d='M2 10v3' /> <path d='M6 6v11' /> <path d='M10 3v18' /> <path d='M14 8v7' /> <path d='M18 5v13' /> <path d='M22 10v3' />",
   'pencil':"<path d='M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z' /> <path d='m15 5 4 4' />",
@@ -2778,7 +2886,16 @@ function ingredientLookupName(raw){
   t=t.replace(/\b(?:mild(?:e|er|es|em)?|frisch(?:e|er|es|em)?|gekocht(?:e|er|es|em)?|gedampft(?:e|er|es|em)?|gedampfte?|gedampfter?|gedampften?|gedampftes?|gedampftem?|zart(?:e|er|es|em)?|fein(?:e|er|es|em)?|klein(?:e|er|es|em)?|gross?(?:e|er|es|em)?|mager(?:e|er|es|em)?|suss(?:e|er|es|em)?|susse?|rote?|gelbe?|grune?|lila)\b/g,'');
   return t.trim();
 }
+// Zwischenspeicher: Zutatennamen werden sehr oft aufgelöst (Rezeptlisten, Filter, Nitrat-Prüfung).
+const _baseFoodCache=new Map();let _baseFoodCacheKey='';
 function resolveBaseFood(raw){
+  const key=`${(S.beikostCustom||[]).length}|${Object.keys(PREP_GUIDE||{}).length}|${getRecipes().length}`;
+  if(key!==_baseFoodCacheKey){_baseFoodCache.clear();_baseFoodCacheKey=key}
+  const k=String(raw??'');
+  if(_baseFoodCache.has(k))return _baseFoodCache.get(k);
+  const v=_resolveBaseFoodUncached(raw);_baseFoodCache.set(k,v);return v;
+}
+function _resolveBaseFoodUncached(raw){
   const primary=ingPrimary(raw);
   if(!primary)return null;
   const rawKey=normKey(primary);
@@ -2876,7 +2993,7 @@ function sanitizeBeikostCustomList(list){
 function categorizeIngredient(name){
   const l=normKey(name);
   if(/(\bei\b|eier|milch|joghurt|quark|kase|fleisch|filet|lachs|fisch|thunfisch|pute|hahnchen|huhnchen|schwein|rind|lamm|makrele|kabeljau|seelachs|honig|mandel|nuss|haselnuss|walnuss|erdnuss|cashew|sesam|tahin|soja|tofu|linse|kichererbse|buttermilch|sahne|creme|parmesan|gouda|emmentaler|edamer)/.test(l))return'proteine';
-  if(/(apfel|birne|banane|mango|pfirsich|nektarine|melone|brombeere|himbeere|heidelbeere|erdbeere|johannisbeere|orange|zitrone|kirsche|traube|kiwi|ananas|pflaume|aprikose|beere|dattel|kakao)/.test(l))return'obst';
+  if(/(apfel|birne|banane|mango|pfirsich|nektarine|melone|brombeere|himbeere|heidelbeere|erdbeere|johannisbeere|orange|zitrone|kirsche|traube|kiwi|ananas|pflaume|aprikose|beere|dattel)/.test(l))return'obst';
   if(/(mehl|flocken|griess|nudel|pasta|reis|hafer|hirse|dinkel|quinoa|amarant|polenta|brot|semmelbrosel|grunkern|buchweizen|spaghetti|tortellini|couscous|mais|roggen|grutze|linsennudel|spirelli|weizen)/.test(l))return'getreide';
   return'gemuese';
 }
@@ -3264,6 +3381,13 @@ function confirmRecipeCookedAction(id, mode){
   }
   markRecipeCooked(id,{mode:mode==='all'?'all':'recipe-only'});
 }
+// Zubereitung: „1. … 2. …“ in einzelne Schritte teilen (nur vor einer Zahl mit Punkt und Großbuchstaben danach)
+function recipeSteps(txt){
+  const t=String(txt||'').trim();
+  const parts=t.split(/\s+(?=\d{1,2}\.\s+[A-ZÄÖÜ„])/).map(x=>x.trim()).filter(Boolean);
+  if(parts.length<2||!/^\d{1,2}\.\s/.test(parts[0]))return null;
+  return parts.map(x=>x.replace(/^\d{1,2}\.\s+/,''));
+}
 function markRecipeCooked(id, options={}){
   tapFeedback();
   const recipe=getRecipes().find(r=>r.id===id);
@@ -3322,7 +3446,7 @@ let S={
   feedings:[],
   prepNotes:{},
   beikostSigns:{},beikostReady:false,
-  recipePrefs:null,rfHintClosed:false,
+  recipePrefs:null,rfHintClosed:false,bkStartOpen:false,bkStartHidden:false,seasonHidden:{},moments:{},momentsInit:false,momentsNotify:true,momentsLastPopup:null,memoriesSeen:false,roomTemp:{},safetyAck:false,
 };
 
 // ════════════════ HELPERS ════════════════════════════════
@@ -3626,6 +3750,12 @@ function sanitizeState(raw){
     beikostReady:src.beikostReady===true,
     recipePrefs:(src.recipePrefs&&typeof src.recipePrefs==='object')?{ageOn:src.recipePrefs.ageOn!==false,diet:['vegetarisch','vegan'].includes(src.recipePrefs.diet)?src.recipePrefs.diet:'alles',avoid:asArray(src.recipePrefs.avoid).filter(a=>['ei','milch','gluten','nuesse'].includes(a))}:null,
     rfHintClosed:src.rfHintClosed===true,
+    bkStartOpen:src.bkStartOpen===true,bkStartHidden:src.bkStartHidden===true,
+    moments:Object.fromEntries(Object.entries(asObj(src.moments)).filter(([k,v])=>['first-spoon','foods50','first-tooth','beikost6m','birthday1'].includes(k)&&v&&typeof v==='object').map(([k,v])=>[k,{date:/^\d{4}-\d{2}-\d{2}$/.test(v.date)?v.date:null,seen:v.seen===true,...(typeof v.food==='string'?{food:v.food.slice(0,60)}:{}),...(typeof v.tooth==='string'?{tooth:v.tooth.slice(0,80)}:{})}]).filter(([,v])=>v.date)),
+    safetyAck:src.safetyAck===true,
+    roomTemp:Object.fromEntries(Object.entries(asObj(src.roomTemp)).filter(([k,v])=>['drinnen','schlafen'].includes(k)&&[16,18,20,22].includes(v))),
+    momentsInit:src.momentsInit===true,momentsNotify:src.momentsNotify!==false,momentsLastPopup:typeof src.momentsLastPopup==='string'?src.momentsLastPopup:null,memoriesSeen:src.memoriesSeen===true,
+    seasonHidden:Object.fromEntries(Object.entries(asObj(src.seasonHidden)).filter(([k,v])=>Number.isInteger(v))),
     prepNotes:Object.fromEntries(Object.entries(asObj(src.prepNotes)).filter(([k,v])=>typeof v==='string'&&v.trim()).map(([k,v])=>[String(k),v.slice(0,2000)])),
   };
   return clean;
@@ -3833,7 +3963,7 @@ function renderRecipeCard(r,opts={}){
       <div class="recipe-section-label">Zutaten</div>
       <ul class="ingredient-list">${ing}</ul>
       <div class="recipe-section-label">Zubereitung</div>
-      <div class="rec-list">${escHtml(r.instructions||'')}</div>
+      ${(()=>{const st=recipeSteps(r.instructions);return st?`<ol class="rec-steps">${st.map(x=>`<li>${escHtml(x)}</li>`).join('')}</ol>`:`<div class="rec-list">${escHtml(r.instructions||'')}</div>`})()}
       ${tips?`<div class="recipe-section-label">Tipps & Varianten</div>${tips}`:''}
       ${compact?'':recipeTraits(r)}
       ${opts.showCookBtn?`<div class="rec-actions"><div class="rec-actions-l">Zuletzt gekocht<br><b>${S.recipesCooked?.[r.id]?fmt(S.recipesCooked[r.id]):'noch nie'}</b></div><button type="button" class="btn" onclick="event.stopPropagation();openRecipeCookedChoice('${r.id}')">Als gekocht markieren</button></div>`:''}
@@ -4049,17 +4179,84 @@ function renderBeikostStartCard(){
     ${bkStep('Sicherheit','Würgen ist normal','Würgen schützt vor dem Verschlucken. Immer aufrecht sitzen lassen und beim Essen nie allein lassen.')}
     <div class="tip-compact" style="margin:var(--space-2) 0 0"><span class="sr-only">Tipp: </span>Zu jedem Lebensmittel findest du unter „Baby-Led Weaning“ die passende Form und Größe nach Alter.</div>`;
   return`<div class="card bk-start-card">
-    <h2 class="readiness-title">Der Start in die Beikost</h2>
+    <div style="display:flex;align-items:flex-start;gap:8px"><h2 class="readiness-title" style="flex:1">Der Start in die Beikost</h2>
+      <button type="button" class="icon-btn" onclick="toggleBkStart()" aria-expanded="true" aria-label="Zuklappen">${icon('chevron-up','icon-sm')}</button></div>
     <p class="bk-start-p">Ob mit Brei, mit Fingerfood oder beidem gemischt: Alles ist möglich. Wählt, was zu euch passt.</p>
     <div class="bk-start-tabs" role="group" aria-label="Art des Einstiegs">${tab('brei','Mit Brei')}${tab('blw','Mit Fingerfood')}</div>
     ${body}
   </div>`;
 }
-// Start-Karte: vor dem Start immer, danach noch 4 Wochen lang
+// Start-Karte (2.10): vor dem Start zugeklappt unter den Reifezeichen, danach 3 Wochen als
+// kompakte Karte „Woche x von 3“ (ausblendbar), dann verschwindet sie von selbst.
+function beikostStartWeek(){
+  const bk=parseDateValue(localStorage.getItem(BABY_BEIKOST_KEY));
+  if(!bk||!beikostActive())return 0;
+  const d=Math.floor((startOfToday()-bk)/864e5);
+  return d<0?0:d<21?Math.floor(d/7)+1:0;
+}
 function showBeikostStartCard(){
   if(!beikostActive())return Math.max(0,corrW())>=17;
-  const bk=parseDateValue(localStorage.getItem(BABY_BEIKOST_KEY));
-  return !!bk&&(startOfToday()-bk)<28*864e5;
+  return beikostStartWeek()>0&&!S.bkStartHidden;
+}
+function toggleBkStart(){tapFeedback();S.bkStartOpen=!S.bkStartOpen;dbSave();render({preserveScroll:true})}
+function hideBkStart(){tapFeedback();S.bkStartHidden=true;dbSave();render({preserveScroll:true})}
+const BK_START_STEPS=[
+  ['Ein Gemüse mit Öl','Fein püriert, anfangs ein paar Löffel. Von Anfang an einen Teelöffel Rapsöl oder Beikostöl unterrühren.'],
+  ['Kartoffel und Vitamin C dazu','Gekochte Kartoffel untermischen und 2 bis 3 Esslöffel Vitamin-C-reichen Saft oder Obstmus dazugeben.'],
+  ['Fleisch oder Fisch dazu','Daraus wird der Gemüse-Kartoffel-Fleisch-Brei, die erste vollständige Breimahlzeit.']];
+function renderBeikostStartArea(){
+  const wk=beikostStartWeek();
+  if(wk>0&&!S.bkStartOpen){
+    const [t,d]=BK_START_STEPS[wk-1];
+    return`<div class="card bk-start-mini">
+      <div class="bk-start-mini-top"><div style="flex:1"><div class="bk-start-mini-l">Euer Beikost-Start · Woche ${wk} von 3</div><div class="bk-start-mini-t">${t}</div></div>
+        <button type="button" class="icon-btn" onclick="hideBkStart()" aria-label="Beikost-Start ausblenden">${icon('x','icon-sm')}</button></div>
+      <div class="bk-start-mini-bar">${[1,2,3].map(i=>`<span class="${i<=wk?'on':''}"></span>`).join('')}</div>
+      <p class="bk-start-mini-d">${d}</p>
+      <button type="button" class="link-btn" style="padding:0" onclick="toggleBkStart()">Alle Schritte ansehen ${icon('chevron-down','icon-sm')}</button>
+    </div>`;
+  }
+  if(wk===0&&!S.bkStartOpen){
+    return`<button type="button" class="card bk-start-row" onclick="toggleBkStart()" aria-expanded="false">
+      <span style="flex:1;text-align:left"><span class="bk-start-row-t">Der Start in die Beikost</span><span class="bk-start-row-d">Mit Brei oder Fingerfood: so gelingen die ersten Wochen</span></span>
+      ${icon('chevron-down','icon-sm')}</button>`;
+  }
+  return renderBeikostStartCard();
+}
+
+// Saisonale Tags (2.11): sichtbar als Filter, Sammlung und Home-Karte nur im Zeitraum. Die Rezepte selbst
+// bleiben das ganze Jahr über Suche und Liste erreichbar. Zeitraum als [Monat, Tag].
+const SEASONS={weihnachten:{from:[11,20],to:[12,26],label:'Weihnachten'}};
+function inSeason(tag,d=new Date()){
+  const s=SEASONS[tag];if(!s)return true;
+  const v=(d.getMonth()+1)*100+d.getDate(),a=s.from[0]*100+s.from[1],b=s.to[0]*100+s.to[1];
+  return a<=b?(v>=a&&v<=b):(v>=a||v<=b);
+}
+function openSeasonCollection(tag){RF.forHanna=true;RF.ageOverride=true;rfApplyTag('anlass',tag)}
+function hideSeasonCard(tag){tapFeedback();S.seasonHidden={...(S.seasonHidden||{}),[tag]:new Date().getFullYear()};dbSave();render({preserveScroll:true})}
+const XMAS_STAR="<svg viewBox='0 0 24 24' aria-hidden='true'><path d='M12 2l2.6 6.9L22 9.3l-5.7 4.6L18.2 21 12 17l-6.2 4 1.9-7.1L2 9.3l7.4-.4z' fill='currentColor'/></svg>";
+function renderXmasCard(){
+  if(!inSeason('weihnachten')||!beikostActive())return'';
+  if((S.seasonHidden||{}).weihnachten===new Date().getFullYear())return'';
+  const all=getRecipes().filter(r=>hasTag(r,'weihnachten')&&passesPrefs(r));
+  if(!all.length)return'';
+  const ageM=corrMonths();
+  const fit=all.filter(r=>(Number(r.ageRecommendation)||0)<=ageM).sort((a,b)=>(a.title||'').localeCompare(b.title||'','de'));
+  const pick=(fit.length?fit:all.slice().sort((a,b)=>(a.ageRecommendation||0)-(b.ageRecommendation||0))).slice(0,3);
+  return`<div class="xmas-card">
+    <svg class="xmas-tree" viewBox="0 0 120 150" aria-hidden="true"><path d="M60 8 L92 52 H76 L104 92 H84 L114 136 H6 L36 92 H16 L44 52 H28 Z"/><rect x="52" y="136" width="16" height="12"/></svg>
+    <span class="xmas-star s1">${XMAS_STAR}</span><span class="xmas-star s2">${XMAS_STAR}</span><span class="xmas-star s3">${XMAS_STAR}</span>
+    <span class="xmas-snow n1"></span><span class="xmas-snow n2"></span><span class="xmas-snow n3"></span><span class="xmas-snow n4"></span>
+    <div class="xmas-body">
+      <div class="xmas-top"><div class="xmas-kicker"><span class="xmas-kicker-star">${XMAS_STAR}</span>Frohe Weihnachtszeit</div>
+        <button type="button" class="xmas-close" onclick="hideSeasonCard('weihnachten')" aria-label="Weihnachtskarte ausblenden">${icon('x','icon-sm')}</button></div>
+      <div class="xmas-title">Weihnachtsrezepte für ${getBabyName()}</div>
+      <p class="xmas-p">Festessen und Plätzchen ohne Zucker.</p>
+      <p class="xmas-p">${fit.length?'Diese passen schon:':'Die meisten sind erst für etwas ältere Kinder. Schau dir schon mal an, was bald dazukommt:'}</p>
+      ${pick.map(r=>`<button type="button" class="xmas-item" onclick="openSeasonCollection('weihnachten')"><span>${escHtml(r.title)}</span><span class="xmas-age">ab ${fmtCount(Number(r.ageRecommendation)||0,'Monat','Monaten')}</span></button>`).join('')}
+      <button type="button" class="xmas-all" onclick="openSeasonCollection('weihnachten')">Alle ${fmtCount(all.length,'Weihnachtsrezept','Weihnachtsrezepte')} ansehen</button>
+    </div>
+  </div>`;
 }
 
 function renderBirthdayCard(){
@@ -4069,12 +4266,22 @@ function renderBirthdayCard(){
   if(!fest.length)return'';
   const prefer=['bananentorte-erster-geburtstag','hafer-bananen-smash-cake','apfelmus-cranberry-muffins-kokos'];
   const pick=prefer.map(id=>fest.find(r=>r.id===id)).filter(Boolean).concat(fest.filter(r=>!prefer.includes(r.id))).slice(0,3);
-  const past=aw>=52;
+  const bday=new Date(BIRTH);bday.setFullYear(bday.getFullYear()+1);bday.setHours(0,0,0,0);
+  const days=Math.round((bday-startOfToday())/864e5);
+  const dateTxt=bday.toLocaleDateString('de-DE',{day:'numeric',month:'long'});
+  const name=getBabyName();
+  const kicker=days>1?`Am ${dateTxt}, in ${days} Tagen`:days===1?`Morgen, am ${dateTxt}`:days===0?'Heute':`Am ${dateTxt}`;
+  const title=days>0?`${name} wird bald 1!`:days===0?`${name} wird heute 1!`:`${name} ist 1 geworden!`;
   return`<div class="bday-card">
-    <div class="ct"><div class="ct-left">${iconInline('cake')} ${past?`${getBabyName()} hatte gerade Geburtstag`:`Bald ist ${babyGen()} erster Geburtstag`}</div></div>
-    <p class="bday-p">Ideen ohne Zucker, die auch den Gästen schmecken.</p>
-    ${pick.map(r=>`<button type="button" class="bday-item" onclick="openFestCollection()"><span>${escHtml(r.title)}</span>${icon('chevron-right','icon-sm')}</button>`).join('')}
-    <button type="button" class="link-btn" style="padding:0" onclick="openFestCollection()">Alle ${fmtCount(fest.length,'Fest-Rezept','Fest-Rezepte')} ansehen</button>
+    <span class="tip-deco bday-deco-1" aria-hidden="true"></span><span class="tip-deco bday-deco-2" aria-hidden="true"></span>
+    <div class="bday-body">
+      <div class="bday-kicker">${icon('cake','icon-sm')} ${kicker}</div>
+      <div class="bday-title">${title}</div>
+      <p class="bday-p">Ideen ohne Zucker, die auch den Gästen schmecken.</p>
+      ${pick.map(r=>`<button type="button" class="bday-item" onclick="openFestCollection()"><span>${escHtml(r.title)}</span>${icon('chevron-right','icon-sm')}</button>`).join('')}
+      ${days===0?`<button type="button" class="btn bday-share" onclick="checkMoments();openMomentSheet('birthday1')">${icon('share','icon-sm')} Geburtstagsbild ansehen</button>`:''}
+      <button type="button" class="bday-all" onclick="openFestCollection()">Alle ${fmtCount(fest.length,'Fest-Rezept','Fest-Rezepte')} ansehen</button>
+    </div>
   </div>`;
 }
 
@@ -4084,7 +4291,9 @@ function renderHome(){
   const suggestions=getHomeRecipeSuggestions(3);
   const tip=getRotatingHomeTip();
   const spoonPreview=spoon?getRecipeIngredientPreview(spoon,4):'';
-  let h=renderBirthdayCard();
+  try{checkMoments()}catch(e){}
+  clearTimeout(window._momentTimer);window._momentTimer=setTimeout(()=>{try{maybeShowMomentPopup()}catch(e){}},900);
+  let h=renderStatsConsentCard()+renderBirthdayCard()+renderXmasCard();
 
   // 1. Rezept des Tages (erst wenn Beikost begonnen hat), vorher ab 4 Monaten die Reifezeichen
   if(homeCardVisible('spoon')&&beikostActive())h+=`<div class="spoon-card">
@@ -4348,7 +4557,7 @@ function closeModal(){const m=document.getElementById('modal');m.classList.remov
 
 
 // ════════════════ SPIELIDEEN ═════════════════════════════
-function refreshEvents(){if(curTab===4&&subPage==='activities')render({preserveScroll:true})}
+function refreshEvents(){if((curTab===4&&subPage==='activities')||(curTab===3&&_devTab==='ideas'))render({preserveScroll:true})}
 function rankEv(t,d){S.evRanks[t]=(S.evRanks[t]||0)+d;dbSave();refreshEvents()}
 
 // ════════════════ ICAL ════════════════════════════════════
@@ -4962,12 +5171,7 @@ function renderPrepContentArea(){
 
   // Safety block (always shown if exists, regardless of tab)
   if(hasSafetyInfo(guide)){
-    h += `<div class="prep-blocks">
-      <div class="prep-block danger full">
-        <div class="prep-block-lbl">${escHtml(guide.safety.k)}</div>
-        <div class="prep-block-txt">${escHtml(guide.safety.h)}</div>
-      </div>
-    </div>`;
+    h += `<div class="al al-amb prep-safety" role="note"><div class="at">${escHtml(guide.safety.k)}</div><p>${escHtml(guide.safety.h)}</p></div>`;
   }
 
   return h;
@@ -5112,6 +5316,30 @@ function setBeikostRecipeFilter(value){
   });
   refreshBeikostRecipeResults();
 }
+const SAFETY_POINTS=[
+  ['Immer aufrecht und nie allein essen lassen','Würgen ist normal und schützt, Ersticken ist still.'],
+  ['Kein Honig im ersten Lebensjahr','Er kann Bakterien enthalten, die für Babys gefährlich sind.'],
+  ['Ohne Salz und Zucker','Würzen erst für die Erwachsenen, nach Abnahme der Babyportion.'],
+  ['Neue Lebensmittel einzeln einführen','So erkennst du Unverträglichkeiten leichter.'],
+  ['Rund, klein und hart meiden','Ganze Nüsse, Trauben, rohe Karotte: zerdrücken, vierteln oder garen.']];
+let _safetyOpen=false;
+function ackSafety(){tapFeedback();S.safetyAck=true;dbSave();render({preserveScroll:true})}
+function toggleSafety(){tapFeedback();_safetyOpen=!_safetyOpen;render({preserveScroll:true})}
+function renderSafetyList(){return SAFETY_POINTS.map(([t,d])=>`<div class="safe-li"><span class="safe-dot"></span><div><div class="safe-t">${t}</div><div class="safe-d">${d}</div></div></div>`).join('')}
+function renderSafetyTop(){
+  if(!beikostActive()||S.safetyAck)return'';
+  return`<div class="card safe-card"><div class="safe-kicker">${icon('shield-check','icon-sm')} Zum Beikost-Start</div>
+    <h2 class="readiness-title">Sicher essen von Anfang an</h2>${renderSafetyList()}
+    <button type="button" class="btn" style="width:100%;margin-top:var(--space-2)" onclick="ackSafety()">Verstanden</button>
+    <p class="safe-note">Danach findest du die Hinweise jederzeit ganz unten auf dieser Seite.</p></div>`;
+}
+function renderSafetyBottom(){
+  if(!beikostActive()||!S.safetyAck)return'';
+  return`<div class="card safe-bottom"><button type="button" class="safe-row" onclick="toggleSafety()" aria-expanded="${_safetyOpen}">
+    <span class="safe-row-icon">${icon('shield-check')}</span><span style="flex:1;text-align:left"><span class="safe-row-t">Sicher essen</span><span class="safe-row-d">${SAFETY_POINTS.length} wichtige Hinweise</span></span>${icon(_safetyOpen?'chevron-up':'chevron-down','icon-sm')}</button>
+    ${_safetyOpen?`<div style="margin-top:var(--space-1)">${renderSafetyList()}</div>`:''}</div>`;
+}
+
 function renderBeikost(){
   ensureBeikostState();
   const ageM=corrMonths();
@@ -5125,9 +5353,9 @@ function renderBeikost(){
   const recipeView=S.beikostHubTab==='recipes';
   const recipeResults=getFilteredRecipeHubRecipes();
   const recipeSummary = beikostRecipeSummaryText(recipeResults.length);
-  let pre='';
+  let pre=renderSafetyTop();
   if(!beikostActive()&&Math.max(0,corrW())>=17)pre+=renderReadinessCard();
-  if(showBeikostStartCard())pre+=renderBeikostStartCard();
+  if(showBeikostStartCard())pre+=renderBeikostStartArea();
   let h=pre+`<div class="card-grad" style="background:linear-gradient(135deg,var(--sage-ll),#fff2f8)">
     <div class="bk-hub-hero">
       <div class="bk-hub-hero-main">
@@ -5214,6 +5442,7 @@ function renderBeikost(){
     </div>
     ${addMsg&&addMsg.type!=='ok'?`<div class="al ${addMsg.type==='err'?'al-red':'al-amb'}" style="margin-top:var(--space-2);margin-bottom:0"><p>${escHtml(addMsg.text)}</p></div>`:''}
   </div>`;
+  h+=renderSafetyBottom();
   return h;
 }
 
@@ -5227,23 +5456,22 @@ function renderMehr(){
   if(subPage==='homeCustomize') return renderHomeCustomize();
   if(subPage==='outfit')     return renderOutfit();
   if(subPage==='support')    return renderSupport();
-  if(subPage==='hinweise')   return renderHinweise();
-  if(subPage==='impressum')  return renderImpressum();
-  if(subPage==='datenschutz')return renderDatenschutz();
+  if(subPage==='hinweise')   {_legalTab='hinweise';subPage='legal';return renderLegal()}
+  if(subPage==='impressum')  {_legalTab='impressum';subPage='legal';return renderLegal()}
+  if(subPage==='datenschutz'){_legalTab='datenschutz';subPage='legal';return renderLegal()}
   if(subPage==='backup')     return renderBackup();
+  if(subPage==='memories')   return renderMemories();
+  if(subPage==='legal')      return renderLegal();
 
   const daily=[
     {icon:'shirt',label:'Outfit Guide',sub:'Wetter & Kleidungsempfehlung',sp:'outfit'},
-    {icon:'music',label:'Spielideen & Lieder',sub:'Passend zum Alter',sp:'activities'},
-    {icon:'tooth',label:'Zahnungskarte',sub:'Interaktive Übersicht',sp:'teething'},
+    {icon:'tooth',label:'Zahnung',sub:'Übersicht und Tipps',sp:'teething'},
     {icon:'book-heart',label:'Notizen',sub:'Eigene Aufzeichnungen',sp:'notes'},
   ];
   const appInfo=[
     {icon:'sliders-horizontal',label:'Home anpassen',sub:'Welche Karten angezeigt werden',sp:'homeCustomize'},
-    {icon:'coffee',label:'App unterstützen',sub:'Kaffee ausgeben & Entwicklung unterstützen',sp:'support'},
-    {icon:'info',label:'Wichtige Hinweise',sub:'Keine Beratung · Quellen · Lizenzen',sp:'hinweise'},
-    {icon:'scroll-text',label:'Impressum',sub:'Angaben nach § 5 DDG',sp:'impressum'},
-    {icon:'shield-check',label:'Datenschutz',sub:'Datenverarbeitung & deine Rechte',sp:'datenschutz'},
+    {icon:'coffee',label:'App unterstützen',sub:'Einen Kaffee spendieren',sp:'support'},
+    {icon:'scroll-text',label:'Impressum, Datenschutz & Hinweise',sub:'Rechtliches, Quellen und Lizenzen',sp:'legal'},
   ];
 
   const row=it=>`<div class="mehr-row" onclick="openMehrSubPage('${it.sp}')">
@@ -5258,9 +5486,10 @@ function renderMehr(){
   return`<div class="card" style="padding:var(--space-1) var(--space-2)">
     <div class="mehr-section-label">Dein Baby</div>
     ${row({icon:'baby',label:'Profil & Messungen',sub:'Gewicht, Größe, Daten',sp:'profile'})}
+    ${row({icon:'heart',label:`Erinnerungen${S.memoriesSeen?'':' <span class="mehr-new">neu</span>'}`,sub:'Besondere Momente zum Teilen',sp:'memories'})}
     <div class="mehr-section-label">Täglich</div>
     ${daily.map(row).join('')}
-    <div class="mehr-section-label" style="margin-top:var(--space-1)">App-Info</div>
+    <div class="mehr-section-label" style="margin-top:var(--space-1)">App</div>
     ${row({icon:'shield-check',label:'Datensicherung',sub:'Sichern und wiederherstellen',sp:'backup'})}
     ${appInfo.map(row).join('')}
   </div>`;
@@ -5305,13 +5534,29 @@ function renderSupport(){
       <div class="support-title">Danke, dass du hier bist!</div>
       <p class="support-copy">Diese App ist ein Hobby-Projekt, das während zahlreicher Babyschläfchen entsteht ${iconInline('coffee')} Koffein ist dabei ausdrücklich Pflicht, keine Kür.</p>
       <div class="support-actions">
-        <button type="button" class="btn" onclick="openSupportLink()">Kaffee ausgeben</button>
+        <button type="button" class="btn" onclick="openSupportLink()">Einen Kaffee spendieren</button>
       </div>
     </div>
   </div>`;
 }
-function renderHinweise(){
-  return bb()
+// Rechtliches (2.13): eine Seite mit vier Reitern
+let _legalTab='hinweise';
+const LEGAL_TABS=[['hinweise','Hinweise'],['datenschutz','Datenschutz'],['impressum','Impressum'],['lizenzen','Lizenzen']];
+function setLegalTab(t){tapFeedback();_legalTab=t;render();const c=document.getElementById('cnt');if(c)c.scrollTop=0}
+function openLegal(t){tapFeedback();_legalTab=t||'hinweise';goTab(4);subPage='legal';render();const c=document.getElementById('cnt');if(c)c.scrollTop=0}
+function renderLizenzen(){
+  return infoCard('Icons',`<p class="info-p">Lucide, ISC-Lizenz. Ein Teil der Icons stammt aus dem Projekt Feather, MIT-Lizenz. Dazu ein eigenes Zahn-Icon.</p><p class="info-p"><a class="info-link" href="/licenses/LICENSE-Lucide.txt" target="_blank" rel="noopener">Lizenztext Lucide und Feather</a></p>`)
+    +infoCard('Schriften',`<p class="info-p">Outfit und Figtree, SIL Open Font License 1.1.</p><p class="info-p"><a class="info-link" href="/licenses/OFL-Outfit.txt" target="_blank" rel="noopener">Lizenztext Outfit</a> · <a class="info-link" href="/licenses/OFL-Figtree.txt" target="_blank" rel="noopener">Lizenztext Figtree</a></p>`)
+    +infoCard('Daten',`<ul class="info-list"><li><b>Wetterdaten:</b> <a class="info-link" href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>, Lizenz CC BY 4.0.</li><li><b>Ortsnamen:</b> © <a class="info-link" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende, Lizenz ODbL.</li><li><b>Lieder:</b> traditionelle Kinderlieder, gemeinfrei.</li></ul>`);
+}
+function renderLegal(){
+  const seg=`<div class="card" style="padding:var(--space-1) var(--space-2)"><div class="bk-hub-toggle legal-toggle">${LEGAL_TABS.map(([k,l])=>`<button type="button" class="bk-hub-tab ${_legalTab===k?'active':''}" aria-pressed="${_legalTab===k}" onclick="setLegalTab('${k}')">${l}</button>`).join('')}</div></div>`;
+  const body=_legalTab==='datenschutz'?renderDatenschutz(true):_legalTab==='impressum'?renderImpressum(true):_legalTab==='lizenzen'?renderLizenzen():renderHinweise(true);
+  return bb()+`<h1 class="legal-h">Impressum, Datenschutz &amp; Hinweise</h1>`+seg+body;
+}
+
+function renderHinweise(noBack){
+  return (noBack?'':bb())
     +infoCard('Keine medizinische Beratung',
       `<p class="info-p">Inhalte, Rezepte, Zubereitungstipps und Entwicklungsinfos dienen der Orientierung und ersetzen keine Beratung durch Ärztinnen, Ärzte oder Hebammen. Bei Fragen zu Ernährung, Allergien, Gewicht, Schlaf oder Entwicklung wende dich bitte immer an eure Kinderarztpraxis oder deine Hebamme. In einem Notfall wähle die 112.</p>`)
     +infoCard('Entwicklung & Meilensteine',
@@ -5328,17 +5573,10 @@ function renderHinweise(){
        </ul>`)
     +infoCard('Haftung',
       `<p class="info-p">Die Inhalte werden mit Sorgfalt erstellt, eine Gewähr für Vollständigkeit, Richtigkeit und Aktualität kann aber nicht übernommen werden. Die Nutzung der App und die Umsetzung der Tipps erfolgen in eigener Verantwortung. Die gesetzliche Haftung für Vorsatz und grobe Fahrlässigkeit sowie für Schäden an Leben, Körper und Gesundheit bleibt unberührt.</p>`)
-    +infoCard('Lizenzen & Datenquellen',
-      `<ul class="info-list">
-         <li><b>Icons:</b> Lucide (ISC-Lizenz), eigenes Zahn-Icon.</li>
-         <li><b>Schriften:</b> Outfit und Figtree, SIL Open Font License 1.1. Die Lizenztexte liegen der App bei.</li>
-         <li><b>Wetterdaten:</b> <a class="info-link" href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>, Lizenz CC BY 4.0.</li>
-         <li><b>Ortsnamen:</b> © <a class="info-link" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende, Lizenz ODbL.</li>
-         <li><b>Lieder:</b> traditionelle Kinderlieder, gemeinfrei.</li>
-       </ul>`);
+    ;
 }
-function renderImpressum(){
-  return bb()
+function renderImpressum(noBack){
+  return (noBack?'':bb())
     +infoCard('Angaben gemäß § 5 DDG',
       infoField('Anbieterin',`<p class="info-p">${APP_OWNER.name}</p>`)
       +infoField('Adresse',`<p class="info-p">${OWNER_ADDRESS}</p>`)
@@ -5347,17 +5585,18 @@ function renderImpressum(){
       `<p class="info-p">${APP_OWNER.name}, Anschrift wie oben.</p>`)
     +infoCard('Kontakt',
       `<p class="info-p">Fragen, Feedback oder ein Fehler in der App? Schreib mir gern an ${OWNER_MAIL}.</p>
-       <p class="info-p">Diese App ist ein privates Projekt. Freiwillige Unterstützung über „App unterstützen“ ist eine Spende ohne Gegenleistung.</p>`);
+       <p class="info-p">Diese App ist ein privates Projekt. Über „App unterstützen“ kannst du freiwillig einen Kaffee spendieren, ohne Gegenleistung.</p>`);
 }
-function renderDatenschutz(){
-  return bb()
+function renderDatenschutz(noBack){
+  return (noBack?'':bb())
     +infoCard('Kurz gesagt',
-      `<p class="info-p">Diese App hat kein Benutzerkonto und keine Werbung und verfolgt dich nicht. Alles, was du einträgst, bleibt auf deinem Gerät. Wir zählen nur anonym, wie oft die App geöffnet wird. Daten verlassen dein Gerät außerdem nur, wenn du eine Funktion nutzt, die einen externen Dienst braucht. Beides ist unten genau aufgeführt.</p>`)
+      `<p class="info-p">Diese App hat kein Benutzerkonto und keine Werbung und verfolgt dich nicht. Alles, was du einträgst, bleibt auf deinem Gerät. Nur wenn du zustimmst, zählen wir anonym, wie oft die App geöffnet wird. Daten verlassen dein Gerät außerdem nur, wenn du eine Funktion nutzt, die einen externen Dienst braucht. Beides ist unten genau aufgeführt.</p>`)
     +infoCard('Verantwortliche',
       infoField('Verantwortlich im Sinne der DSGVO',`<p class="info-p">${OWNER_ADDRESS}</p>`)
       +infoField('Kontakt',`<p class="info-p">${OWNER_MAIL}</p>`))
     +infoCard('Hosting und Aufruf der App',
       `<p class="info-p">Die Dateien der App werden bei <b>Netlify, Inc.</b> (USA) bereitgestellt. Beim Aufruf und bei Updates verarbeitet der Hoster technisch notwendig Verbindungsdaten: IP-Adresse, Datum und Uhrzeit, aufgerufene Datei, Browser- und Gerätetyp. Das dient der sicheren und stabilen Auslieferung der App.</p>
+       <p class="info-p">Die Verbindungsdaten speichert Netlify für 30 Tage und löscht sie danach. Wir selbst speichern sie nicht. Die Nutzungsstatistik liegt nur als zusammengefasste Tageszahlen ohne Personenbezug vor und wird nach 13 Monaten automatisch gelöscht.</p>
        <p class="info-p">Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Mit Netlify besteht ein Vertrag zur Auftragsverarbeitung. Für Übermittlungen in die USA gelten die dort vorgesehenen Garantien (EU-US Data Privacy Framework beziehungsweise EU-Standardvertragsklauseln).</p>`)
     +infoCard('Speicherung auf deinem Gerät',
       `<p class="info-p">Deine Eingaben werden ausschließlich im lokalen Speicher deines Browsers beziehungsweise der installierten App abgelegt (<code style="font-size:12px">localStorage</code>). Zusätzlich speichert die App ihre eigenen Dateien im Gerätespeicher, damit sie auch offline startet. Das ist für die von dir gewünschte Funktion unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG).</p>
@@ -5379,24 +5618,29 @@ function renderDatenschutz(){
     +infoCard('Externe Dienste',
       `<p class="info-p">Einzelne Funktionen laden Inhalte von fremden Servern. Dabei wird technisch notwendig deine IP-Adresse an den jeweiligen Anbieter übermittelt, dazu nur die unten genannten Angaben. Deine Baby-Daten werden nie mitgesendet.</p>
        <ul class="info-list">
-         <li><b>Open-Meteo</b> (open-meteo.com), nur im Outfit Guide: für das Wetter die Koordinaten deines Standorts beziehungsweise Ortes, für die Ortssuche der eingegebene Ortsname.</li>
-         <li><b>OpenStreetMap Foundation (Nominatim)</b>, nur wenn du im Outfit Guide deinen aktuellen Standort freigibst: Die Koordinaten werden in einen Ortsnamen umgewandelt.</li>
+         <li><b>Open-Meteo</b> (open-meteo.com, Sitz in der Schweiz), nur im Outfit Guide: für das Wetter die Koordinaten deines Standorts beziehungsweise Ortes, für die Ortssuche der eingegebene Ortsname. Für die Schweiz besteht ein Angemessenheitsbeschluss der EU-Kommission.</li>
+         <li><b>OpenStreetMap Foundation (Nominatim)</b>, Sitz in Großbritannien, nur wenn du im Outfit Guide deinen aktuellen Standort freigibst: Die Koordinaten werden in einen Ortsnamen umgewandelt. Für Großbritannien besteht ein Angemessenheitsbeschluss der EU-Kommission, derzeit gültig bis 27. Dezember 2031.</li>
          <li><b>Buy Me a Coffee</b>, nur wenn du unter „App unterstützen“ auf den Button tippst. Die Seite öffnet sich im Browser, dort gelten die Datenschutzbestimmungen des Anbieters.</li>
        </ul>
        <p class="info-p">Die Standortabfrage erfolgt nur nach deiner Freigabe im Browser (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit in den Geräteeinstellungen widerrufen kannst. Die übrigen Abrufe erfolgen, weil du die jeweilige Funktion nutzt (Art. 6 Abs. 1 lit. f DSGVO). Schriften und Icons sind in der App enthalten und werden nicht von fremden Servern geladen.</p>`)
+    +infoCard('Erinnerungsbilder',
+      `<p class="info-p">Bilder zu besonderen Momenten, etwa dem ersten Löffel, entstehen vollständig auf deinem Gerät. Ein Foto, das du dafür auswählst, wird nur für das Bild verwendet und weder gespeichert noch hochgeladen. Geteilt wird nur, was du selbst über das Teilen-Menü deines Handys verschickst.</p>`)
     +infoCard('Anonyme Nutzungsstatistik',
-      `<p class="info-p">Damit wir wissen, ob und wie die App genutzt wird, meldet sie bei jedem Öffnen und Schließen eine kurze Nachricht an unseren Server bei Netlify. Gezählt wird nur pro Tag:</p>
+      `<p class="info-p">Nur wenn du zustimmst, meldet die App beim Öffnen und Schließen eine kurze Nachricht an unseren Server bei Netlify. Gezählt wird nur pro Tag:</p>
        <ul class="info-list">
          <li>wie oft die App geöffnet wurde, und ob als installierte App oder im Browser,</li>
          <li>wie lange sie am Stück offen war, grob eingeteilt in unter 1 Minute, 1 bis 5, 5 bis 15 und über 15 Minuten,</li>
          <li>wie oft sie auf Android-Geräten installiert wurde.</li>
        </ul>
-       <p class="info-p">Wir speichern dabei keine IP-Adresse, keine Kennung und keinen Gerätetyp, und es wird nichts dafür auf deinem Gerät abgelegt. Deine Einträge, der Name oder das Alter deines Kindes werden nie übertragen. Die Zahlen lassen sich keiner Person zuordnen. Rechtsgrundlage ist unser berechtigtes Interesse, die App sinnvoll weiterzuentwickeln (Art. 6 Abs. 1 lit. f DSGVO).</p>
-       <p class="info-p">Du kannst die Statistik hier ausschalten. Gespeichert wird dann nur deine Wahl, damit sie beim nächsten Start gilt.</p>
+       <p class="info-p">Keine Gesundheitsdaten, nichts über dein Baby: Deine Einträge, der Name oder das Alter deines Kindes werden nie übertragen. Wir speichern keine Kennung und keinen Gerätetyp, die Zahlen lassen sich keiner Person zuordnen. Beim Senden verarbeitet Netlify technisch bedingt deine IP-Adresse, genauso wie beim Aufruf der App. Wir werten sie für die Statistik nicht aus und speichern sie nicht.</p>
+       <p class="info-p">Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Auf deinem Gerät wird dafür nur deine Entscheidung gespeichert. Du kannst sie hier jederzeit ändern, die Einwilligung gilt dann nicht mehr für die Zukunft.</p>
        <button type="button" class="stats-switch${statsEnabled()?' on':''}" role="switch" aria-checked="${statsEnabled()}" onclick="toggleStats()"><span class="stats-switch-knob"></span><span>${statsEnabled()?'Statistik ist an':'Statistik ist aus'}</span></button>`)
+    +infoCard('Kontakt per E-Mail',
+      `<p class="info-p">Wenn du uns per E-Mail schreibst, verarbeiten wir deine E-Mail-Adresse und den Inhalt deiner Nachricht, um dir zu antworten (Art. 6 Abs. 1 lit. f DSGVO). Wir löschen die Nachricht, sobald dein Anliegen erledigt ist und keine Aufbewahrungspflicht besteht. Unser Postfach liegt bei Yahoo.</p>`)
     +infoCard('Deine Rechte',
       `<p class="info-p">Nach DSGVO hast du das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) sowie auf Widerruf einer Einwilligung (Art. 7 Abs. 3).</p>
        <p class="info-p">Weil deine Eingaben nur auf deinem Gerät liegen, kannst du diese Rechte unmittelbar selbst ausüben: einsehen und ändern direkt in der App, exportieren unter „Datensicherung“, löschen durch Entfernen der App- beziehungsweise Website-Daten in den Browsereinstellungen.</p>
+       <p class="info-p"><b>Widerspruchsrecht:</b> Soweit wir Daten auf Grundlage unseres berechtigten Interesses verarbeiten (Art. 6 Abs. 1 lit. f DSGVO), kannst du dem jederzeit aus Gründen widersprechen, die sich aus deiner besonderen Situation ergeben. Schreib uns dazu eine E-Mail. Die Statistik kannst du außerdem direkt hier ausschalten.</p>
        <p class="info-p">Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Unabhängigen Landeszentrum für Datenschutz Schleswig-Holstein (ULD).</p>`)
     +infoCard('Datensicherung',
       `<p class="info-p">Unter Mehr → Datensicherung kannst du alle Daten als Datei sichern und auf einem anderen Gerät wiederherstellen. Die Datei bleibt bei dir, sie wird nicht an uns übertragen.</p>
@@ -5797,16 +6041,18 @@ function renderPhaseHomeCard(){
 }
 
 let _devTab='phase';
-function setDevTab(t){_devTab=(t==='milestones')?'milestones':'phase';tapFeedback();render();}
+function setDevTab(t){_devTab=['milestones','ideas'].includes(t)?t:'phase';tapFeedback();render();}
+function openDevIdeas(){_devTab='ideas';subPage=null;goTab(3)}
 function renderEntwicklung(){
   return `
   <div class="card" style="padding:var(--space-1) var(--space-2)">
     <div class="bk-hub-toggle">
-      <button type="button" class="bk-hub-tab ${_devTab==='phase'?'active':''}" onclick="setDevTab('phase')">${iconInline('sprout')} Eure Phase</button>
-      <button type="button" class="bk-hub-tab ${_devTab==='milestones'?'active':''}" onclick="setDevTab('milestones')">${iconInline('check')} Meilensteine</button>
+      <button type="button" class="bk-hub-tab ${_devTab==='phase'?'active':''}" onclick="setDevTab('phase')">Phase</button>
+      <button type="button" class="bk-hub-tab ${_devTab==='milestones'?'active':''}" onclick="setDevTab('milestones')">Meilensteine</button>
+      <button type="button" class="bk-hub-tab ${_devTab==='ideas'?'active':''}" onclick="setDevTab('ideas')">Spielideen</button>
     </div>
   </div>
-  ${_devTab==='milestones'?renderMilestonesInner():renderPhaseView()}`;
+  ${_devTab==='milestones'?renderMilestonesInner():_devTab==='ideas'?renderActivities(true):renderPhaseView()}`;
 }
 
 const IDEA_CATS={'Bücherei-Besuch':'sprache','Spaziergang im Park':'kognitiv','Wasserspaß zuhause':'kognitiv','Fingerfarben-Kunstwerk':'kognitiv','Küchen-Konzert':'kognitiv','Spiegel-Entdeckung':'sozial','Tuch-Kuckuck':'kognitiv','Natur-Texturen erkunden':'kognitiv','Seifenblasen':'kognitiv','Socken-Handpuppe':'sprache','Herbst-Basteln':'motorik','Baby-Café-Besuch':'sozial'};
@@ -5845,9 +6091,9 @@ function renderIdeasCard(){
     }).join('')}
   </div>`;
 }
-function renderActivities(){
+function renderActivities(noBack){
   const a=getActs(),sl=getSongs();
-  return bb()+`
+  return (noBack?'':bb())+`
   <div class="card-grad" style="background:linear-gradient(135deg,var(--rose-ll),#faedf8)">
     <div class="ct"><div class="ct-left">${iconInline('music')} Lieder für ${getBabyName()}</div></div>
     ${sl.map(s=>`<div class="song-block"><div class="song-title">${s.title}</div><div class="song-type">${s.type}</div><div class="song-text">${resolveBaby(s.text)}</div></div>`).join('')}
@@ -5890,16 +6136,16 @@ function renderProfile(){
         <span class="profile-avatar-badge">${icon('camera')}</span>
       </div>
     </div>
-    <div class="profile-sec">Daten</div>
+    <div class="profile-sec">Geburt und Alter</div>
     <dl class="profile-facts">
-      <dt>Geburtstag</dt><dd>${long(BIRTH)}</dd>
+      <dt>Geburtsdatum</dt><dd>${long(BIRTH)}</dd>
       <dt>Errechneter Termin</dt><dd>${long(DUE)}</dd>
-      ${bkD?`<dt>Beikost-Start</dt><dd>${long(bkD)}</dd>`:''}
-      <dt>Tatsächliches Alter</dt><dd>${fmtCount(Math.max(0,ageW()),'Woche','Wochen')}</dd>
+      <dt>Alter</dt><dd>${fmtCount(Math.max(0,ageW()),'Woche','Wochen')}</dd>
       <dt>Korrigiertes Alter</dt><dd>${fmtCount(Math.max(0,corrW()),'Woche','Wochen')}</dd>
     </dl>
     <div class="profile-sec">Essen</div>
     <dl class="profile-facts">
+      ${bkD?`<dt>Beikost seit</dt><dd>${long(bkD)}</dd>`:''}
       <dt>Ernährung</dt><dd>${{alles:'Alles',vegetarisch:'Vegetarisch',vegan:'Vegan'}[recipePrefs().diet]}</dd>
       <dt>Verträgt nicht</dt><dd>${recipePrefs().avoid.length?recipePrefs().avoid.map(a=>AVOID_LABEL[a]).join(', '):'nichts eingetragen'}</dd>
     </dl>
@@ -6036,7 +6282,11 @@ let outfitScenario='drinnen';
 let outfitWeather=null;       // cached weather data
 let outfitWeatherLoading=false;
 let outfitSwapSlot=null;      // { slotKey, options, currentIdx }
-let outfitSwaps={};           // { slotKey: selectedIdx }
+let outfitSwaps={};           // { 'szenario:slot': {name, day} } — gilt nur für heute
+// Raumtemperatur (2.13): Drinnen und Schlafen rechnen mit dem Raum, nicht mit dem Wetter draußen.
+const ROOM_DEFAULT={drinnen:20,schlafen:18},ROOM_CHOICES={drinnen:[18,20,22],schlafen:[16,18,20]};
+function roomTemp(sc){const v=(S.roomTemp||{})[sc];return ROOM_CHOICES[sc]?.includes(v)?v:ROOM_DEFAULT[sc]}
+function setRoomTemp(sc,v){tapFeedback();S.roomTemp={...(S.roomTemp||{}),[sc]:v};dbSave();render({preserveScroll:true})}
 
 // ── SVG Icon Library ─────────────────────────────────────────
 const OI={
@@ -6083,7 +6333,19 @@ function fetchWithTimeout(url, ms=6000){
 // (offiziell bestätigt als fehlendes Feature), deshalb Nominatim/OpenStreetMap –
 // kostenlos, kein API-Key nötig. Bei Fehler/Timeout: null, Aufrufer fällt dann
 // auf "Aktueller Standort" zurück statt die App zu blockieren.
+// Nominatim-Nutzungsrichtlinie: höchstens eine Anfrage pro Sekunde, Ergebnisse zwischenspeichern.
+// Den User-Agent darf ein Browser nicht setzen; der Referer (Adresse der App) wird mitgeschickt.
+let _nominatimLast=0;const NOMINATIM_CACHE='h_geoCache';
 async function reverseGeocode(lat,lon){
+  const key=`${Number(lat).toFixed(2)},${Number(lon).toFixed(2)}`;
+  try{const c=JSON.parse(localStorage.getItem(NOMINATIM_CACHE)||'{}');if(c[key])return c[key]}catch(e){}
+  const wait=_nominatimLast+1100-Date.now();if(wait>0)await new Promise(r=>setTimeout(r,wait));
+  _nominatimLast=Date.now();
+  const name=await _reverseGeocodeFetch(lat,lon);
+  if(name){try{const c=JSON.parse(localStorage.getItem(NOMINATIM_CACHE)||'{}');c[key]=name;const keys=Object.keys(c);if(keys.length>20)delete c[keys[0]];localStorage.setItem(NOMINATIM_CACHE,JSON.stringify(c))}catch(e){}}
+  return name;
+}
+async function _reverseGeocodeFetch(lat,lon){
   try{
     const res=await fetchWithTimeout(
       `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json&zoom=10&addressdetails=1&accept-language=de`,
@@ -6341,7 +6603,8 @@ function weatherIcon(code,rain){
 
 // ── Outfit recommendation logic ───────────────────────────────
 function getOutfitForScenario(scenario,weather){
-  const temp=weather?.current?.temp??18;
+  const outdoor=weather?.current?.temp??18;
+  const temp=(scenario==='drinnen'||scenario==='schlafen')?roomTemp(scenario):outdoor;
   const rain=weather?.current?.rain??0;
   const uv=weather?.current?.uv??2;
   const ageM=corrMonths();
@@ -6362,12 +6625,12 @@ function getOutfitForScenario(scenario,weather){
   // Mid layer
   let mid=[];
   if(scenario==='schlafen'){
-    const tog=cold?2.5:cool?1.5:mild?1.0:0.5;
+    const tog=temp<20?2.5:temp<24?1.0:temp<27?0.5:0.2;
     mid=[
-      {key:'sleepsuit',icon:OI.sleepsuit,label:'Schlafanzug',swap:false},
-      {key:'sleepbag',icon:OI.sleepbag,label:`Schlafsack ${tog} TOG`,swap:true,
+      {key:'sleepsuit',icon:OI.sleepsuit,label:temp<20?'Langarm-Schlafanzug':'Schlafanzug',swap:false},
+      {key:'sleepbag',icon:OI.sleepbag,label:`Schlafsack ${String(tog).replace('.',',')} TOG`,swap:true,
        swapOptions:[
-         {icon:OI.sleepbag,name:`${tog} TOG Schlafsack`,note:'Empfohlen für diese Temperatur'},
+         {icon:OI.sleepbag,name:`${String(tog).replace('.',',')} TOG Schlafsack`,note:'Empfohlen für diese Temperatur'},
          {icon:OI.blanket,name:'Wolldecke',note:'Alternative bei gutem Festschlafen'},
        ]},
     ];
@@ -6521,7 +6784,7 @@ function getOutfitForScenario(scenario,weather){
     {label:'Basisschicht',items:base},
     {label:'Hauptschicht',items:mid},
     ...(outer.length?[{label:'Außenschicht',items:outer}]:[]),
-    ...(acc.length?[{label:'Zubehör & Szenarien',items:acc}]:[]),
+    ...(acc.length?[{label:'Zubehör',items:acc}]:[]),
   ],warnings,temp,rain,uv,
   // Wichtige Hinweise, die über dem Outfit prominent dargestellt werden (nicht nur als Listenpunkt)
   alerts:(scenario==='kinderwagen'&&rain>40)?[{
@@ -6535,9 +6798,18 @@ function getOutfitForScenario(scenario,weather){
 // ── Swap item registry (avoids JSON-in-onclick attribute issues) ──
 const _outfitSwapRegistry=[];
 
+function outfitOptions(item){
+  const rec={icon:item.icon,name:item.label,note:'Empfohlen für heute'};
+  return[rec].concat((item.swapOptions||[]).filter(o=>o.name!==item.label));
+}
+function outfitChoice(item){
+  const ch=outfitSwaps[`${outfitScenario}:${item.key}`];
+  if(!ch||ch.day!==todayKey())return 0;
+  const i=outfitOptions(item).findIndex(o=>o.name===ch.name);return i<0?0:i;
+}
 function renderOutfitTile(item){
-  const swapIdx=outfitSwaps[item.key]??0;
-  const current=item.swap&&item.swapOptions?item.swapOptions[swapIdx]:null;
+  const swapIdx=item.swap?outfitChoice(item):0;
+  const current=item.swap&&swapIdx>0?outfitOptions(item)[swapIdx]:null;
   // Eigene Kleidungs-Illustration (kein Lucide-Icon) — Name bewusst nicht
   // 'icon', damit der globale Icon-Helfer nicht verdeckt wird.
   const garmentSvg=current?current.icon:item.icon;
@@ -6560,9 +6832,9 @@ window.openOutfitSwap=function(regIdx){
   const item=_outfitSwapRegistry[regIdx];
   if(!item)return;
   outfitSwapSlot=item;
-  const curIdx=outfitSwaps[item.key]??0;
+  const curIdx=outfitChoice(item);
   document.getElementById('outfit-swap-title').textContent=`Alternative für: ${item.label}`;
-  const optHtml=(item.swapOptions||[]).map((opt,i)=>`
+  const optHtml=outfitOptions(item).map((opt,i)=>`
     <button type="button" class="outfit-swap-option${i===curIdx?' selected':''}" onclick="selectOutfitSwapOption(${i})">
       ${opt.icon}
       <div class="outfit-swap-option-text">
@@ -6575,7 +6847,7 @@ window.openOutfitSwap=function(regIdx){
 };
 window.selectOutfitSwapOption=function(i){
   document.querySelectorAll('.outfit-swap-option').forEach((el,j)=>el.classList.toggle('selected',j===i));
-  if(outfitSwapSlot)outfitSwaps[outfitSwapSlot.key]=i;
+  if(outfitSwapSlot){const o=outfitOptions(outfitSwapSlot)[i];outfitSwaps[`${outfitScenario}:${outfitSwapSlot.key}`]={name:o.name,day:todayKey()}}
 };
 window.confirmOutfitSwap=function(){
   closeOutfitSwap();
@@ -6617,12 +6889,23 @@ window.setOutfitScenario=function(key){
   if(_title)_title.textContent='Outfit · '+(_sc?_sc.label:'');
   const _tips=document.getElementById('outfit-tips-wrap');
   if(_tips)_tips.innerHTML=renderOutfitTips();
+  const _temp=document.getElementById('outfit-temp-wrap');
+  if(_temp)_temp.innerHTML=renderOutfitTempLine();
   // Fade + re-render grid
   const grid=document.getElementById('outfit-grid-wrap');
   if(grid){grid.classList.add('fade');setTimeout(()=>{grid.classList.remove('fade');grid.innerHTML=renderOutfitGrid()},160)}
 };
 
 // ── Main renderer for outfit sub-page ─────────────────────────
+function renderOutfitTempLine(){
+  const wt=outfitWeather,out=wt?.current?.temp,sc=outfitScenario;
+  if(ROOM_CHOICES[sc]){
+    const r=roomTemp(sc);
+    return`<div class="outfit-temp">Bei etwa ${r} °C ${sc==='schlafen'?'im Schlafzimmer':'Raumtemperatur'}${out!=null&&!wt?.mock?` · draußen ${out} °C`:''}</div>
+      <div class="outfit-room" role="group" aria-label="Raumtemperatur"><span>${sc==='schlafen'?'Schlafzimmer':'Raum'}:</span>${ROOM_CHOICES[sc].map(v=>`<button type="button" class="rf-chip${v===r?' on':''}" aria-pressed="${v===r}" onclick="setRoomTemp('${sc}',${v})">${v} °C</button>`).join('')}</div>`;
+  }
+  return wt?`<div class="outfit-temp">${wt.mock?'Simulierte Wetterdaten':`Draußen ${out} °C · ${wt.current.rain??0} % Regen`}</div>`:'';
+}
 function renderOutfitTips(){
   const wt=outfitWeather||buildMockWeather('');
   const data=getOutfitForScenario(outfitScenario,wt);
@@ -6632,7 +6915,7 @@ function renderOutfitTips(){
       <div><div class="outfit-alert-title">${a.title}</div><div class="outfit-alert-text">${a.text}</div></div>
     </div>`).join('');
   const tipsHtml=data.warnings.length?`<div class="outfit-tips">
-      <div class="outfit-tips-title">Beachte heute</div>
+      <div class="outfit-tips-title">Gut zu wissen für heute</div>
       <ul>${data.warnings.map(w=>`<li>${w}</li>`).join('')}</ul>
     </div>`:'';
   return alertsHtml+tipsHtml;
@@ -6711,12 +6994,12 @@ function renderOutfit(){
     <div class="outfit-combo-divider" aria-hidden="true"><span>${icon('chevron-down','icon-sm')}</span></div>
     <div class="ct" style="margin-bottom:var(--space-2)">
       <div class="ct-left">${iconInline('shirt')} <span id="outfit-title">Outfit · ${SCENARIOS.find(s=>s.key===outfitScenario)?.label||''}</span></div>
-      ${wt?`<span style="font-size:13px;color:var(--text-m);font-family:var(--font-ui)">${temp}°C · ${rain}% Regen</span>`:''}
     </div>
-    <div id="outfit-tips-wrap">${renderOutfitTips()}</div>
+    <div id="outfit-temp-wrap">${renderOutfitTempLine()}</div>
     <div id="outfit-grid-wrap" class="outfit-grid-wrap">
       ${data?renderOutfitGrid():`<div class="weather-loading">⏳ Warte auf Wetterdaten…</div>`}
     </div>
+    <div id="outfit-tips-wrap">${renderOutfitTips()}</div>
   </div>
 
   <!-- Permanent footer note -->
@@ -6740,7 +7023,7 @@ function renderOutfitHomeCard(){
       ${wt?`<span class="outfit-uv-badge ${uvClass(uv)}" style="font-size:10px">UV ${uv}</span>`:''}
     </div>
     <div style="font-size:11px;color:var(--sage-d);margin-bottom:8px;font-family:var(--font-ui)">
-      Drinnen${temp!=null?` · ${temp}°C`:''}${wt?.location?` · ${escHtml(wt.location)}`:''}
+      Drinnen · etwa ${roomTemp('drinnen')} °C${temp!=null&&!wt?.mock?` · draußen ${temp} °C`:''}${wt?.location?` · ${escHtml(wt.location)}`:''}
     </div>
     <div class="outfit-home-icon-row">
       ${previewItems.map(item=>`<div class="outfit-home-icon">${item.icon}<span>${item.label.replace('!','')}</span></div>`).join('')}
@@ -6768,14 +7051,14 @@ if(typeof window!=='undefined'){
     openBeikostNitratePop,closeBeikostNitratePop,
     openBeikostTriedPop,closeBeikostTriedPop,confirmBeikostTried,
     markRecipeCooked,toggleRecipeExpand,
-    toggleWN,rankEv,rfResetSheet,rfToggle,rfToggleCompatible,toggleForHanna,rfReset,rfApplyTag,openFestCollection,openFilterSheet,closeHannaHint,openHannaPrefs,saveHannaPrefs,hpSetDiet,hpToggleAvoid,hpToggleAge,startNap,endNap,toggleSleepNoise,openNapEditor,saveNap,deleteNap,setIdeaFilter,toggleStats,setBkStartMode,toggleReadinessSign,startBeikost,openProfileEdit,peSelectPronoun,saveProfileEdit,toggleMeasureAll,askDeleteMeasure,deleteMeasure,startImport,onBackupFile,confirmImport,
+    toggleWN,rankEv,setStatsConsent,ackSafety,toggleSafety,openDevIdeas,setLegalTab,openLegal,setRoomTemp,openMomentSheet,momentToggleName,momentTogglePhoto,momentPhotoChosen,momentShare,momentSave,toggleMomentsNotify,checkMoments,openSeasonCollection,hideSeasonCard,toggleBkStart,hideBkStart,rfResetSheet,rfToggle,rfToggleCompatible,toggleForHanna,rfReset,rfApplyTag,openFestCollection,openFilterSheet,closeHannaHint,openHannaPrefs,saveHannaPrefs,hpSetDiet,hpToggleAvoid,hpToggleAge,startNap,endNap,toggleSleepNoise,openNapEditor,saveNap,deleteNap,setIdeaFilter,toggleStats,setBkStartMode,toggleReadinessSign,startBeikost,openProfileEdit,peSelectPronoun,saveProfileEdit,toggleMeasureAll,askDeleteMeasure,deleteMeasure,startImport,onBackupFile,confirmImport,
     setToothStatus,saveToothDate,openToothMenu,toggleMs,setDevTab,selectPhase,openPhaseMilestones,openPhaseView,resetOutfitLocation,
     addNote,delNote,saveWeight,saveHeight,exportData,
     openSupportLink,dismissSaveWarning,
   });
 }
 
-const TAG_CATALOG=[{"id": "fruehstueck", "label": "Frühstück", "group": "mahlzeit"}, {"id": "mittagessen", "label": "Mittagessen", "group": "mahlzeit"}, {"id": "abendessen", "label": "Abendessen", "group": "mahlzeit"}, {"id": "snack", "label": "Snack", "group": "mahlzeit"}, {"id": "brei", "label": "Brei", "group": "essform"}, {"id": "fingerfood", "label": "Fingerfood", "group": "essform"}, {"id": "waffeln", "label": "Waffeln", "group": "gerichtsart"}, {"id": "pancakes", "label": "Pancakes & Pfannkuchen", "group": "gerichtsart"}, {"id": "muffins", "label": "Muffins", "group": "gerichtsart"}, {"id": "kuchen", "label": "Kuchen", "group": "gerichtsart"}, {"id": "brot-broetchen", "label": "Brot & Brötchen", "group": "gerichtsart"}, {"id": "riegel-baellchen", "label": "Riegel & Bällchen", "group": "gerichtsart"}, {"id": "puffer", "label": "Puffer & Taler", "group": "gerichtsart"}, {"id": "pasta", "label": "Pasta", "group": "gerichtsart"}, {"id": "suppe", "label": "Suppe", "group": "gerichtsart"}, {"id": "aufstrich-dip", "label": "Aufstrich & Dip", "group": "gerichtsart"}, {"id": "getraenk", "label": "Getränk", "group": "gerichtsart"}, {"id": "vegetarisch", "label": "Vegetarisch", "group": "ernaehrung"}, {"id": "vegan", "label": "Vegan", "group": "ernaehrung"}, {"id": "fleisch", "label": "Mit Fleisch", "group": "ernaehrung"}, {"id": "fisch", "label": "Mit Fisch", "group": "ernaehrung"}, {"id": "ohne-ei", "label": "Ohne Ei", "group": "frei-von"}, {"id": "ohne-milch", "label": "Ohne Milch", "group": "frei-von"}, {"id": "glutenfrei", "label": "Glutenfrei", "group": "frei-von"}, {"id": "ohne-nuesse", "label": "Ohne Nüsse", "group": "frei-von"}, {"id": "einfrierbar", "label": "Einfrierbar", "group": "praktisch"}, {"id": "unterwegs", "label": "Für unterwegs", "group": "praktisch"}, {"id": "schnell", "label": "Schnell (bis 15 Minuten)", "group": "praktisch"}, {"id": "one-pot", "label": "One-Pot", "group": "praktisch"}, {"id": "reste-verwertung", "label": "Resteverwertung", "group": "praktisch"}, {"id": "vorkochen", "label": "Zum Vorkochen", "group": "praktisch"}, {"id": "familienessen", "label": "Familienessen", "group": "anlass"}, {"id": "fest", "label": "Geburtstag & Fest", "group": "anlass"}, {"id": "ofen", "label": "Ofen", "group": "zubereitung"}, {"id": "pfanne", "label": "Pfanne", "group": "zubereitung"}, {"id": "waffeleisen", "label": "Waffeleisen", "group": "zubereitung"}, {"id": "ohne-kochen", "label": "Ohne Kochen", "group": "zubereitung"}];
+const TAG_CATALOG=[{"id": "fruehstueck", "label": "Frühstück", "group": "mahlzeit"}, {"id": "mittagessen", "label": "Mittagessen", "group": "mahlzeit"}, {"id": "abendessen", "label": "Abendessen", "group": "mahlzeit"}, {"id": "snack", "label": "Snack", "group": "mahlzeit"}, {"id": "brei", "label": "Brei", "group": "essform"}, {"id": "fingerfood", "label": "Fingerfood", "group": "essform"}, {"id": "waffeln", "label": "Waffeln", "group": "gerichtsart"}, {"id": "pancakes", "label": "Pancakes & Pfannkuchen", "group": "gerichtsart"}, {"id": "muffins", "label": "Muffins", "group": "gerichtsart"}, {"id": "kuchen", "label": "Kuchen", "group": "gerichtsart"}, {"id": "brot-broetchen", "label": "Brot & Brötchen", "group": "gerichtsart"}, {"id": "riegel-baellchen", "label": "Riegel & Bällchen", "group": "gerichtsart"}, {"id": "puffer", "label": "Puffer & Taler", "group": "gerichtsart"}, {"id": "pasta", "label": "Pasta", "group": "gerichtsart"}, {"id": "suppe", "label": "Suppe", "group": "gerichtsart"}, {"id": "aufstrich-dip", "label": "Aufstrich & Dip", "group": "gerichtsart"}, {"id": "getraenk", "label": "Getränk", "group": "gerichtsart"}, {"id": "vegetarisch", "label": "Vegetarisch", "group": "ernaehrung"}, {"id": "vegan", "label": "Vegan", "group": "ernaehrung"}, {"id": "fleisch", "label": "Mit Fleisch", "group": "ernaehrung"}, {"id": "fisch", "label": "Mit Fisch", "group": "ernaehrung"}, {"id": "ohne-ei", "label": "Ohne Ei", "group": "frei-von"}, {"id": "ohne-milch", "label": "Ohne Milch", "group": "frei-von"}, {"id": "glutenfrei", "label": "Glutenfrei", "group": "frei-von"}, {"id": "ohne-nuesse", "label": "Ohne Nüsse", "group": "frei-von"}, {"id": "einfrierbar", "label": "Einfrierbar", "group": "praktisch"}, {"id": "unterwegs", "label": "Für unterwegs", "group": "praktisch"}, {"id": "schnell", "label": "Schnell (bis 15 Minuten)", "group": "praktisch"}, {"id": "one-pot", "label": "One-Pot", "group": "praktisch"}, {"id": "reste-verwertung", "label": "Resteverwertung", "group": "praktisch"}, {"id": "vorkochen", "label": "Zum Vorkochen", "group": "praktisch"}, {"id": "familienessen", "label": "Familienessen", "group": "anlass"}, {"id": "fest", "label": "Geburtstag & Fest", "group": "anlass"}, {"id": "weihnachten", "label": "Weihnachten", "group": "anlass"}, {"id": "ofen", "label": "Ofen", "group": "zubereitung"}, {"id": "pfanne", "label": "Pfanne", "group": "zubereitung"}, {"id": "waffeleisen", "label": "Waffeleisen", "group": "zubereitung"}, {"id": "ohne-kochen", "label": "Ohne Kochen", "group": "zubereitung"}];
 // ════════════════ REZEPTFILTER (2.7) ═══════════════════════
 // „Für Hanna“ = dauerhafte Einstellungen (Alter, Ernährung, Unverträglichkeiten, S.recipePrefs).
 // Alle übrigen Filter gelten nur in dieser Sitzung (RF.sel). Innerhalb einer Gruppe „oder“,
@@ -6811,17 +7094,31 @@ function passesHanna(r,ageM){
   return passesPrefs(r);
 }
 function passesGroup(r,g,list){if(!list.length)return true;return g==='frei-von'?list.every(t=>hasTag(r,t)):list.some(t=>hasTag(r,t))}
+// Leistung: Die teuren Prüfungen (Alter, Nitrat, Ernährung, Suche, „nur mit Probiertem“) laufen
+// einmal pro Rezept und Durchgang. Die Trefferzahlen an den Filtern rechnen danach nur noch mit Tags.
+let _rfCache=null;
+function rfCacheKey(){return JSON.stringify([RF.forHanna,RF.ageOverride,S.recipePrefs,S.beikostRecipeQuery||'',corrMonths(),getRecipes().length,Object.keys(S.beikost?.tried||{}).length,Object.keys(S.beikost?.reactions||{}).length,localStorage.getItem(BABY_BEIKOST_KEY)])}
+function rfBase(compat){
+  const key=rfCacheKey();
+  if(!_rfCache||_rfCache.key!==key){
+    const ageM=corrMonths(),q=(S.beikostRecipeQuery||'').trim();
+    const base=getRecipes().filter(r=>passesHanna(r,ageM)&&recipeMatchesSearch(r,q));
+    _rfCache={key,base,compat:null};
+  }
+  if(!compat)return _rfCache.base;
+  if(!_rfCache.compat)_rfCache.compat=_rfCache.base.filter(r=>recipeMatchesFilter(r,'compatible'));
+  return _rfCache.compat;
+}
 function rfFiltered(opt={}){
-  const ageM=corrMonths(),q=(S.beikostRecipeQuery||'').trim();
   const compat=opt.compatible!=null?opt.compatible:RF.compatible;
-  return getRecipes().filter(r=>passesHanna(r,ageM)&&recipeMatchesSearch(r,q)&&(!compat||recipeMatchesFilter(r,'compatible'))
-    &&Object.keys(RF.sel).every(g=>g===opt.exceptGroup||passesGroup(r,g,rfSel(g)))&&(!opt.extra||opt.extra(r)));
+  const groups=Object.keys(RF.sel).filter(g=>g!==opt.exceptGroup&&rfSel(g).length);
+  return rfBase(compat).filter(r=>groups.every(g=>passesGroup(r,g,rfSel(g)))&&(!opt.extra||opt.extra(r)));
 }
 function rfCount(g,t){return g==='frei-von'?rfFiltered({extra:r=>hasTag(r,t)}).length:rfFiltered({exceptGroup:g,extra:r=>hasTag(r,t)}).length}
 function rfSheetCount(){return SHEET_GROUPS.reduce((a,g)=>a+rfSel(g).length,0)+(RF.compatible?1:0)}
 function rfAnySession(){return Object.values(RF.sel).some(a=>a.length)||RF.compatible}
 function joinDe(list,word){if(list.length<2)return list.join('');return list.slice(0,-1).join(', ')+` ${word} `+list[list.length-1]}
-function getFilteredRecipeHubRecipes(){return rfFiltered().sort((a,b)=>(a.title||'').localeCompare(b.title||'','de'))}
+function getFilteredRecipeHubRecipes(){const ageM=corrMonths();return rfFiltered().sort((a,b)=>{if(RF.ageOverride){const la=(Number(a.ageRecommendation)||0)>ageM,lb=(Number(b.ageRecommendation)||0)>ageM;if(la!==lb)return la?1:-1}return(a.title||'').localeCompare(b.title||'','de')})}
 function rfSummaryText(n){
   const name=getBabyName(),ageM=corrMonths();
   const cnt=fmtCount(n,'Rezept','Rezepte');
@@ -6831,7 +7128,7 @@ function rfSummaryText(n){
   if(p.diet!=='alles')parts.push(p.diet);
   const free=p.avoid.map(a=>SENTENCE_LABEL[AVOID_TAG[a]]).concat(rfSel('frei-von').map(t=>SENTENCE_LABEL[t]||TAG_LABEL[t]));
   if(free.length)parts.push(joinDe(free,'und'));
-  return`<b>${cnt}</b> für ${name}: ${parts.join(', ')}.${ageFilterActive()?'':` Für manche ist ${name} noch zu jung.`}`;
+  return`<b>${cnt}</b> für ${name}: ${parts.join(', ')}.${ageFilterActive()?'':` Für manche ist ${name} noch zu jung${RF.ageOverride?', die passenden stehen oben':''}.`}`;
 }
 const FREI_VON_NOUN={'ohne-ei':'Ei','ohne-milch':'Milch','glutenfrei':'Gluten','ohne-nuesse':'Nüssen'};
 function rfChosenParts(){
@@ -6855,11 +7152,19 @@ function rfChip(g,t,label,count,on,handler){
 function rfRefresh(){
   const m=document.getElementById('modal');
   if(m&&m.classList.contains('open')&&m.dataset.sheet==='filter'){document.getElementById('modal-body').innerHTML=renderFilterSheetBody();return}
+  const bar=document.querySelector('.rf-bar'),list=document.getElementById('bk-recipe-list');
+  if(curTab===2&&bar&&list){
+    const focus=document.activeElement&&document.activeElement.id;
+    const tmp=document.createElement('div');tmp.innerHTML=renderRecipeFilterBar();bar.replaceWith(tmp.firstElementChild);
+    list.innerHTML=renderBeikostRecipeListInner(getFilteredRecipeHubRecipes());
+    if(focus==='bk-recipe-search'){const i=document.getElementById('bk-recipe-search');if(i){i.focus();i.setSelectionRange(i.value.length,i.value.length)}}
+    return;
+  }
   render({preserveScroll:true});
 }
 function rfToggle(g,t){tapFeedback();const a=rfSel(g);RF.sel[g]=a.includes(t)?a.filter(x=>x!==t):a.concat(t);rfRefresh()}
 function rfToggleCompatible(){tapFeedback();RF.compatible=!RF.compatible;rfRefresh()}
-function toggleForHanna(){tapFeedback();RF.forHanna=!RF.forHanna;RF.ageOverride=false;render({preserveScroll:true})}
+function toggleForHanna(){tapFeedback();RF.forHanna=!RF.forHanna;RF.ageOverride=false;rfRefresh()}
 function rfReset(){tapFeedback();RF.sel={};RF.compatible=false;RF.ageOverride=false;rfRefresh()}
 // Im Filterfenster: nur die Filter aus dem Fenster zurücksetzen, die Schnellfilter oben bleiben
 function rfResetSheet(){tapFeedback();SHEET_GROUPS.forEach(g=>delete RF.sel[g]);RF.compatible=false;rfRefresh()}
@@ -6882,7 +7187,7 @@ function renderFilterSheetBody(){
   }else top=`<button type="button" class="link-btn rf-hanna-link" onclick="openHannaPrefs('filter')">Immer für ${name} einrichten</button>`;
   let sec='',first=true;
   SHEET_GROUPS.forEach(g=>{
-    let chips=TAG_CATALOG.filter(t=>t.group===g).filter(t=>!(g==='frei-von'&&p.avoid.some(a=>AVOID_TAG[a]===t.id)))
+    let chips=TAG_CATALOG.filter(t=>t.group===g).filter(t=>!(g==='frei-von'&&p.avoid.some(a=>AVOID_TAG[a]===t.id))).filter(t=>inSeason(t.id)||rfSel(g).includes(t.id))
       .map(t=>({t,c:rfCount(g,t.id),on:rfSel(g).includes(t.id)})).filter(x=>x.c>0||x.on)
       .map(x=>rfChip(g,x.t.id,TAG_SHORT[x.t.id]||x.t.label,x.c,x.on));
     if(g==='praktisch'){const c=rfFiltered({compatible:true}).length;if(c>0||RF.compatible)chips.push(rfChip('','','Nur mit Probiertem',c,RF.compatible,'rfToggleCompatible()'))}
@@ -6931,8 +7236,9 @@ function renderRecipeFilterBar(){
   const name=getBabyName(),q=S.beikostRecipeQuery||'';
   const quick=(g,t,l)=>rfChip(g,t,l,null,rfSel(g).includes(t));
   const n=rfSheetCount();
-  const colls=[['anlass','familienessen','Familienessen'],['praktisch','unterwegs','Für unterwegs'],['praktisch','vorkochen','Zum Vorkochen'],['anlass','fest','Geburtstag & Fest']]
-    .map(([g,t,l])=>({g,t,l,c:getRecipes().filter(r=>passesHanna(r,corrMonths())&&hasTag(r,t)).length})).filter(x=>x.c>0);
+  const season=Object.keys(SEASONS).filter(t=>inSeason(t)).map(t=>({g:'anlass',t,l:SEASONS[t].label,season:true,c:getRecipes().filter(r=>hasTag(r,t)&&(!RF.forHanna||passesPrefs(r))).length}));
+  const colls=season.concat([['anlass','familienessen','Familienessen'],['praktisch','unterwegs','Für unterwegs'],['praktisch','vorkochen','Zum Vorkochen'],['anlass','fest','Geburtstag & Fest']]
+    .map(([g,t,l])=>({g,t,l,c:(RF.forHanna?rfBase(false):getRecipes()).filter(r=>hasTag(r,t)).length}))).filter(x=>x.c>0);
   const n2=getFilteredRecipeHubRecipes().length;
   return`<div class="rf-bar">
     <div class="bk-search-field"><input id="bk-recipe-search" type="text" class="bk-search-input" value="${escHtml(q)}" placeholder="Rezept oder Zutat suchen" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" oninput="setBeikostRecipeQuery(this.value)"/>
@@ -6940,8 +7246,8 @@ function renderRecipeFilterBar(){
     <div class="rf-chips">${rfChip('','',`Für ${getBabyNameRaw()}`,null,RF.forHanna,'toggleForHanna()')}${quick('essform','brei','Brei')}${quick('essform','fingerfood','Fingerfood')}</div>
     <div class="rf-chips">${quick('mahlzeit','fruehstueck','Frühstück')}${quick('mahlzeit','mittagessen','Mittagessen')}${quick('mahlzeit','abendessen','Abendessen')}${quick('mahlzeit','snack','Snack')}</div>
     <div class="rf-chips"><button type="button" class="rf-more" onclick="openFilterSheet()">${icon('sliders-horizontal','icon-sm')} Mehr Filter${n?`<span class="rf-badge">${n}</span>`:''}</button></div>
-    ${colls.length&&!rfAnySession()&&!q.trim()?`<div class="rf-colls-l">Sammlungen</div><div class="rf-colls">${colls.map((x,i)=>`<button type="button" class="rf-coll rf-coll-${i}" onclick="rfApplyTag('${x.g}','${x.t}')"><span class="rf-coll-t">${escHtml(x.l)}</span><span class="rf-coll-c">${fmtCount(x.c,'Rezept','Rezepte')}</span></button>`).join('')}</div>`:''}
-    ${(()=>{const a=[['anlass','familienessen','Familienessen'],['praktisch','unterwegs','Für unterwegs'],['praktisch','vorkochen','Zum Vorkochen'],['anlass','fest','Geburtstag & Fest']].find(([g,t])=>rfSel(g).length===1&&rfSel(g)[0]===t&&Object.keys(RF.sel).filter(k=>rfSel(k).length).length===1);return a?`<div class="rf-active-coll">Sammlung <b>${escHtml(a[2])}</b><button type="button" class="rf-coll-x" onclick="rfReset()" aria-label="Sammlung schließen">${icon('x','icon-sm')}</button></div>`:''})()}
+    ${colls.length&&!rfAnySession()&&!q.trim()?`<div class="rf-colls-l">Sammlungen</div><div class="rf-colls">${colls.map((x,i)=>`<button type="button" class="rf-coll ${x.season?'rf-coll-xmas':`rf-coll-${i-season.length}`}" onclick="${x.season?`openSeasonCollection('${x.t}')`:`rfApplyTag('${x.g}','${x.t}')`}">${x.season?`<span class="rf-coll-star">${XMAS_STAR}</span>`:''}<span class="rf-coll-t">${escHtml(x.l)}</span><span class="rf-coll-c">${fmtCount(x.c,'Rezept','Rezepte')}</span></button>`).join('')}</div>`:''}
+    ${(()=>{const a=[['anlass','weihnachten','Weihnachten'],['anlass','familienessen','Familienessen'],['praktisch','unterwegs','Für unterwegs'],['praktisch','vorkochen','Zum Vorkochen'],['anlass','fest','Geburtstag & Fest']].find(([g,t])=>rfSel(g).length===1&&rfSel(g)[0]===t&&Object.keys(RF.sel).filter(k=>rfSel(k).length).length===1);return a?`<div class="rf-active-coll">Sammlung <b>${escHtml(a[2])}</b><button type="button" class="rf-coll-x" onclick="rfReset()" aria-label="Sammlung schließen">${icon('x','icon-sm')}</button></div>`:''})()}
     <div class="rf-summary" data-rf-summary>${rfSummaryText(n2)}</div>
     ${rfAnySession()?`<button type="button" class="link-btn" style="padding:0" onclick="rfReset()">Filter zurücksetzen</button>`:''}
   </div>`;
@@ -6963,6 +7269,195 @@ function recipeTraits(r){
     return`<div class="rt-l">${label}</div><div class="rt-chips">${tags.map(t=>`<button type="button" class="rt-chip" onclick="event.stopPropagation();rfApplyTag('${TAG_GROUP[t]}','${t}')">${escHtml(TAG_SHORT[t]||TAG_LABEL[t])}</button>`).join('')}</div>`;
   }).join('');
   return html?`<div class="recipe-section-label">Merkmale</div>${html}<div class="rt-hint">Tippe auf ein Merkmal, um ähnliche Rezepte zu sehen.</div>`:'';
+}
+
+// ════════════════ MOMENTE ZUM TEILEN (2.12) ════════════════
+// Erreichte Momente werden in S.moments gespeichert ({id:{date,food?,seen}}). Das Bild entsteht mit
+// <canvas> auf dem Gerät, nichts wird hochgeladen. Ein eigenes Foto wird nur für das Bild genutzt
+// und nicht gespeichert. Jeder Moment kommt höchstens einmal als Fenster, höchstens eins pro Woche.
+const MOMENT_ORDER=['first-spoon','foods50','first-tooth','beikost6m','birthday1'];
+const MOMENT_TITLE={'first-spoon':'Erster Löffel','foods50':'50 Lebensmittel probiert','first-tooth':'Erster Zahn','beikost6m':'6 Monate Beikost','birthday1':'Erster Geburtstag'};
+const MP={tooth:"M7 3c-2.2 0-4 1.8-4 4.2 0 2 .8 3.4 1.6 4.8.7 1.3 1 3 1.3 4.8.2 1.7.7 4.2 2.1 4.2 1.6 0 1.6-3.4 2.4-5.2.4-.9 1-1.3 1.6-1.3s1.2.4 1.6 1.3c.8 1.8.8 5.2 2.4 5.2 1.4 0 1.9-2.5 2.1-4.2.3-1.8.6-3.5 1.3-4.8.8-1.4 1.6-2.8 1.6-4.8C21 4.8 19.2 3 17 3c-2 0-2.8 1.2-5 1.2S9 3 7 3z",
+  cake:["M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8","M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1","M2 21h20","M7 8v3","M12 8v3","M17 8v3","M7 4h.01","M12 4h.01","M17 4h.01"]};
+let _mPhoto=null,_mShowName=true,_mCurrent=null,_mBlob=null;
+const isoDay=d=>{const x=new Date(d);return`${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`};
+const longDate=d=>new Date(d).toLocaleDateString('de-DE',{day:'numeric',month:'long',year:'numeric'});
+function triedIds(){return Object.keys(S.beikost?.tried||{}).filter(k=>S.beikost.tried[k])}
+function foodLabel(id){return getFoodById(id)?.name||id}
+function momentTeeth(){return Object.entries(S.teething?.teeth||{}).filter(([,v])=>v.status==='present')}
+// Welche Momente sind erreicht? Liefert {id: Datum} (ohne Speichern).
+function momentsAchieved(){
+  const out={},tried=triedIds();
+  const bk=parseDateValue(localStorage.getItem(BABY_BEIKOST_KEY));
+  if(tried.length>=1)out['first-spoon']=isoDay(new Date());
+  if(tried.length>=50)out['foods50']=isoDay(new Date());
+  if(bk&&beikostActive()){const six=new Date(bk);six.setMonth(six.getMonth()+6);if(six<=new Date())out['beikost6m']=isoDay(six)}
+  const teeth=momentTeeth().filter(([,v])=>v.date).sort((a,b)=>String(a[1].date).localeCompare(String(b[1].date)));
+  if(momentTeeth().length)out['first-tooth']=teeth[0]?.[1].date||isoDay(new Date());
+  if(BIRTH){const b1=new Date(BIRTH);b1.setFullYear(b1.getFullYear()+1);if(b1<=new Date())out['birthday1']=isoDay(b1)}
+  return out;
+}
+function checkMoments(){
+  if(!S.moments)S.moments={};
+  const ach=momentsAchieved(),first=!S.momentsInit;let changed=false;
+  MOMENT_ORDER.forEach(id=>{
+    if(!(id in ach)||S.moments[id])return;
+    const rec={date:ach[id]||isoDay(new Date()),seen:first};
+    if(id==='first-spoon'){const t=triedIds();rec.food=t.length?foodLabel(t[0]):'';const bk=parseDateValue(localStorage.getItem(BABY_BEIKOST_KEY));rec.date=first&&bk&&bk<=startOfToday()?isoDay(bk):isoDay(new Date())}
+    if(id==='first-tooth'){const t=momentTeeth().sort((a,b)=>String(a[1].date||'').localeCompare(String(b[1].date||'')))[0];rec.tooth=t?(TOOTH_MAP.find(x=>x.id===t[0])?.label||''):''}
+    if(id==='birthday1')rec.seen=true; // kommt über die Geburtstagskarte, nicht als eigenes Fenster
+    S.moments[id]=rec;changed=true;
+  });
+  if(first){S.momentsInit=true;changed=true}
+  if(changed)dbSave();
+}
+function maybeShowMomentPopup(){
+  if(S.momentsNotify===false||curTab!==0)return;
+  const m=document.getElementById('modal');if(m&&m.classList.contains('open'))return;
+  const last=S.momentsLastPopup?new Date(S.momentsLastPopup):null;
+  if(last&&(Date.now()-last)<7*864e5)return;
+  const id=MOMENT_ORDER.find(k=>S.moments?.[k]&&!S.moments[k].seen);
+  if(!id)return;
+  S.moments[id].seen=true;S.momentsLastPopup=new Date().toISOString();dbSave();
+  openMomentSheet(id);
+}
+// Inhalt eines Moments für Bild und Text
+function momentContent(id){
+  const rec=S.moments?.[id]||{},nm=_mShowName?getBabyNameRaw():'Unser Baby',d=rec.date||isoDay(new Date());
+  const isToday=d===isoDay(new Date()),when=isToday?'heute':`am ${new Date(d).toLocaleDateString('de-DE',{day:'numeric',month:'long'})}`;
+  const n=triedIds().length,teeth=momentTeeth().length,app='Festgehalten mit Alles Baby, der App für das erste Babyjahr: allesbabyapp.de';
+  const tried=triedIds().map(foodLabel).sort((a,b)=>a.localeCompare(b,'de'));
+  switch(id){
+    case'first-spoon':return{sym:'spoon',title:'Erster Löffel!',sub:`${nm} · ${longDate(d)}`,tag:rec.food||'',text:`${nm} hat ${when} zum ersten Mal etwas anderes als Milch probiert${rec.food?`: ${rec.food}`:''}! ${app}`};
+    case'foods50':return{sym:'50',title:'Lebensmittel probiert!',sub:`${nm} · ${longDate(d)}`,tag:tried.length?`von ${tried[0]} bis ${tried[tried.length-1]}`:'',text:`${nm} hat schon 50 Lebensmittel probiert! ${app}`};
+    case'beikost6m':return{sym:'6',title:'Monate Beikost!',sub:`${nm} · ${longDate(d)}`,tag:n?fmtCount(n,'Lebensmittel probiert','Lebensmittel probiert'):'',text:`Ein halbes Jahr Beikost: ${nm} hat schon ${fmtCount(n,'Lebensmittel','Lebensmittel')} probiert! ${app}`};
+    case'first-tooth':return{sym:'tooth',title:'Erster Zahn!',sub:`${nm} · ${longDate(d)}`,tag:rec.tooth||'',text:`${nm} hat den ersten Zahn! ${app}`};
+    case'birthday1':{const parts=[n?fmtCount(n,'Lebensmittel probiert','Lebensmittel probiert'):'',teeth?fmtCount(teeth,'Zahn','Zähne'):''].filter(Boolean);
+      return{sym:'cake',title:`${nm} ist 1!`,sub:longDate(d),tag:parts.join(' · '),text:`${nm} ist 1 Jahr alt! ${app}`}}
+  }
+  return null;
+}
+// Bild zeichnen (1080 × 1080)
+async function drawMoment(id){
+  const c=momentContent(id);if(!c)return null;
+  try{await Promise.all(['700 100px Outfit','600 40px Figtree','400 30px Figtree'].map(f=>document.fonts.load(f)))}catch(e){}
+  const W=1080,cv=document.createElement('canvas');cv.width=W;cv.height=W;const x=cv.getContext('2d');
+  const g=x.createLinearGradient(0,0,W*.5,W);g.addColorStop(0,'#efe6f8');g.addColorStop(.6,'#f9e9ef');g.addColorStop(1,'#fbeee3');
+  x.fillStyle=g;x.fillRect(0,0,W,W);
+  [[88,100,17,'rgba(155,114,207,.35)'],[970,180,24,'rgba(214,138,170,.35)'],[148,780,14,'rgba(214,138,170,.45)'],[980,680,15,'rgba(155,114,207,.3)']].forEach(([cx,cy,r,col])=>{x.fillStyle=col;x.beginPath();x.arc(cx,cy,r,0,Math.PI*2);x.fill()});
+  // Inhalt vertikal zentrieren
+  const symH=_mPhoto?460:300,titleSize=Math.min(118,fitSize(x,c.title,'700',W-140,118)),hasTag=!!c.tag;
+  const total=symH+30+titleSize*1.1+20+48+(hasTag?40+64:0);let y=(W-110-total)/2+20;
+  const cx=W/2;
+  if(_mPhoto){
+    const r=220;x.save();x.beginPath();x.arc(cx,y+r,r,0,Math.PI*2);x.closePath();x.clip();
+    const s=Math.max(2*r/_mPhoto.width,2*r/_mPhoto.height),iw=_mPhoto.width*s,ih=_mPhoto.height*s;
+    x.drawImage(_mPhoto,cx-iw/2,y+r-ih/2,iw,ih);x.restore();
+    x.lineWidth=16;x.strokeStyle='#fff';x.beginPath();x.arc(cx,y+r,r,0,Math.PI*2);x.stroke();y+=460;
+  }else{
+    x.save();x.fillStyle='#9b72cf';x.strokeStyle='#9b72cf';
+    if(c.sym==='spoon'){x.translate(cx,y+150);x.rotate(-Math.PI/4.2);x.beginPath();x.ellipse(0,-60,62,82,0,0,Math.PI*2);x.fill();x.beginPath();x.roundRect?x.roundRect(-17,10,34,170,17):x.rect(-17,10,34,170);x.fill()}
+    else if(c.sym==='tooth'||c.sym==='cake'){const sc=11.5;x.translate(cx-12*sc,y+150-12*sc);x.scale(sc,sc);x.lineWidth=1.6;x.lineCap='round';x.lineJoin='round';
+      (c.sym==='tooth'?[MP.tooth]:MP.cake).forEach(p=>x.stroke(new Path2D(p)))}
+    else{x.font='700 250px Outfit, Figtree, sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(c.sym,cx,y+160)}
+    x.restore();y+=symH;
+  }
+  y+=30;x.textAlign='center';x.textBaseline='top';
+  x.fillStyle='#6b44a0';x.font=`700 ${titleSize}px Outfit, Figtree, sans-serif`;x.fillText(c.title,cx,y);y+=titleSize*1.1+20;
+  x.fillStyle='#4a3f4a';x.font='600 46px Figtree, sans-serif';x.fillText(c.sub,cx,y);y+=48;
+  if(hasTag){y+=40;x.font='600 40px Figtree, sans-serif';const tw=Math.min(x.measureText(c.tag).width,W-180)+70;
+    x.fillStyle='#fff';x.beginPath();x.roundRect?x.roundRect(cx-tw/2,y,tw,64,32):x.rect(cx-tw/2,y,tw,64);x.fill();
+    x.fillStyle='#6b44a0';x.textBaseline='middle';x.fillText(c.tag,cx,y+33,W-200)}
+  // Fußzeile
+  x.textBaseline='middle';x.font='400 32px Figtree, sans-serif';const foot='Festgehalten mit Alles Baby · allesbabyapp.de',fw=x.measureText(foot).width;
+  const fy=W-58,fx=cx-(fw+60)/2;const ig=x.createLinearGradient(fx,fy-24,fx+48,fy+24);ig.addColorStop(0,'#9b72cf');ig.addColorStop(1,'#c9a0dc');
+  x.fillStyle=ig;x.beginPath();x.roundRect?x.roundRect(fx,fy-24,48,48,13):x.rect(fx,fy-24,48,48);x.fill();
+  x.fillStyle='#6f616f';x.textAlign='left';x.fillText(foot,fx+60,fy+2);
+  return cv;
+}
+function fitSize(x,text,weight,maxW,start){let s=start;do{x.font=`${weight} ${s}px Outfit, Figtree, sans-serif`;if(x.measureText(text).width<=maxW)return s;s-=4}while(s>50);return s}
+async function refreshMomentPreview(){
+  const id=_mCurrent;if(!id)return;
+  const cv=await drawMoment(id);if(!cv)return;
+  _mBlob=await new Promise(r=>cv.toBlob(r,'image/png'));
+  const img=document.getElementById('moment-img');if(img){img.src=cv.toDataURL('image/png');img.alt=`Erinnerungsbild: ${momentContent(id).title}`}
+}
+function openMomentSheet(id){
+  tapFeedback();_mCurrent=id;_mPhoto=null;_mShowName=true;_mBlob=null;
+  const t=MOMENT_TITLE[id];
+  openAppModal(id==='first-spoon'?`${babyGenRaw()} erster Löffel`:id==='birthday1'?`${getBabyNameRaw()} ist 1!`:t,`
+    <p class="info-p" style="margin-top:0">Ein besonderer Moment. Halte ihn als Bild fest und teile ihn mit Familie und Freunden, per Messenger, E-Mail oder in sozialen Netzwerken.</p>
+    <div class="moment-prev"><img id="moment-img" alt="" width="240" height="240"/></div>
+    <div class="moment-opts">
+      <div class="moment-opt"><span>Name zeigen</span><button type="button" class="stats-switch on" role="switch" aria-checked="true" aria-label="Name zeigen" onclick="momentToggleName(this)"><span class="stats-switch-knob"></span></button></div>
+      <div class="moment-opt"><span>Foto hinzufügen</span><button type="button" class="stats-switch" role="switch" aria-checked="false" aria-label="Foto hinzufügen" onclick="momentTogglePhoto(this)"><span class="stats-switch-knob"></span></button></div>
+    </div>
+    <input type="file" id="moment-photo" accept="image/*" hidden onchange="momentPhotoChosen(this)"/>
+    <div class="moment-btns">
+      <button type="button" class="btn-ghost" onclick="momentSave()">${icon('download','icon-sm')} In Fotos sichern</button>
+      <button type="button" class="btn" onclick="momentShare()">${icon('share','icon-sm')} Teilen</button>
+    </div>
+    <p class="moment-note">Das Bild entsteht auf deinem Handy. Nichts wird hochgeladen.</p>`);
+  document.getElementById('modal').dataset.sheet='moment';
+  refreshMomentPreview();
+}
+function momentToggleName(b){tapFeedback();_mShowName=!_mShowName;b.classList.toggle('on',_mShowName);b.setAttribute('aria-checked',_mShowName);refreshMomentPreview()}
+function momentTogglePhoto(b){
+  tapFeedback();
+  if(_mPhoto){_mPhoto=null;b.classList.remove('on');b.setAttribute('aria-checked','false');refreshMomentPreview();return}
+  document.getElementById('moment-photo')?.click();
+}
+function momentPhotoChosen(inp){
+  const f=inp.files&&inp.files[0];if(!f)return;
+  const img=new Image();img.onload=()=>{_mPhoto=img;const b=document.querySelectorAll('.moment-opt .stats-switch')[1];if(b){b.classList.add('on');b.setAttribute('aria-checked','true')}refreshMomentPreview();URL.revokeObjectURL(img.src)};
+  img.src=URL.createObjectURL(f);inp.value='';
+}
+function momentFile(){const n=(_mShowName?getBabyNameRaw():'Baby').replace(/[^\wäöüÄÖÜß-]+/g,'-');return new File([_mBlob],`${MOMENT_TITLE[_mCurrent].replace(/\s+/g,'-')}-${n}.png`,{type:'image/png'})}
+async function momentShare(){
+  tapFeedback();if(!_mBlob)await refreshMomentPreview();
+  const file=momentFile(),text=momentContent(_mCurrent).text;
+  try{
+    if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],text});return}
+    if(navigator.share){await navigator.share({text});return}
+  }catch(e){if(e&&e.name==='AbortError')return}
+  momentDownload(file);
+}
+async function momentSave(){
+  tapFeedback();if(!_mBlob)await refreshMomentPreview();
+  const file=momentFile();
+  try{if(/iPhone|iPad|iPod/.test(navigator.userAgent)&&navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file]});return}}catch(e){if(e&&e.name==='AbortError')return}
+  momentDownload(file);
+}
+function momentDownload(file){const a=document.createElement('a');a.href=URL.createObjectURL(file);a.download=file.name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);showToast('Bild gespeichert.')}
+function toggleMomentsNotify(){tapFeedback();S.momentsNotify=S.momentsNotify===false;dbSave();render({preserveScroll:true})}
+// Seite „Erinnerungen“
+function momentMini(id){
+  const c=momentContent(id)||{},sym=c.sym==='spoon'?'<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="22" cy="22" rx="13" ry="17" transform="rotate(-40 22 22)" fill="currentColor"/><rect x="30" y="30" width="7" height="34" rx="3.5" transform="rotate(-40 33.5 47)" fill="currentColor"/></svg>'
+    :c.sym==='tooth'?`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="${MP.tooth}"/></svg>`
+    :c.sym==='cake'?`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">${MP.cake.map(p=>`<path d="${p}"/>`).join('')}</svg>`
+    :`<b>${escHtml(c.sym||'')}</b>`;
+  return`<span class="mem-thumb">${sym}</span>`;
+}
+function renderMemories(){
+  checkMoments();
+  if(!S.memoriesSeen){S.memoriesSeen=true;dbSave()}
+  const name=getBabyName(),got=MOMENT_ORDER.filter(id=>S.moments?.[id]);
+  const n=triedIds().length,bk=parseDateValue(localStorage.getItem(BABY_BEIKOST_KEY));
+  const soon=[];
+  if(!S.moments?.['first-spoon'])soon.push(['first-spoon','Erster Löffel',beikostActive()?'beim ersten probierten Lebensmittel':'sobald die Beikost startet',null]);
+  if(!S.moments?.['foods50'])soon.push(['foods50','50 Lebensmittel probiert',`${n} von 50`,Math.round(n/50*100)]);
+  if(!S.moments?.['first-tooth'])soon.push(['first-tooth','Erster Zahn','sobald er eingetragen ist',null]);
+  if(!S.moments?.['beikost6m']){const six=bk?new Date(bk):null;if(six)six.setMonth(six.getMonth()+6);soon.push(['beikost6m','6 Monate Beikost',six?`am ${longDate(six)}`:'ein halbes Jahr nach dem Start',null])}
+  if(!S.moments?.['birthday1']&&BIRTH){const b1=new Date(BIRTH);b1.setFullYear(b1.getFullYear()+1);soon.push(['birthday1','Erster Geburtstag',`am ${longDate(b1)}`,null])}
+  return bb()+`<div class="card">
+    <h2 class="readiness-title">Erinnerungen</h2>
+    <p class="info-p" style="margin-top:0">Besondere Momente aus ${babyGen()} erstem Jahr, als Bild zum Teilen.</p>
+    ${got.map(id=>`<button type="button" class="mem-row" onclick="openMomentSheet('${id}')">${momentMini(id)}<span class="mem-body"><span class="mem-t">${MOMENT_TITLE[id]}</span><span class="mem-d">${longDate(S.moments[id].date)}</span></span><span class="mem-share">${icon('share','icon-sm')}</span></button>`).join('')}
+    ${!got.length?`<p class="mem-empty">Noch keine Momente. Sie erscheinen hier, sobald ${name} sie erreicht.</p>`:''}
+    ${soon.length?`<div class="mem-soon-l">Kommt noch</div>${soon.map(([id,t,d,p])=>`<div class="mem-row soon"><span class="mem-thumb soon"></span><span class="mem-body"><span class="mem-t">${t}</span><span class="mem-d">${d}</span>${p!=null?`<span class="mem-bar"><span style="width:${Math.min(100,p)}%"></span></span>`:''}</span></div>`).join('')}`:''}
+  </div>
+  <div class="card mem-notify"><div style="flex:1"><div class="hp-t">Bei neuen Momenten Bescheid geben</div><div class="hp-d">Zeigt ein Fenster, wenn ein neuer Moment erreicht ist. Die Erinnerungen hier bleiben immer erhalten.</div></div>
+    <button type="button" class="stats-switch${S.momentsNotify!==false?' on':''}" role="switch" aria-checked="${S.momentsNotify!==false}" aria-label="Bei neuen Momenten Bescheid geben" onclick="toggleMomentsNotify()"><span class="stats-switch-knob"></span></button></div>`;
 }
 
 // ════════════════ DATENSICHERUNG ═══════════════════════
@@ -7127,11 +7622,48 @@ function renderBackup(){
 // Keine Kennung, nichts wird dafür auf dem Gerät gespeichert, keine Inhalte aus der App.
 // Gesendet wird nur auf der echten App-Adresse, damit Tests die Zahlen nicht verfälschen.
 const STATS_HOST='app.allesbabyapp.de';
-const STATS_OFF_KEY='h_statsOff'; // merkt sich nur das Abschalten (unbedingt nötig, um die Wahl zu respektieren)
-function statsEnabled(){try{return localStorage.getItem(STATS_OFF_KEY)!=='1'}catch(e){return true}}
+const STATS_OFF_KEY='h_statsOff'; // alt (bis 2.12): Abschalten
+// Einwilligung (2.13): Gezählt wird nur nach „Ja, gerne“. Bis dahin wird nichts gesendet,
+// eine Installation merkt sich die App und meldet sie erst nach der Zustimmung.
+const STATS_CONSENT_KEY='h_statsConsent',STATS_CONSENT_AT='h_statsConsentAt',STATS_PENDING_INSTALL='h_statsPendingInstall',STATS_CLICKS='h_clicksAfterOnboarding';
+function statsConsent(){try{
+  let c=localStorage.getItem(STATS_CONSENT_KEY);
+  if(!c&&localStorage.getItem(STATS_OFF_KEY)==='1'){c='no';localStorage.setItem(STATS_CONSENT_KEY,'no');localStorage.setItem(STATS_CONSENT_AT,new Date().toISOString())}
+  return c==='yes'||c==='no'?c:null}catch(e){return null}}
+function statsEnabled(){return statsConsent()==='yes'}
+function shouldAskStats(){
+  if(needsOnboarding())return false;
+  const c=statsConsent();
+  if(c==='yes')return false;
+  if(c==='no'){const at=Date.parse(localStorage.getItem(STATS_CONSENT_AT)||'');return !isNaN(at)&&Date.now()-at>180*864e5}
+  return (Number(localStorage.getItem(STATS_CLICKS))||0)>=2;
+}
+function setStatsConsent(yes){
+  tapFeedback();
+  try{
+    localStorage.setItem(STATS_CONSENT_KEY,yes?'yes':'no');localStorage.setItem(STATS_CONSENT_AT,new Date().toISOString());localStorage.removeItem(STATS_OFF_KEY);
+    if(yes&&localStorage.getItem(STATS_PENDING_INSTALL)){localStorage.removeItem(STATS_PENDING_INSTALL);sendStat('install')}
+  }catch(e){}
+  render({preserveScroll:true});
+}
+document.addEventListener('click',()=>{try{if(!needsOnboarding()&&!statsConsent()){const n=(Number(localStorage.getItem(STATS_CLICKS))||0)+1;if(n<=3)localStorage.setItem(STATS_CLICKS,String(n))}}catch(e){}},true);
+function renderStatsConsentCard(){
+  if(!shouldAskStats())return'';
+  return`<div class="consent-card">
+    <span class="tip-deco consent-deco" aria-hidden="true"></span>
+    <div class="consent-body">
+      <div class="consent-kicker">${icon('heart','icon-sm')} Eine kleine Bitte</div>
+      <div class="consent-title">Alles Baby möchte nur wissen, wie viele Familien hiermit glücklich werden.</div>
+      <p class="consent-p">Dafür zählen wir anonym, wie oft die App geöffnet wird und wie lange. Keine Gesundheitsdaten, nichts über dein Baby, nichts, was dich erkennbar macht.</p>
+      <div class="consent-btns"><button type="button" class="consent-btn" onclick="setStatsConsent(false)">Nein danke</button><button type="button" class="consent-btn" onclick="setStatsConsent(true)">Ja, gerne</button></div>
+      <button type="button" class="link-btn consent-more" onclick="openLegal('datenschutz')">Was genau gezählt wird</button>
+    </div></div>`;
+}
 function isStandaloneApp(){return navigator.standalone===true||!!(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)}
 function sendStat(e,v=''){
-  if(location.hostname!==STATS_HOST||!statsEnabled()||navigator.onLine===false)return;
+  if(location.hostname!==STATS_HOST)return;
+  if(!statsEnabled()){if(e==='install'&&statsConsent()!=='no'){try{localStorage.setItem(STATS_PENDING_INSTALL,'1')}catch(_){}}return}
+  if(navigator.onLine===false)return;
   const body=JSON.stringify({e,v});
   try{if(navigator.sendBeacon&&navigator.sendBeacon('/api/hit',new Blob([body],{type:'application/json'})))return}catch(_){}
   try{fetch('/api/hit',{method:'POST',body,keepalive:true,headers:{'content-type':'application/json'}}).catch(()=>{})}catch(_){}
@@ -7153,11 +7685,7 @@ function initStats(){
   });
   window.addEventListener('appinstalled',()=>sendStat('install'));
 }
-function toggleStats(){
-  tapFeedback();
-  try{if(statsEnabled())localStorage.setItem(STATS_OFF_KEY,'1');else localStorage.removeItem(STATS_OFF_KEY)}catch(e){}
-  render({preserveScroll:true});
-}
+function toggleStats(){setStatsConsent(!statsEnabled())}
 
 // ════════════════ BARRIEREFREIHEIT ═══════════════════════
 // Klickbare <div>/<span> (Karten, Zeilen, Kopf) per Tastatur und Screenreader bedienbar machen.

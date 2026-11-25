@@ -1,5 +1,5 @@
 // Bei JEDER Auslieferung hochzählen, sonst sehen installierte Apps den alten Stand.
-const CACHE = 'babyapp-v20';
+const CACHE = 'babyapp-v26';
 const ASSETS = [
   '/',
   '/index.html',

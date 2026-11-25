@@ -11,21 +11,21 @@
     "label": "Mittagessen",
     "group": "mahlzeit",
     "groupLabel": "Mahlzeit",
-    "count": 47
+    "count": 61
   },
   {
     "id": "abendessen",
     "label": "Abendessen",
     "group": "mahlzeit",
     "groupLabel": "Mahlzeit",
-    "count": 61
+    "count": 77
   },
   {
     "id": "snack",
     "label": "Snack",
     "group": "mahlzeit",
     "groupLabel": "Mahlzeit",
-    "count": 98
+    "count": 106
   },
   {
     "id": "brei",
@@ -39,7 +39,7 @@
     "label": "Fingerfood",
     "group": "essform",
     "groupLabel": "Essform",
-    "count": 96
+    "count": 104
   },
   {
     "id": "waffeln",
@@ -60,28 +60,28 @@
     "label": "Muffins",
     "group": "gerichtsart",
     "groupLabel": "Gerichtsart",
-    "count": 11
+    "count": 12
   },
   {
     "id": "kuchen",
     "label": "Kuchen",
     "group": "gerichtsart",
     "groupLabel": "Gerichtsart",
-    "count": 10
+    "count": 13
   },
   {
     "id": "brot-broetchen",
     "label": "Brot & Brötchen",
     "group": "gerichtsart",
     "groupLabel": "Gerichtsart",
-    "count": 10
+    "count": 11
   },
   {
     "id": "riegel-baellchen",
     "label": "Riegel & Bällchen",
     "group": "gerichtsart",
     "groupLabel": "Gerichtsart",
-    "count": 5
+    "count": 6
   },
   {
     "id": "puffer",
@@ -95,14 +95,14 @@
     "label": "Pasta",
     "group": "gerichtsart",
     "groupLabel": "Gerichtsart",
-    "count": 11
+    "count": 14
   },
   {
     "id": "suppe",
     "label": "Suppe",
     "group": "gerichtsart",
     "groupLabel": "Gerichtsart",
-    "count": 1
+    "count": 3
   },
   {
     "id": "aufstrich-dip",
@@ -123,126 +123,133 @@
     "label": "Vegetarisch",
     "group": "ernaehrung",
     "groupLabel": "Ernährung",
-    "count": 141
+    "count": 156
   },
   {
     "id": "vegan",
     "label": "Vegan",
     "group": "ernaehrung",
     "groupLabel": "Ernährung",
-    "count": 32
+    "count": 35
   },
   {
     "id": "fleisch",
     "label": "Mit Fleisch",
     "group": "ernaehrung",
     "groupLabel": "Ernährung",
-    "count": 9
+    "count": 14
   },
   {
     "id": "fisch",
     "label": "Mit Fisch",
     "group": "ernaehrung",
     "groupLabel": "Ernährung",
-    "count": 9
+    "count": 10
   },
   {
     "id": "ohne-ei",
     "label": "Ohne Ei",
     "group": "frei-von",
     "groupLabel": "Frei von",
-    "count": 97
+    "count": 109
   },
   {
     "id": "ohne-milch",
     "label": "Ohne Milch",
     "group": "frei-von",
     "groupLabel": "Frei von",
-    "count": 62
+    "count": 67
   },
   {
     "id": "glutenfrei",
     "label": "Glutenfrei",
     "group": "frei-von",
     "groupLabel": "Frei von",
-    "count": 41
+    "count": 49
   },
   {
     "id": "ohne-nuesse",
     "label": "Ohne Nüsse",
     "group": "frei-von",
     "groupLabel": "Frei von",
-    "count": 126
+    "count": 142
   },
   {
     "id": "einfrierbar",
     "label": "Einfrierbar",
     "group": "praktisch",
     "groupLabel": "Praktisch",
-    "count": 68
+    "count": 81
   },
   {
     "id": "unterwegs",
     "label": "Für unterwegs",
     "group": "praktisch",
     "groupLabel": "Praktisch",
-    "count": 36
+    "count": 40
   },
   {
     "id": "schnell",
     "label": "Schnell (bis 15 Minuten)",
     "group": "praktisch",
     "groupLabel": "Praktisch",
-    "count": 57
+    "count": 58
   },
   {
     "id": "one-pot",
     "label": "One-Pot",
     "group": "praktisch",
     "groupLabel": "Praktisch",
-    "count": 4
+    "count": 7
   },
   {
     "id": "reste-verwertung",
     "label": "Resteverwertung",
     "group": "praktisch",
     "groupLabel": "Praktisch",
-    "count": 6
+    "count": 8
   },
   {
     "id": "vorkochen",
     "label": "Zum Vorkochen",
     "group": "praktisch",
     "groupLabel": "Praktisch",
-    "count": 17
+    "count": 20
   },
   {
     "id": "familienessen",
     "label": "Familienessen",
     "group": "anlass",
     "groupLabel": "Anlass",
-    "count": 26
+    "count": 42
   },
   {
     "id": "fest",
     "label": "Geburtstag & Fest",
     "group": "anlass",
     "groupLabel": "Anlass",
-    "count": 11
+    "count": 10
+  },
+  {
+    "id": "weihnachten",
+    "label": "Weihnachten",
+    "group": "anlass",
+    "groupLabel": "Anlass",
+    "count": 9
   },
   {
     "id": "ofen",
     "label": "Ofen",
     "group": "zubereitung",
     "groupLabel": "Zubereitung",
-    "count": 50
+    "count": 63
   },
   {
     "id": "pfanne",
     "label": "Pfanne",
     "group": "zubereitung",
     "groupLabel": "Zubereitung",
-    "count": 31
+    "count": 35
   },
   {
     "id": "waffeleisen",

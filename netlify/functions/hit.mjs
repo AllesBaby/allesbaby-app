@@ -1,5 +1,5 @@
 import { getStore } from '@netlify/blobs';
-import { counterFor, increment } from '../lib/stats.mjs';
+import { counterFor, increment, cleanupOld } from '../lib/stats.mjs';
 
 // Nimmt eine anonyme Meldung der App entgegen und zählt sie hoch.
 // Liest bewusst keine IP-Adresse und keine weiteren Header aus.
@@ -13,7 +13,9 @@ export default async (req) => {
   } catch { return new Response(null, { status: 400 }); }
   const counter = counterFor(body);
   if (!counter) return new Response(null, { status: 400 });
-  await increment(getStore('statistik'), counter);
+  const store = getStore('statistik');
+  await increment(store, counter);
+  try { await cleanupOld(store); } catch {}
   return new Response(null, { status: 204 });
 };
 

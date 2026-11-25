@@ -897,7 +897,7 @@
     "id": "overnight-oats-mit-nektarine",
     "title": "Über-Nacht-Haferflocken mit Nektarine",
     "ageRecommendation": 12,
-    "prepTime": "5 Minuten + 8 Stunden Quellen",
+    "prepTime": "5 Minuten + 8 Stunden Quellzeit",
     "ingredients": [
       {
         "name": "Haferflocken, zart",
@@ -1214,7 +1214,7 @@
     "id": "pfannkuchen-birnen-tuermchen",
     "title": "Birnen-Pfannkuchen-Stapel",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Dinkelmehl, Type 1050",
@@ -1276,7 +1276,7 @@
     "id": "saftiges-roggenvollkornbrot",
     "title": "Kerniges Roggen-Leinsamen-Brot",
     "ageRecommendation": 18,
-    "prepTime": "10 Minuten + 45 Minuten Gehen + 45 Minuten Backen",
+    "prepTime": "10 Minuten + 45 Minuten Gehzeit + 45 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Roggenvollkornmehl",
@@ -1378,7 +1378,7 @@
     "id": "zucchini-schiffchen-mit-couscous",
     "title": "Couscous-Zucchiniboote mit Käsehaube",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "ingredients": [
       {
         "name": "kleine Zucchini (je etwa 150 g)",
@@ -1429,7 +1429,7 @@
     "id": "gefuellte-zucchini-mit-putenaufschnitt",
     "title": "Zucchinihälften mit Puten-Möhren-Füllung",
     "ageRecommendation": 18,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "ingredients": [
       {
         "name": "kleine Zucchini (etwa 200 g)",
@@ -1489,7 +1489,7 @@
     "id": "kaese-mandel-scones",
     "title": "Buchweizen-Käsetaler mit Mandeln",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Buchweizenmehl",
@@ -1739,7 +1739,7 @@
     "id": "spinatnocken-auf-tomatensauce",
     "title": "Quark-Spinat-Klößchen in Tomatensugo",
     "ageRecommendation": 12,
-    "prepTime": "30 Minuten + 8 Stunden Abtropfen",
+    "prepTime": "30 Minuten + 8 Stunden Abtropfzeit",
     "ingredients": [
       {
         "name": "Magerquark",
@@ -1797,7 +1797,7 @@
     "id": "dinkel-moehren-stangen",
     "title": "Weiche Möhren-Dinkel-Brotstangen",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 30 Minuten Gehen + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 30 Minuten Gehzeit + 20 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Dinkelmehl Type 1050",
@@ -1901,7 +1901,7 @@
     "id": "kaiserschmarrn-mit-himbeeren",
     "title": "Himbeer-Schmarrn aus der Pfanne",
     "ageRecommendation": 12,
-    "prepTime": "20 Minuten + 10 Minuten Ruhen",
+    "prepTime": "20 Minuten + 10 Minuten Ruhezeit",
     "ingredients": [
       {
         "name": "Eier (Größe M)",
@@ -2140,7 +2140,7 @@
     "id": "regenbogen-pommes-mit-tomaten-dip",
     "title": "Bunte Ofen-Gemüsestäbchen mit Tomatenquark",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "ingredients": [
       {
         "name": "gelbe Möhren",
@@ -2269,7 +2269,7 @@
     "id": "nussbroetchen-aus-quark-hefe-teig",
     "title": "Haselnuss-Quarkbrötchen mit Dinkel",
     "ageRecommendation": 12,
-    "prepTime": "20 Minuten + 75 Minuten Gehen + 20 Minuten Backen",
+    "prepTime": "20 Minuten + 75 Minuten Gehzeit + 20 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Dinkelmehl Type 1050",
@@ -2419,7 +2419,7 @@
     "id": "apfelkuchlein-mit-suesskartoffeln",
     "title": "Süßkartoffel-Apfel-Muffins mit Mandeln",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Süßkartoffel, gegart (gut vom Vortag)",
@@ -2545,7 +2545,7 @@
     "id": "hafer-moehren-kekse",
     "title": "Möhren-Apfel-Haferplätzchen",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "ingredients": [
       {
         "name": "Möhre (etwa 80 g)",
@@ -2781,7 +2781,7 @@
     "id": "muffins-mit-gemuese-konfetti",
     "title": "Bunte Paprika-Gouda-Muffins",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "ingredients": [
       {
         "name": "gelbe Paprikaschote",
@@ -3144,7 +3144,7 @@
     "id": "bananenbrot-mit-haferflocken",
     "title": "Hafer-Walnuss-Bananenbrot",
     "ageRecommendation": 24,
-    "prepTime": "15 Minuten + 40 Minuten Backen",
+    "prepTime": "15 Minuten + 40 Minuten Backzeit",
     "ingredients": [
       {
         "name": "sehr reife Bananen",
@@ -3591,7 +3591,7 @@
     "id": "apfelmark-waffeln",
     "title": "Apfelmus-Grieß-Waffeln",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 10 Minuten Quellen",
+    "prepTime": "10 Minuten + 10 Minuten Quellzeit",
     "ingredients": [
       {
         "name": "Apfelmark ohne Zuckerzusatz",
@@ -3645,7 +3645,7 @@
     "id": "linsen-suesskartoffel-puffer",
     "title": "Linsen-Süßkartoffel-Sticks",
     "ageRecommendation": 6,
-    "prepTime": "15 Minuten + 15 Minuten Backen",
+    "prepTime": "15 Minuten + 15 Minuten Backzeit",
     "ingredients": [
       {
         "name": "rote Linsen, weich gegart",
@@ -3890,7 +3890,7 @@
     "id": "griesz-schnitten",
     "title": "Feste Grießbrei-Sticks",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + Kühlen über Nacht",
+    "prepTime": "10 Minuten + Kühlzeit über Nacht",
     "ingredients": [
       {
         "name": "Dinkel- oder Weichweizengrieß",
@@ -3928,7 +3928,7 @@
     "id": "hafer-bananen-stangen",
     "title": "Ofen-Bananen-Haferfinger",
     "ageRecommendation": 6,
-    "prepTime": "5 Minuten + 15 Minuten Backen",
+    "prepTime": "5 Minuten + 15 Minuten Backzeit",
     "ingredients": [
       {
         "name": "sehr reife Banane",
@@ -4175,7 +4175,7 @@
     "id": "linsen-waffeln",
     "title": "Linsen-Grieß-Waffeln",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 5 Minuten Quellen",
+    "prepTime": "10 Minuten + 5 Minuten Quellzeit",
     "ingredients": [
       {
         "name": "Linsen, weich gegart und zerdrückt",
@@ -4282,7 +4282,7 @@
     "id": "waffeln-mit-obst-glaeschen",
     "title": "Fruchtmus-Haferwaffeln",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 5 Minuten Quellen",
+    "prepTime": "10 Minuten + 5 Minuten Quellzeit",
     "categories": [
       "obst",
       "getreide"
@@ -4337,7 +4337,7 @@
     "id": "obst-schnitten-kekse-ofen",
     "title": "Fruchtmus-Haferkekse vom Blech",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 18 Minuten Backen",
+    "prepTime": "10 Minuten + 18 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -4383,7 +4383,7 @@
     "id": "hipp-glaeschen-nuggets",
     "title": "Knusper-Taler aus dem Gemüse-Gläschen",
     "ageRecommendation": 6,
-    "prepTime": "20 Minuten + 20 Minuten Backen",
+    "prepTime": "20 Minuten + 20 Minuten Backzeit",
     "categories": [
       "gemuese"
     ],
@@ -4726,7 +4726,7 @@
     "id": "haehnchen-nuggets-gruene-bohnen",
     "title": "Kokos-Hühnchen-Nuggets mit zarten Bohnen",
     "ageRecommendation": 6,
-    "prepTime": "25 Minuten + 25 Minuten Backen",
+    "prepTime": "25 Minuten + 25 Minuten Backzeit",
     "categories": [
       "gemuese"
     ],
@@ -4827,7 +4827,7 @@
     "id": "couscous-baellchen",
     "title": "Brokkoli-Süßkartoffel-Couscous-Kugeln",
     "ageRecommendation": 6,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -4939,7 +4939,7 @@
     "id": "blaubeer-riegel",
     "title": "Heidelbeer-Bananen-Ofenstreifen",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 28 Minuten Backen",
+    "prepTime": "10 Minuten + 28 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5143,7 +5143,7 @@
     "id": "nektarinen-baby-muffins",
     "title": "Nektarinen-Dinkel-Muffins",
     "ageRecommendation": 6,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5199,7 +5199,7 @@
     "id": "mango-baellchen",
     "title": "Mango-Cashew-Haferkugeln",
     "ageRecommendation": 9,
-    "prepTime": "20 Minuten + 15 Minuten Kühlen",
+    "prepTime": "20 Minuten + 15 Minuten Kühlzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5244,7 +5244,7 @@
     "id": "erdbeer-marmorkuchen",
     "title": "Erdbeer-Wirbel-Kuchen",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5299,7 +5299,7 @@
     "id": "schoko-bananen-kuchen",
     "title": "Kakao-Bananen-Ofenkuchen",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5349,7 +5349,7 @@
     "id": "beeren-crumble",
     "title": "Ofen-Haferauflauf mit Waldbeeren",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 30 Minuten Backen",
+    "prepTime": "10 Minuten + 30 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5403,7 +5403,7 @@
     "id": "apfel-dinkel-soft-riegel",
     "title": "Weiche Zimtapfel-Dinkelriegel",
     "ageRecommendation": 6,
-    "prepTime": "15 Minuten + 18 Minuten Backen",
+    "prepTime": "15 Minuten + 18 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5461,7 +5461,7 @@
     "id": "apfel-buchweizen-baellchen",
     "title": "Buchweizen-Apfelmus-Kugeln",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 15 Minuten Backen",
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5516,7 +5516,7 @@
     "id": "ofen-nuggets",
     "title": "Reste-Brei-Nuggets aus dem Ofen",
     "ageRecommendation": 6,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "categories": [
       "gemuese"
     ],
@@ -5560,7 +5560,7 @@
     "id": "reste-retter-baby-muffins",
     "title": "Herzhafte Breireste-Muffins",
     "ageRecommendation": 6,
-    "prepTime": "15 Minuten + 22 Minuten Backen",
+    "prepTime": "15 Minuten + 22 Minuten Backzeit",
     "categories": [
       "gemuese"
     ],
@@ -5673,7 +5673,7 @@
     "id": "vollkorn-moehren-broetchen",
     "title": "Karotten-Hafer-Vollkornbrötchen",
     "ageRecommendation": 6,
-    "prepTime": "20 Minuten + 40 Minuten Gehzeit + 25 Minuten Backen",
+    "prepTime": "20 Minuten + 40 Minuten Gehzeit + 25 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -5857,7 +5857,7 @@
     "id": "bananen-kokos-waffeln-cranberry",
     "title": "Bananen-Kokos-Waffeln mit Cranberry-Sprenkeln",
     "ageRecommendation": 10,
-    "prepTime": "10 Minuten + 10 Minuten Einweichen",
+    "prepTime": "10 Minuten + 10 Minuten Einweichzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5914,7 +5914,7 @@
     "id": "zwetschgen-apfel-muffins-kokos",
     "title": "Zwetschgen-Apfel-Muffins mit Kokosdecke",
     "ageRecommendation": 10,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -5976,7 +5976,7 @@
     "id": "dattel-lebkuchen-schnitten",
     "title": "Dattel-Gewürzschnitten nach Lebkuchenart",
     "ageRecommendation": 12,
-    "prepTime": "20 Minuten + 25 Minuten Backen",
+    "prepTime": "20 Minuten + 25 Minuten Backzeit",
     "categories": [
       "getreide",
       "obst"
@@ -6040,7 +6040,7 @@
       "kuchen",
       "vegetarisch",
       "einfrierbar",
-      "fest",
+      "weihnachten",
       "ofen"
     ]
   },
@@ -6227,7 +6227,7 @@
     "id": "bananentorte-erster-geburtstag",
     "title": "Bananentorte zum ersten Geburtstag",
     "ageRecommendation": 12,
-    "prepTime": "30 Minuten + 45 Minuten Backen + Kühlzeit",
+    "prepTime": "30 Minuten + 45 Minuten Backzeit + Kühlzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6302,7 +6302,7 @@
     "id": "hafer-bananen-smash-cake",
     "title": "Hafer-Bananen-Smash-Cake mit Joghurthaube",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 25 Minuten Backen",
+    "prepTime": "15 Minuten + 25 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6373,7 +6373,7 @@
     "id": "joghurt-bananenbrot-dinkel",
     "title": "Joghurt-Bananenbrot aus Dinkelmehl",
     "ageRecommendation": 9,
-    "prepTime": "15 Minuten + 40 Minuten Backen",
+    "prepTime": "15 Minuten + 40 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6433,7 +6433,7 @@
     "id": "bananen-joghurt-minimuffins",
     "title": "Bananen-Joghurt-Minimuffins",
     "ageRecommendation": 9,
-    "prepTime": "10 Minuten + 15 Minuten Backen",
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6489,7 +6489,7 @@
     "id": "apfelmus-cranberry-muffins-kokos",
     "title": "Apfelmus-Bananen-Muffins mit Cranberrys und Kokos",
     "ageRecommendation": 10,
-    "prepTime": "20 Minuten + 25 Minuten Backen",
+    "prepTime": "20 Minuten + 25 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6552,7 +6552,7 @@
     "id": "blaetterteig-schnecken-herzhaft",
     "title": "Herzhafte Blätterteig-Röllchen mit Frischkäse und Gemüse",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 15 Minuten Kühlen + 18 Minuten Backen",
+    "prepTime": "15 Minuten + 15 Minuten Kühlzeit + 18 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -6597,7 +6597,7 @@
     "id": "apfel-zimt-blaetterteig-schnecken",
     "title": "Apfel-Zimt-Röllchen aus Blätterteig",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 15 Minuten Kühlen + 18 Minuten Backen",
+    "prepTime": "15 Minuten + 15 Minuten Kühlzeit + 18 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6715,7 +6715,7 @@
     "id": "ofen-aubergine-tofu-tahin-dip",
     "title": "Ofen-Aubergine mit knusprigen Tofustreifen und Sesam-Joghurt-Dip",
     "ageRecommendation": 10,
-    "prepTime": "10 Minuten + 25 Minuten Backen",
+    "prepTime": "10 Minuten + 25 Minuten Backzeit",
     "categories": [
       "gemuese"
     ],
@@ -6772,7 +6772,7 @@
     "id": "moehrenkuchen-sticks",
     "title": "Weiche Karottenkuchen-Streifen vom Blech",
     "ageRecommendation": 8,
-    "prepTime": "15 Minuten + 28 Minuten Backen",
+    "prepTime": "15 Minuten + 28 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -6833,7 +6833,7 @@
     "id": "moehren-joghurt-brot-hefefrei",
     "title": "Schnelles Karotten-Joghurt-Brot ohne Hefe",
     "ageRecommendation": 10,
-    "prepTime": "10 Minuten + 40 Minuten Backen",
+    "prepTime": "10 Minuten + 40 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -6896,7 +6896,7 @@
     "id": "hafer-bananen-muesli-muffins",
     "title": "Weiche Hafer-Bananen-Frühstücksmuffins",
     "ageRecommendation": 7,
-    "prepTime": "10 Minuten + 22 Minuten Backen",
+    "prepTime": "10 Minuten + 22 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -6955,7 +6955,7 @@
     "id": "kuerbis-apfel-muffins-ohne-ei",
     "title": "Kürbis-Apfelmark-Muffins ohne Ei",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 22 Minuten Backen",
+    "prepTime": "10 Minuten + 22 Minuten Backzeit",
     "categories": [
       "gemuese",
       "obst",
@@ -7015,7 +7015,7 @@
     "id": "zucchini-frittata-blech",
     "title": "Zucchini-Ei-Schnitten vom Blech",
     "ageRecommendation": 6,
-    "prepTime": "10 Minuten + 22 Minuten Backen",
+    "prepTime": "10 Minuten + 22 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -7111,7 +7111,7 @@
     "id": "ofen-tofu-sticks",
     "title": "Ofen-Tofustäbchen mit Kräutern",
     "ageRecommendation": 6,
-    "prepTime": "5 Minuten + 15 Minuten Backen",
+    "prepTime": "5 Minuten + 15 Minuten Backzeit",
     "categories": [
       "gemuese"
     ],
@@ -7254,7 +7254,7 @@
     "id": "overnight-oats-baby-grundrezept",
     "title": "Über-Nacht-Haferschälchen für Babys. Grundrezept",
     "ageRecommendation": 9,
-    "prepTime": "3 Minuten + mindestens 4 Stunden Quellen",
+    "prepTime": "3 Minuten + mindestens 4 Stunden Quellzeit",
     "categories": [
       "getreide",
       "obst"
@@ -7305,7 +7305,7 @@
     "id": "apfelringe-dinkel-joghurt-teig",
     "title": "Apfelringe im Dinkel-Joghurt-Mantel",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 15 Minuten Ausbacken",
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -7412,7 +7412,7 @@
     "id": "kiwi-joghurt-schaelchen",
     "title": "Kiwi-Joghurt-Schälchen mit Mandelmus",
     "ageRecommendation": 8,
-    "prepTime": "5 Minuten + 5 Minuten Quellen",
+    "prepTime": "5 Minuten + 5 Minuten Quellzeit",
     "categories": [
       "obst",
       "getreide"
@@ -7555,7 +7555,7 @@
     "id": "apfel-waffel-lollis",
     "title": "Apfelscheiben-Waffeln am Stiel",
     "ageRecommendation": 12,
-    "prepTime": "20 Minuten + 25 Minuten Ausbacken",
+    "prepTime": "20 Minuten + 25 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -7625,7 +7625,7 @@
     "id": "quark-bananen-griess-schnitten",
     "title": "Beeren-Quarkschnitten mit Banane und Grieß",
     "ageRecommendation": 10,
-    "prepTime": "10 Minuten + 35 Minuten Backen",
+    "prepTime": "10 Minuten + 35 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -7857,7 +7857,7 @@
     "id": "kakao-heidelbeer-bananenbrot-buchweizen",
     "title": "Kakao-Heidelbeer-Bananenbrot mit Buchweizen",
     "ageRecommendation": 12,
-    "prepTime": "15 Minuten + 45 Minuten Backen",
+    "prepTime": "15 Minuten + 45 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -7986,7 +7986,7 @@
     "id": "rote-bete-dinkel-stangen",
     "title": "Rote-Bete-Hafer-Knabberstangen",
     "ageRecommendation": 8,
-    "prepTime": "15 Minuten + 15 Minuten Backen",
+    "prepTime": "15 Minuten + 15 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -8040,7 +8040,7 @@
     "id": "rote-bete-bananen-muffins",
     "title": "Pinke Rote-Bete-Bananen-Muffins",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 20 Minuten Backen",
+    "prepTime": "10 Minuten + 20 Minuten Backzeit",
     "categories": [
       "gemuese",
       "obst",
@@ -8145,7 +8145,7 @@
     "id": "gruene-spinat-bananen-waffeln",
     "title": "Grüne Spinat-Bananen-Waffeln",
     "ageRecommendation": 7,
-    "prepTime": "10 Minuten + 15 Minuten Backen",
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
     "categories": [
       "gemuese",
       "obst",
@@ -8202,7 +8202,7 @@
     "id": "heidelbeer-dinkel-stangen",
     "title": "Weiche Heidelbeer-Dinkel-Stangen",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 15 Minuten Backen",
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -8252,7 +8252,7 @@
     "id": "lila-heidelbeer-bananen-muffins",
     "title": "Lila Heidelbeer-Bananen-Muffins",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 20 Minuten Backen",
+    "prepTime": "10 Minuten + 20 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -8362,7 +8362,7 @@
     "id": "linsen-gemuese-pasta-one-pot",
     "title": "Herbstliche Linsen-Nudeln mit Karotte aus einem Topf",
     "ageRecommendation": 8,
-    "prepTime": "5 Minuten + 25 Minuten Köcheln",
+    "prepTime": "5 Minuten + 25 Minuten Kochzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -8415,7 +8415,7 @@
     "id": "apfel-nektarinen-hafer-stangen",
     "title": "Apfel-Nektarinen-Hafer-Stangen vom Blech",
     "ageRecommendation": 8,
-    "prepTime": "15 Minuten + 20 Minuten Backen",
+    "prepTime": "15 Minuten + 20 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -8474,7 +8474,7 @@
     "id": "obstglaeschen-muffins",
     "title": "Fruchtmus-Muffins aus dem Obstgläschen",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 20 Minuten Backen",
+    "prepTime": "10 Minuten + 20 Minuten Backzeit",
     "categories": [
       "obst",
       "getreide"
@@ -8665,7 +8665,7 @@
     "id": "ueberbackene-brot-haeppchen",
     "title": "Überbackene Gemüse-Brothäppchen aus dem Ofen",
     "ageRecommendation": 12,
-    "prepTime": "10 Minuten + 10 Minuten Backen",
+    "prepTime": "10 Minuten + 10 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -8714,7 +8714,7 @@
     "id": "hirse-gemuese-auflauf-kaese",
     "title": "Goldhirse-Gemüse-Auflauf mit Käsehaube",
     "ageRecommendation": 10,
-    "prepTime": "20 Minuten + 25 Minuten Backen",
+    "prepTime": "20 Minuten + 25 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -8782,7 +8782,7 @@
     "id": "suesskartoffel-linsen-eintopf",
     "title": "Süßkartoffel-Linsen-Eintopf mit Spinat",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 20 Minuten Köcheln",
+    "prepTime": "10 Minuten + 20 Minuten Kochzeit",
     "categories": [
       "gemuese"
     ],
@@ -8854,7 +8854,7 @@
     "id": "herzhafte-polenta-zucchini-schnitten",
     "title": "Herzhafte Polenta-Zucchini-Schnitten",
     "ageRecommendation": 8,
-    "prepTime": "15 Minuten + 60 Minuten Kühlen + 10 Minuten Braten",
+    "prepTime": "15 Minuten + 60 Minuten Kühlzeit + 10 Minuten Bratzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -8980,7 +8980,7 @@
     "id": "milde-gemuesesuppe-sternchennudeln",
     "title": "Milde Wurzelgemüsesuppe mit Sternchennudeln",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 25 Minuten Köcheln",
+    "prepTime": "10 Minuten + 25 Minuten Kochzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -9040,7 +9040,7 @@
     "id": "nudel-hack-auflauf",
     "title": "Cremiger Nudel-Hack-Auflauf mit Zucchini",
     "ageRecommendation": 10,
-    "prepTime": "25 Minuten + 25 Minuten Backen",
+    "prepTime": "25 Minuten + 25 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -9106,7 +9106,7 @@
     "id": "hack-kartoffel-topf",
     "title": "Butterweicher Hackfleisch-Kartoffel-Topf",
     "ageRecommendation": 8,
-    "prepTime": "10 Minuten + 20 Minuten Köcheln",
+    "prepTime": "10 Minuten + 20 Minuten Kochzeit",
     "categories": [
       "gemuese"
     ],
@@ -9167,7 +9167,7 @@
     "id": "gefuellte-paprika-hack-reis",
     "title": "Gefüllte Spitzpaprika mit Hack und Reis",
     "ageRecommendation": 10,
-    "prepTime": "20 Minuten + 30 Minuten Backen",
+    "prepTime": "20 Minuten + 30 Minuten Backzeit",
     "categories": [
       "gemuese",
       "getreide"
@@ -9280,6 +9280,466 @@
       "einfrierbar",
       "vorkochen",
       "familienessen"
+    ]
+  },
+  {
+    "id": "apfel-lebkuchen-taler",
+    "title": "Weiche Apfel-Lebkuchentaler ohne Zucker",
+    "ageRecommendation": 12,
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
+    "categories": [
+      "obst",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Apfelmark ohne Zuckerzusatz",
+        "amount": "150 g"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "weiche Butter oder Rapsöl",
+        "amount": "40 g"
+      },
+      {
+        "name": "Dinkelmehl Type 630",
+        "amount": "120 g"
+      },
+      {
+        "name": "zarte Haferflocken",
+        "amount": "40 g"
+      },
+      {
+        "name": "Weinsteinbackpulver",
+        "amount": "1 TL"
+      },
+      {
+        "name": "Lebkuchengewürz (oder je 1 Prise Zimt, Kardamom und Koriander)",
+        "amount": "1 TL"
+      },
+      {
+        "name": "gemahlene Mandeln oder Kokosraspel (optional)",
+        "amount": "2 EL"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 175 °C Umluft vor und leg ein Blech mit Backpapier aus. 2. Verrühr Apfelmark, Ei und Butter oder Öl zu einer glatten Masse. 3. Misch Mehl, Haferflocken, Backpulver, Gewürz und nach Wunsch Mandeln oder Kokos und rühr sie zügig unter. Der Teig ist weich und klebrig. 4. Setz mit zwei Teelöffeln kleine Häufchen aufs Blech und drück sie mit feuchten Fingern zu flachen Talern. 5. Back die Taler 12 bis 15 Minuten, bis sie fest, aber noch hell sind. 6. Auf einem Gitter abkühlen lassen.",
+    "tips": [
+      "Lebkuchengewürz enthält kräftige Gewürze wie Nelke und Muskat. Deshalb sparsam dosieren und erst ab etwa einem Jahr anbieten. Für Jüngere nur Zimt nehmen.",
+      "Ausstech-Variante: Mit 2 bis 3 EL mehr Haferflocken wird der Teig fester. Dann auf etwas Mehl 1 cm dick ausrollen, Sterne oder Herzen ausstechen und genauso backen.",
+      "Die Taler lieber etwas früher als zu spät aus dem Ofen nehmen. Sie werden beim Abkühlen noch fester und bleiben so weich.",
+      "In einer Dose mit einem Stück Apfel bleiben sie 2 bis 3 Tage weich. Den Apfel täglich tauschen, damit nichts schimmelt."
+    ],
+    "tags": [
+      "snack",
+      "fingerfood",
+      "kuchen",
+      "vegetarisch",
+      "einfrierbar",
+      "unterwegs",
+      "weihnachten",
+      "ofen"
+    ]
+  },
+  {
+    "id": "apfel-zimt-plaetzchen-weich",
+    "title": "Weiche Apfel-Zimt-Plätzchen für die Weihnachtsdose",
+    "ageRecommendation": 10,
+    "prepTime": "10 Minuten + 14 Minuten Backzeit",
+    "categories": [
+      "obst",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Apfelmark ohne Zuckerzusatz",
+        "amount": "100 g"
+      },
+      {
+        "name": "weiche Butter",
+        "amount": "50 g"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "Dinkelmehl Type 630",
+        "amount": "150 g"
+      },
+      {
+        "name": "Weinsteinbackpulver",
+        "amount": "1 TL"
+      },
+      {
+        "name": "Ceylon-Zimt",
+        "amount": "½ TL"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 175 °C Umluft vor und leg ein Blech mit Backpapier aus. 2. Rühr Butter, Apfelmark und Ei cremig. 3. Misch Mehl, Backpulver und Zimt und knete alles zu einem weichen Teig. 4. Setz kleine Kleckse mit Abstand aufs Blech und drück sie leicht flach. 5. Back die Plätzchen 12 bis 14 Minuten, bis die Ränder leicht golden sind. 6. Auf dem Blech kurz ruhen lassen, dann auf einem Gitter auskühlen lassen.",
+    "tips": [
+      "Für die Erwachsenen: Den Teig teilen und unter eine Hälfte 50 bis 70 g Marzipanrohmasse in kleinen Stückchen kneten. Diese Plätzchen getrennt backen und gut beschriften, weil Marzipan Zucker und Mandeln enthält.",
+      "Zum Ausstechen 2 bis 3 EL zarte Haferflocken in den Teig kneten, dann lässt er sich ausrollen.",
+      "Nicht zu lange backen: Plätzchen, die zu dunkel werden, sind hart und für kleine Kinder schwer zu kauen.",
+      "Abgekühlt einfrieren und bei Bedarf einzeln auftauen."
+    ],
+    "tags": [
+      "snack",
+      "fingerfood",
+      "kuchen",
+      "vegetarisch",
+      "einfrierbar",
+      "unterwegs",
+      "weihnachten",
+      "ofen"
+    ]
+  },
+  {
+    "id": "kokos-apfel-haeufchen",
+    "title": "Weiche Kokos-Apfel-Häufchen",
+    "ageRecommendation": 12,
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
+    "categories": [
+      "obst"
+    ],
+    "ingredients": [
+      {
+        "name": "feine Kokosraspel",
+        "amount": "100 g"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "Apfelmark ohne Zuckerzusatz",
+        "amount": "3 EL"
+      },
+      {
+        "name": "Ceylon-Zimt",
+        "amount": "1 Prise"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 160 °C Ober-/Unterhitze vor und leg ein Blech mit Backpapier aus. 2. Verrühr Ei, Apfelmark und Zimt und misch die Kokosraspel unter. Lass die Masse 5 Minuten ziehen, damit die Raspel die Feuchtigkeit aufnehmen. 3. Forme mit feuchten Händen oder zwei Teelöffeln kleine Häufchen und setz sie aufs Blech. 4. Back sie 12 bis 15 Minuten, bis sie unten hellgolden sind. Sie sollen innen weich bleiben. 5. Abkühlen lassen.",
+    "tips": [
+      "Die Häufchen schmecken nach Makronen, kommen aber ohne Zucker und ohne Mehl aus.",
+      "Ohne Ei: Eine halbe sehr reife, zerdrückte Banane bindet die Masse ebenfalls. Die Häufchen werden dann etwas weicher.",
+      "Kokos zählt nicht zu den typischen Nussallergenen. Bei einer bekannten Nussallergie trotzdem vorher ärztlich abklären.",
+      "In einer Dose halten sie 3 Tage, eingefroren rund 2 Monate."
+    ],
+    "tags": [
+      "snack",
+      "fingerfood",
+      "riegel-baellchen",
+      "vegetarisch",
+      "ohne-milch",
+      "glutenfrei",
+      "ohne-nuesse",
+      "einfrierbar",
+      "weihnachten",
+      "ofen"
+    ]
+  },
+  {
+    "id": "mandel-frischkaese-kissen",
+    "title": "Weiche Mandel-Frischkäse-Kissen",
+    "ageRecommendation": 10,
+    "prepTime": "10 Minuten + 15 Minuten Backzeit",
+    "categories": [
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Frischkäse (Doppelrahmstufe) oder Speisequark",
+        "amount": "80 g"
+      },
+      {
+        "name": "Rapsöl oder geschmolzene Butter",
+        "amount": "40 ml"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "Dinkelmehl Type 630",
+        "amount": "140 g"
+      },
+      {
+        "name": "gemahlene Mandeln oder Haselnüsse",
+        "amount": "40 g"
+      },
+      {
+        "name": "Weinsteinbackpulver",
+        "amount": "1 TL"
+      },
+      {
+        "name": "Ceylon-Zimt oder abgeriebene Schale einer Bio-Orange (optional)",
+        "amount": "1 Prise"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 175 °C Umluft vor und leg ein Blech mit Backpapier aus. 2. Rühr Frischkäse, Öl und Ei glatt. 3. Gib Mehl, gemahlene Nüsse, Backpulver und nach Wunsch Zimt oder Orangenschale dazu und rühr einen weichen Teig. 4. Setz mit zwei Teelöffeln kleine Kissen aufs Blech. 5. Back sie 12 bis 15 Minuten, bis sie leicht gebräunt sind. Innen bleiben sie weich und saftig.",
+    "tips": [
+      "Nüsse für Kinder unter 4 Jahren immer fein gemahlen verwenden, nie gehackt oder ganz.",
+      "Mandeln und Haselnüsse sind häufige Allergene. Führe sie einzeln ein, bevor du sie in Gebäck verwendest.",
+      "Der Frischkäse hält die Kissen besonders saftig, auch noch am nächsten Tag.",
+      "Einzeln eingefroren halten sie etwa 2 Monate."
+    ],
+    "tags": [
+      "snack",
+      "fingerfood",
+      "kuchen",
+      "vegetarisch",
+      "einfrierbar",
+      "unterwegs",
+      "weihnachten",
+      "ofen"
+    ]
+  },
+  {
+    "id": "apfel-rotkohl-ohne-zucker",
+    "title": "Milder Apfel-Rotkohl ohne Zucker",
+    "ageRecommendation": 8,
+    "prepTime": "15 Minuten + 45 Minuten Schmorzeit",
+    "categories": [
+      "gemuese",
+      "obst"
+    ],
+    "ingredients": [
+      {
+        "name": "Rotkohl",
+        "amount": "500 g"
+      },
+      {
+        "name": "süße Äpfel (zum Beispiel Elstar)",
+        "amount": "2 Stück"
+      },
+      {
+        "name": "kleine Zwiebel",
+        "amount": "½ Stück"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      },
+      {
+        "name": "Wasser",
+        "amount": "150 ml"
+      },
+      {
+        "name": "naturtrüber Apfel-Direktsaft",
+        "amount": "50 ml"
+      },
+      {
+        "name": "Ceylon-Zimt",
+        "amount": "1 Prise"
+      }
+    ],
+    "instructions": "1. Entferne die äußeren Blätter und den Strunk vom Rotkohl und hobel oder schneid ihn in feine Streifen. 2. Schäl die Äpfel und würfle sie klein, würfle auch die Zwiebel sehr fein. 3. Dünste die Zwiebel im Öl in einem Topf glasig, gib Rotkohl und Äpfel dazu und rühr 2 Minuten um. 4. Gieß Wasser und Apfelsaft an, gib den Zimt dazu und lass alles zugedeckt bei kleiner Hitze 40 bis 45 Minuten schmoren, bis der Kohl sehr weich ist. Rühr zwischendurch um und gib bei Bedarf Wasser nach. 5. Nimm die Babyportion ab und püriere oder zerdrück sie. Den Rest für Erwachsene mit Salz, Pfeffer, Nelke, Lorbeer und etwas Essig abschmecken.",
+    "tips": [
+      "Die Äpfel machen den Kohl mild und süß, Zucker ist nicht nötig.",
+      "Festtagsteller fürs Baby: Rotkohl mit Kartoffelpüree und weichen Hackbällchen oder zartem, klein geschnittenem Geflügel. Fertige Klöße enthalten meist Salz und sind eher etwas für die Großen.",
+      "Rotkohl kann anfangs blähen. Starte mit kleinen Mengen.",
+      "Rotkohl schmeckt aufgewärmt noch besser und lässt sich gut ein bis zwei Tage vorher kochen oder einfrieren."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "vegetarisch",
+      "vegan",
+      "ohne-ei",
+      "ohne-milch",
+      "glutenfrei",
+      "ohne-nuesse",
+      "einfrierbar",
+      "vorkochen",
+      "familienessen",
+      "weihnachten"
+    ]
+  },
+  {
+    "id": "gefluegel-hackbaellchen-kartoffelpueree",
+    "title": "Weiche Geflügel-Hackbällchen mit Kartoffelpüree",
+    "ageRecommendation": 8,
+    "prepTime": "25 Minuten + 20 Minuten Backzeit",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Hähnchen- oder Putenhackfleisch",
+        "amount": "250 g"
+      },
+      {
+        "name": "Zucchini oder Karotte, fein geraspelt und ausgedrückt",
+        "amount": "60 g"
+      },
+      {
+        "name": "zarte Haferflocken",
+        "amount": "3 EL"
+      },
+      {
+        "name": "Ei (Größe M)",
+        "amount": "1 Stück"
+      },
+      {
+        "name": "mehligkochende Kartoffeln",
+        "amount": "500 g"
+      },
+      {
+        "name": "Milch",
+        "amount": "100 ml"
+      },
+      {
+        "name": "Butter",
+        "amount": "1 TL"
+      },
+      {
+        "name": "Karotten für die Soße",
+        "amount": "150 g"
+      },
+      {
+        "name": "Frischkäse natur",
+        "amount": "1 EL"
+      },
+      {
+        "name": "Rapsöl für das Blech",
+        "amount": "1 TL"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 180 °C Ober-/Unterhitze vor und fette ein Blech mit Backpapier dünn mit Öl ein. 2. Verknete Hackfleisch, Gemüseraspel, Haferflocken und Ei und forme mit feuchten Händen etwa 16 kleine Bällchen. 3. Back die Bällchen 18 bis 20 Minuten, bis sie innen vollständig durchgegart sind. 4. Koch inzwischen Kartoffeln und Soßenkarotten in ungesalzenem Wasser in etwa 20 Minuten weich. 5. Nimm die Karotten heraus und püriere sie mit 4 bis 5 EL Kochwasser und dem Frischkäse zu einer milden Soße. 6. Stampf die Kartoffeln mit Milch und Butter zu Püree. 7. Für dein Baby die Bällchen halbieren oder zerdrücken und mit Püree und Soße servieren. Erwachsene würzen am Teller nach.",
+    "tips": [
+      "Geflügel muss vollständig durchgegart sein, innen darf nichts mehr rosa sein. Die Kerntemperatur sollte mindestens 75 °C betragen.",
+      "Passt sehr gut zum milden Apfel-Rotkohl ohne Zucker als festlicher Teller für die ganze Familie.",
+      "Die gebackenen Bällchen lassen sich gut einfrieren und im Ofen aufwärmen.",
+      "Für Erwachsene kann die Soße mit Bratensaft, Salz und Pfeffer abgeschmeckt werden."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "fingerfood",
+      "fleisch",
+      "ohne-nuesse",
+      "einfrierbar",
+      "familienessen",
+      "weihnachten",
+      "ofen"
+    ]
+  },
+  {
+    "id": "maronen-kuerbis-auflauf",
+    "title": "Festlicher Maronen-Kürbis-Nudelauflauf",
+    "ageRecommendation": 10,
+    "prepTime": "20 Minuten + 25 Minuten Backzeit",
+    "categories": [
+      "gemuese",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "Hokkaido-Kürbis, gewürfelt (Schale kann dranbleiben)",
+        "amount": "400 g"
+      },
+      {
+        "name": "vorgegarte Maronen (vakuumiert), fein gehackt",
+        "amount": "100 g"
+      },
+      {
+        "name": "kurze Nudeln (zum Beispiel Hörnchen)",
+        "amount": "150 g"
+      },
+      {
+        "name": "Milch",
+        "amount": "200 ml"
+      },
+      {
+        "name": "Frischkäse natur",
+        "amount": "2 EL"
+      },
+      {
+        "name": "junger Gouda, gerieben",
+        "amount": "40 g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": "1 EL"
+      }
+    ],
+    "instructions": "1. Koch die Nudeln in ungesalzenem Wasser weich. 2. Heiz den Ofen auf 180 °C Umluft vor. 3. Dünste die Kürbiswürfel im Öl mit 4 EL Wasser zugedeckt etwa 10 Minuten weich. 4. Zerdrück etwa ein Drittel des Kürbisses und rühr Milch und Frischkäse darunter. 5. Misch Nudeln, restlichen Kürbis, Kürbiscreme und Maronen in einer Auflaufform. 6. Streu den Käse darüber und back den Auflauf 20 bis 25 Minuten, bis er goldbraun ist. 7. Babyportion abnehmen und abkühlen lassen. Erwachsene würzen mit Salz, Pfeffer und Muskat.",
+    "tips": [
+      "Maronen schmecken nussig-süß und machen den Auflauf festlich. Für Babys immer fein hacken oder zerdrücken, ganze Maronen sind zu fest.",
+      "Mit Hackfleisch: 200 g Rinderhack krümelig und vollständig durchbraten und vor dem Backen untermischen.",
+      "Statt Nudeln passen auch dünne, vorgegarte Kartoffelscheiben.",
+      "Hokkaido-Schale wird beim Garen weich. Für jüngere Babys schälst du den Kürbis trotzdem lieber."
+    ],
+    "tags": [
+      "mittagessen",
+      "abendessen",
+      "pasta",
+      "vegetarisch",
+      "ohne-ei",
+      "familienessen",
+      "weihnachten",
+      "ofen"
+    ]
+  },
+  {
+    "id": "bratapfel-kleinkind",
+    "title": "Bratäpfel mit Hafer-Mandel-Füllung",
+    "ageRecommendation": 8,
+    "prepTime": "15 Minuten + 30 Minuten Backzeit",
+    "categories": [
+      "obst",
+      "getreide"
+    ],
+    "ingredients": [
+      {
+        "name": "süß-säuerliche Äpfel (Boskoop, Elstar oder Jonagold)",
+        "amount": "4 Stück"
+      },
+      {
+        "name": "zarte Haferflocken",
+        "amount": "4 EL"
+      },
+      {
+        "name": "gemahlene Mandeln oder Haselnüsse",
+        "amount": "2 EL"
+      },
+      {
+        "name": "helles Mandelmus oder weiche Butter",
+        "amount": "1 EL"
+      },
+      {
+        "name": "Apfelmark ohne Zuckerzusatz (oder ½ zerdrückte reife Banane)",
+        "amount": "2 EL"
+      },
+      {
+        "name": "Ceylon-Zimt",
+        "amount": "1 Prise"
+      },
+      {
+        "name": "Wasser",
+        "amount": "100 ml"
+      }
+    ],
+    "instructions": "1. Heiz den Ofen auf 180 °C Ober-/Unterhitze vor. 2. Wasch die Äpfel, schneid oben einen Deckel ab und stich das Kerngehäuse großzügig aus. Lass unten einen Boden stehen, damit die Füllung nicht ausläuft. 3. Verrühr Haferflocken, gemahlene Nüsse, Mandelmus oder Butter, Apfelmark und Zimt zu einer feuchten Füllung. 4. Füll die Äpfel und setz die Deckel wieder auf. 5. Stell sie in eine Auflaufform, gieß das Wasser an und back sie 25 bis 30 Minuten, bis sie weich sind und die Schale leicht aufplatzt. 6. Lass sie gut abkühlen.",
+    "tips": [
+      "Für dein Baby die Schale entfernen und das weiche Fruchtfleisch mit der Füllung vom Löffel anbieten. Die Schale wird beim Backen zäh.",
+      "Bratäpfel speichern sehr lange Hitze. Vor dem Servieren gut durchrühren und die Temperatur prüfen.",
+      "Dazu passt ein Klecks Naturjoghurt. Erwachsene genießen den Bratapfel mit Vanillesoße, Marzipan oder etwas Schmand.",
+      "Wer Rosinen mag, weicht sie ein und hackt sie sehr fein. Ganze Rosinen sind für Babys ein Erstickungsrisiko."
+    ],
+    "tags": [
+      "snack",
+      "abendessen",
+      "vegetarisch",
+      "ohne-ei",
+      "familienessen",
+      "weihnachten",
+      "ofen"
     ]
   }
 ]

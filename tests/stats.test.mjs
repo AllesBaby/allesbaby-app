@@ -1,11 +1,13 @@
 // Test der Zähl-Logik ohne Netlify (Speicher wird nachgebildet).
 import assert from 'node:assert/strict';
-import { counterFor, increment, lastDays, renderStatsPage, dayKey } from '../netlify/lib/stats.mjs';
+import { counterFor, increment, lastDays, renderStatsPage, dayKey, cleanupOld } from '../netlify/lib/stats.mjs';
 
 const mem = new Map();
 const store = {
   async get(k) { return mem.has(k) ? JSON.parse(mem.get(k)) : null; },
   async setJSON(k, v) { mem.set(k, JSON.stringify(v)); },
+  async list({ prefix }) { return { blobs: [...mem.keys()].filter(k => k.startsWith(prefix)).map(key => ({ key })) }; },
+  async delete(k) { mem.delete(k); },
 };
 
 assert.equal(counterFor({ e: 'start', v: 'app' }), 'start_app');
@@ -22,4 +24,8 @@ assert.equal(rows[0].start_app, 2); assert.equal(rows[0].install, 1); assert.equ
 const html = renderStatsPage(rows);
 assert.ok(html.includes('Starts gesamt') && html.includes('100 %'));
 assert.ok(!/[–—]/.test(html.replace(/<style>[\s\S]*?<\/style>/, '')), 'keine Gedankenstriche');
+await increment(store, 'start_app', new Date('2025-08-01T10:00:00Z'));
+const removed = await cleanupOld(store, d);
+assert.equal(removed, 1); assert.ok(!mem.has('tag/2025-08-01')); assert.ok(mem.has(`tag/${dayKey(d)}`));
+assert.equal(await cleanupOld(store, d), 0, 'nur einmal pro Tag');
 console.log('Alle Statistik-Tests bestanden.');

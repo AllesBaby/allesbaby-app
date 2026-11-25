@@ -31,6 +31,23 @@ export async function increment(store, counter, date = new Date()) {
   return cur;
 }
 
+// Tageszahlen älter als 13 Monate löschen (höchstens einmal pro Tag).
+export async function cleanupOld(store, today = new Date()) {
+  const todayKey = dayKey(today);
+  const last = await store.get('meta/cleanup', { type: 'json' });
+  if (last && last.day === todayKey) return 0;
+  const cutoff = new Date(today); cutoff.setMonth(cutoff.getMonth() - 13);
+  const cutKey = dayKey(cutoff);
+  let removed = 0;
+  const { blobs = [] } = (await store.list({ prefix: 'tag/' })) || {};
+  for (const b of blobs) {
+    const d = String(b.key).slice(4);
+    if (d < cutKey) { await store.delete(b.key); removed++; }
+  }
+  await store.setJSON('meta/cleanup', { day: todayKey });
+  return removed;
+}
+
 export async function lastDays(store, days = 30, today = new Date()) {
   const rows = [];
   for (let i = 0; i < days; i++) {
