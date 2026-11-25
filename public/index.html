@@ -1590,6 +1590,31 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 /* Leiste unten im Lebensmittel-Fenster: weiße Fläche bis zum Rand, nichts scheint durch */
 .prep-acts{position:sticky}
 .prep-acts::after{content:'';position:absolute;left:0;right:0;top:100%;height:400px;background:#fff}
+/* Abnahme 2.15 */
+.bk-hub-wrap{margin-bottom:var(--space-2)}
+.bk-hub-wrap .bk-hub-hero{gap:var(--space-1)}
+.bk-hub-wrap .bk-hub-toggle{margin-top:var(--space-1)}
+.bk-hub-pill-row:empty{display:none}
+.bk-hub-pill-row{margin:0 0 var(--space-2)}
+.bk-nitrate{margin:0 0 var(--space-2)!important;grid-column:1/-1}
+.bk-hub-toggle.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bk-hub-toggle.n4{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:4px}
+.bk-hub-toggle.n3 .bk-hub-tab,.bk-hub-toggle.n4 .bk-hub-tab{padding:var(--space-1) 2px;white-space:nowrap;font-size:13px}
+.bk-hub-toggle.n4 .bk-hub-tab{font-size:12px}
+.dev-toggle-card{padding:var(--space-1) var(--space-2)!important}
+/* Lebensmittel-Fenster: Abstände und kein weißer Leerraum beim Scrollen */
+.prep-acts::after{content:none!important}
+.prep-acts{box-shadow:0 -1px 0 var(--rose-ll),0 300px 0 300px #fff!important}
+.prep-safety{margin:var(--space-2) 0 var(--space-3)!important}
+/* Outfit Home: gleich große Kacheln */
+.outfit-home-icon-row{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:stretch}
+.outfit-home-icon{height:auto!important;min-height:84px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:12px 4px 10px!important;gap:6px}
+.outfit-home-icon svg{width:28px!important;height:28px!important;flex-shrink:0}
+.outfit-home-icon span{font-size:12px!important;line-height:1.25;text-align:center}
+.legal-sub{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--color-text-heading);margin:var(--space-3) 0 var(--space-2)}
+.outfit-home-in{display:block;font-weight:600;font-size:13px;color:var(--color-text-heading)}
+.outfit-home-out{display:block;font-size:12px;color:var(--text-l);margin-top:2px}
+.outfit-home-icon span{hyphens:manual;-webkit-hyphens:manual;max-width:100%}
 </style>
 </head>
 <body>
@@ -5032,6 +5057,10 @@ window.prepOpenReaction = prepOpenReaction;
 function prepOpenRecipe(recipeId){
   closePrepSheet();
   subPage = null;
+  // Das geöffnete Rezept muss in der Liste stehen, auch wenn ein Filter es sonst ausblenden würde
+  RF.sel={};RF.compatible=false;RF.ageOverride=false;
+  const _r=getRecipes().find(x=>x.id===recipeId);
+  if(_r){if((Number(_r.ageRecommendation)||0)>corrMonths())RF.ageOverride=true;if(!passesPrefs(_r))RF.forHanna=false}
   S.beikostHubTab = 'recipes';
   S.beikostRecipeQuery = '';
   S.beikostRecipeFilter = 'all';
@@ -5353,10 +5382,10 @@ function renderBeikost(){
   const recipeView=S.beikostHubTab==='recipes';
   const recipeResults=getFilteredRecipeHubRecipes();
   const recipeSummary = beikostRecipeSummaryText(recipeResults.length);
-  let pre=renderSafetyTop();
-  if(!beikostActive()&&Math.max(0,corrW())>=17)pre+=renderReadinessCard();
-  if(showBeikostStartCard())pre+=renderBeikostStartArea();
-  let h=pre+`<div class="card-grad" style="background:linear-gradient(135deg,var(--sage-ll),#fff2f8)">
+  // Hierarchie (2.15): oben immer der Umschalter Lebensmittel/Rezepte. Hinweise zum Start,
+  // Reifezeichen und Nitrat gehören zur Lebensmittel-Ansicht; die Rezepte starten direkt mit Suche und Filtern.
+  const pre=recipeView?'':renderSafetyTop()+((!beikostActive()&&Math.max(0,corrW())>=17)?renderReadinessCard():'')+(showBeikostStartCard()?renderBeikostStartArea():'');
+  let h=`<div class="bk-hub-wrap">
     <div class="bk-hub-hero">
       <div class="bk-hub-hero-main">
         <div>
@@ -5370,12 +5399,14 @@ function renderBeikost(){
         <button type="button" class="bk-hub-tab ${recipeView?'active':''}" onclick="setBeikostHubTab('recipes')">${iconInline('chef-hat')} Rezepte</button>
       </div>
     </div>
-    ${nitrateInfo?`<div class="al al-amb" style="margin-top:var(--space-2);margin-bottom:0"><div class="at">Nitrat-Sperre aktiv</div><p>Beikost-Woche ${nitrateInfo.beikostWeek} von 8, nitrathaltiges Gemüse (zum Beispiel Spinat, Fenchel, Mangold, Rote Bete) ist noch gesperrt.</p></div>`:''}
-    <div class="bk-hub-pill-row">
-      ${recipeView?'':`<span class="pill p-sage">${triedCount} probiert</span>${reactCount?`<span class="pill p-red">${reactCount} Reaktion${reactCount===1?'':'en'}</span>`:''}`}
-    </div>
   </div>`;
-
+  if(!recipeView){
+    h+=`<div class="bk-hub-pill-row">
+      ${recipeView?'':`<span class="pill p-sage">${triedCount} probiert</span>${reactCount?`<span class="pill p-red">${reactCount} Reaktion${reactCount===1?'':'en'}</span>`:''}`}
+    </div>`;
+    h+=pre;
+    // Nitrat-Sperre steht jetzt direkt im Bereich Gemüse (2.15)
+  }
   if(recipeView){
     h+=renderRecipeFilterBar()+`<div class="bk-recipe-list" id="bk-recipe-list" style="margin-top:var(--space-2)">${renderBeikostRecipeListInner(recipeResults)}</div>`;
     return h;
@@ -5400,6 +5431,7 @@ function renderBeikost(){
         <span class="rec-chevron">${icon(collapsed?'chevron-right':'chevron-down','icon-sm')}</span>
       </div>
       <div class="bk-cat-body${collapsed?' collapsed':''}">
+        ${catKey==='gemuese'&&nitrateInfo&&!collapsed?`<div class="al al-amb bk-nitrate"><div class="at">Nitrat-Sperre bis ${fmt(nitrateInfo.end)}</div><p>Spinat, Fenchel, Mangold und Rote Bete gibt es erst danach, sie enthalten viel Nitrat.</p></div>`:''}
         ${foods.map(f=>{
           const reaction=S.beikost.reactions[f.id];
           const nitrateLocked=isFoodNitrateLocked(f);
@@ -5541,7 +5573,7 @@ function renderSupport(){
 }
 // Rechtliches (2.13): eine Seite mit vier Reitern
 let _legalTab='hinweise';
-const LEGAL_TABS=[['hinweise','Hinweise'],['datenschutz','Datenschutz'],['impressum','Impressum'],['lizenzen','Lizenzen']];
+const LEGAL_TABS=[['hinweise','Hinweise'],['datenschutz','Datenschutz'],['impressum','Impressum']];
 function setLegalTab(t){tapFeedback();_legalTab=t;render();const c=document.getElementById('cnt');if(c)c.scrollTop=0}
 function openLegal(t){tapFeedback();_legalTab=t||'hinweise';goTab(4);subPage='legal';render();const c=document.getElementById('cnt');if(c)c.scrollTop=0}
 function renderLizenzen(){
@@ -5550,8 +5582,9 @@ function renderLizenzen(){
     +infoCard('Daten',`<ul class="info-list"><li><b>Wetterdaten:</b> <a class="info-link" href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>, Lizenz CC BY 4.0.</li><li><b>Ortsnamen:</b> © <a class="info-link" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende, Lizenz ODbL.</li><li><b>Lieder:</b> traditionelle Kinderlieder, gemeinfrei.</li></ul>`);
 }
 function renderLegal(){
-  const seg=`<div class="card" style="padding:var(--space-1) var(--space-2)"><div class="bk-hub-toggle legal-toggle">${LEGAL_TABS.map(([k,l])=>`<button type="button" class="bk-hub-tab ${_legalTab===k?'active':''}" aria-pressed="${_legalTab===k}" onclick="setLegalTab('${k}')">${l}</button>`).join('')}</div></div>`;
-  const body=_legalTab==='datenschutz'?renderDatenschutz(true):_legalTab==='impressum'?renderImpressum(true):_legalTab==='lizenzen'?renderLizenzen():renderHinweise(true);
+  const seg=`<div class="card" style="padding:var(--space-1) var(--space-2)"><div class="bk-hub-toggle legal-toggle n3" style="margin-top:0">${LEGAL_TABS.map(([k,l])=>`<button type="button" class="bk-hub-tab ${_legalTab===k?'active':''}" aria-pressed="${_legalTab===k}" onclick="setLegalTab('${k}')">${l}</button>`).join('')}</div></div>`;
+  if(_legalTab==='lizenzen')_legalTab='hinweise';
+  const body=_legalTab==='datenschutz'?renderDatenschutz(true):_legalTab==='impressum'?renderImpressum(true):renderHinweise(true)+`<h2 class="legal-sub">Lizenzen und Datenquellen</h2>`+renderLizenzen();
   return bb()+`<h1 class="legal-h">Impressum, Datenschutz &amp; Hinweise</h1>`+seg+body;
 }
 
@@ -6045,8 +6078,8 @@ function setDevTab(t){_devTab=['milestones','ideas'].includes(t)?t:'phase';tapFe
 function openDevIdeas(){_devTab='ideas';subPage=null;goTab(3)}
 function renderEntwicklung(){
   return `
-  <div class="card" style="padding:var(--space-1) var(--space-2)">
-    <div class="bk-hub-toggle">
+  <div class="card dev-toggle-card">
+    <div class="bk-hub-toggle n3" style="margin-top:0">
       <button type="button" class="bk-hub-tab ${_devTab==='phase'?'active':''}" onclick="setDevTab('phase')">Phase</button>
       <button type="button" class="bk-hub-tab ${_devTab==='milestones'?'active':''}" onclick="setDevTab('milestones')">Meilensteine</button>
       <button type="button" class="bk-hub-tab ${_devTab==='ideas'?'active':''}" onclick="setDevTab('ideas')">Spielideen</button>
@@ -6618,8 +6651,8 @@ function getOutfitForScenario(scenario,weather){
   // Base layer — always same
   const base=[
     {key:'diaper',icon:OI.diaper,label:'Windel',swap:false},
-    {key:'bodyLayer',icon:(warm||mild)?OI.bodyShort:OI.bodyLong,
-     label:(warm||mild)?'Kurzarmbody':'Langarmbody',swap:false},
+    {key:'bodyLayer',icon:warm?OI.bodyShort:OI.bodyLong,
+     label:warm?'Kurzarmbody':'Langarmbody',swap:false},
   ];
 
   // Mid layer
@@ -6636,13 +6669,14 @@ function getOutfitForScenario(scenario,weather){
     ];
   }else{
     const bottomIcon=mild||warm?OI.pants:OI.romper;
-    const bottomLabel=mild||warm?'Dünne Hose':'Strampler';
+    const bottomLabel=warm?'Dünne Hose':mild?'Lange Hose':'Strampler';
     const topIcon=warm?OI.shirt:(cold?OI.pullover:OI.shirt);
     const topLabel=warm?'T-Shirt':(cold?'Pullover':'Langarmshirt');
     mid=[
       {key:'bottom',icon:bottomIcon,label:bottomLabel,swap:true,
        swapOptions:[
          {icon:OI.pants,name:'Dünne Hose',note:'Für wärmere Innenräume'},
+         {icon:OI.pants,name:'Lange Hose',note:'Für normale Raumtemperatur'},
          {icon:OI.romper,name:'Strampler',note:'Bequem, alles in einem'},
          {icon:OI.pants,name:'Dicke Jogginghose',note:'Extra warm'},
        ]},
@@ -6807,6 +6841,8 @@ function outfitChoice(item){
   if(!ch||ch.day!==todayKey())return 0;
   const i=outfitOptions(item).findIndex(o=>o.name===ch.name);return i<0?0:i;
 }
+// Weiche Trennstellen für lange Kleidungsnamen (Silbengrenze statt zufälliger Trennung)
+function softHyphen(t){return String(t).replace(/^(Langarm|Kurzarm)(?=[a-zäöü])/,'$1\u00AD').replace(/^(Schlaf)(anzug|sack)/,'$1\u00AD$2')}
 function renderOutfitTile(item){
   const swapIdx=item.swap?outfitChoice(item):0;
   const current=item.swap&&swapIdx>0?outfitOptions(item)[swapIdx]:null;
@@ -6822,7 +6858,7 @@ function renderOutfitTile(item){
   }
   return`<div class="outfit-tile${item.warn?' warn':''}${item.optional?' optional':''}">
     ${garmentSvg}
-    <div class="outfit-tile-label">${label}</div>
+    <div class="outfit-tile-label">${softHyphen(label)}</div>
     ${swapBtn}
   </div>`;
 }
@@ -7023,10 +7059,10 @@ function renderOutfitHomeCard(){
       ${wt?`<span class="outfit-uv-badge ${uvClass(uv)}" style="font-size:10px">UV ${uv}</span>`:''}
     </div>
     <div style="font-size:11px;color:var(--sage-d);margin-bottom:8px;font-family:var(--font-ui)">
-      Drinnen · etwa ${roomTemp('drinnen')} °C${temp!=null&&!wt?.mock?` · draußen ${temp} °C`:''}${wt?.location?` · ${escHtml(wt.location)}`:''}
+      <span class="outfit-home-in">Für drinnen bei etwa ${roomTemp('drinnen')} °C</span>${temp!=null&&!wt?.mock?`<span class="outfit-home-out">Draußen ${temp} °C${wt?.location?` in ${escHtml(String(wt.location).replace(/, [A-Z]{2}$/,''))}`:''}</span>`:''}
     </div>
     <div class="outfit-home-icon-row">
-      ${previewItems.map(item=>`<div class="outfit-home-icon">${item.icon}<span>${item.label.replace('!','')}</span></div>`).join('')}
+      ${previewItems.map(item=>`<div class="outfit-home-icon">${item.icon}<span>${softHyphen(item.label.replace('!',''))}</span></div>`).join('')}
     </div>
     <button type="button" class="btn-sm btn-sage" style="width:100%;margin-top:8px" onclick="openSubPage('outfit')">Zum Outfit Guide ›</button>
   </div>`;
@@ -7169,7 +7205,7 @@ function rfReset(){tapFeedback();RF.sel={};RF.compatible=false;RF.ageOverride=fa
 // Im Filterfenster: nur die Filter aus dem Fenster zurücksetzen, die Schnellfilter oben bleiben
 function rfResetSheet(){tapFeedback();SHEET_GROUPS.forEach(g=>delete RF.sel[g]);RF.compatible=false;rfRefresh()}
 function rfSheetAny(){return rfSheetCount()>0}
-function rfApplyTag(g,t){tapFeedback();RF.sel={};RF.compatible=false;RF.sel[g]=[t];if(S.recipeExpanded)S.recipeExpanded={};S.beikostHubTab='recipes';closeModal();goTab(2);setTimeout(()=>{const c=document.getElementById('cnt');if(c)c.scrollTop=0},30)}
+function rfApplyTag(g,t){tapFeedback();RF.sel={};RF.compatible=false;RF.sel[g]=[t];if(S.recipeExpanded)S.recipeExpanded={};S.beikostHubTab='recipes';closeModal();goTab(2);setTimeout(()=>{const el=document.querySelector('.rf-active-coll')||document.querySelector('.rf-summary');const c=document.getElementById('cnt');if(el&&c){c.scrollTop=Math.max(0,el.getBoundingClientRect().top-c.getBoundingClientRect().top+c.scrollTop-12)}else if(c)c.scrollTop=0},60)}
 function openFestCollection(){RF.forHanna=true;RF.ageOverride=true;rfApplyTag('anlass','fest')}
 // ── Mehr Filter ──
 function renderFilterSheetBody(){
