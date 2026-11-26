@@ -1622,6 +1622,13 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
 .prep-acts{margin-top:auto!important;box-shadow:0 -1px 0 var(--rose-ll)!important}
 /* Auf Touch-Geräten bleibt :hover nach dem Tippen hängen und lässt Buttons blass wirken */
 @media (hover:none){.btn:hover{background:var(--primary);box-shadow:var(--shadow)}}
+/* Lebensmittel-Fenster (2.17): Kopf und Inhalt scrollen, die Leiste ist ein fester Fuß des Fensters.
+   Ersetzt alle früheren Sticky-Lösungen (2.14 bis 2.16). */
+.prep-sheet{display:flex!important;flex-direction:column!important;overflow:hidden!important;padding-bottom:0!important}
+#prep-sheet-inner{flex:1 1 auto!important;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;display:block!important;padding-bottom:var(--space-3)!important}
+.prep-sheet-foot{flex-shrink:0;background:#fff;border-top:1px solid var(--rose-ll)}
+.prep-sheet-foot:empty{display:none}
+.prep-sheet-foot .prep-acts{position:static!important;margin:0!important;padding:12px var(--space-3) calc(12px + env(safe-area-inset-bottom,0px))!important;box-shadow:none!important;border:none!important;background:#fff!important}
 </style>
 </head>
 <body>
@@ -1761,6 +1768,7 @@ input[type="date"]::-webkit-date-and-time-value,input[type="time"]::-webkit-date
     <div class="prep-sheet-inner" id="prep-sheet-inner">
       <!-- Dynamisch befüllt -->
     </div>
+    <div class="prep-sheet-foot" id="prep-sheet-foot"></div>
   </div>
 </div>
 
@@ -4955,7 +4963,13 @@ function openPrepSheet(foodId){
   loadPrepNotes();
   const overlay = document.getElementById('prep-sheet-overlay');
   const sheet = overlay.querySelector('.prep-sheet');
-  document.getElementById('prep-sheet-inner').innerHTML = renderPrepSheetContent();
+  const _inner=document.getElementById('prep-sheet-inner');
+  _inner.innerHTML = renderPrepSheetContent();
+  _inner.scrollTop=0;
+  // Aktionsleiste (2.17): steht außerhalb des scrollenden Bereichs, fest am unteren Rand des Fensters.
+  // So kann darunter nichts durchscheinen, und es gibt keinen weißen Leerraum.
+  const _foot=document.getElementById('prep-sheet-foot');_foot.innerHTML='';
+  const _acts=_inner.querySelector('.prep-acts');if(_acts)_foot.appendChild(_acts);
   // Ohne Zubereitungsdaten (zum Beispiel selbst hinzugefügte Lebensmittel) ist der Inhalt
   // viel kürzer – die erzwungene Mindesthöhe (62vh, gedacht für den vollen Guide
   // mit Tabs/Rezepten) würde hier nur unnötigen Weißraum erzeugen.
@@ -4969,15 +4983,16 @@ function openPrepSheet(foodId){
   sheet._swipeInit = true;
   let startY=0, curDy=0, dragging=false;
 
+  const scroller=document.getElementById('prep-sheet-inner');
   sheet.addEventListener('touchstart', e=>{
-    if(sheet.scrollTop > 2)return; // only when scrolled to top
+    if(scroller.scrollTop > 2)return; // only when scrolled to top
     startY = e.touches[0].clientY;
     curDy = 0;
     dragging = false;
   },{passive:true});
 
   sheet.addEventListener('touchmove', e=>{
-    if(sheet.scrollTop > 2){dragging=false;return;}
+    if(scroller.scrollTop > 2){dragging=false;return;}
     const dy = e.touches[0].clientY - startY;
     if(dy < 5)return; // ignore upward pulls
     dragging = true;
